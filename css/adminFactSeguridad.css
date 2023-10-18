@@ -1,0 +1,82 @@
+body{
+    background-image: url(../../Linux-ayudas/img/newcantv.jpg) ;
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position:center;
+    font-family: "Sofia", sans-serif;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+    background-color: transparent;
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center;
+}
+
+form {
+    font-size: 10px;
+    text-align: center;
+}
+
+table {
+    width: 20%;
+}
+
+th {
+    font-size: 25px;
+    padding: 15px;
+    background-color: transparent;
+    color: lightblue;
+    text-align: center;
+    border: 4px transparent;
+}
+
+td {
+    font-size: 18px;
+    text-align: left;
+    background-color: transparent;
+    color: lightblue;
+    font-family: 'Lucida grande';
+    border: 2px transparent;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+p {
+    color: lightblue;
+    text-align: center;
+    font-size: 30px;
+}
+
+button {
+    margin: 0px;
+    font-family: "Sofia", sans-serif;
+}
+
+.boton {
+    color: white;
+    font-size: 15px;
+    /*  font-weight: 500; */
+    padding: 0.5em 1.2em;
+    background: rgba(21, 74, 248, 0);
+    position: relative;
+    border: 0px solid #318aac;
+    outline: 2px solid;
+    outline-color: rgba(49, 138, 172, 0.4);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.boton:hover {
+    background: blue;
+    color: white;
+    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    border: 2px;
+    transform: rotate(-7deg);
+}

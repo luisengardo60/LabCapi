@@ -1,0 +1,1 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.55/responsiveslides.min.js" integrity="sha512-xLb7JAM9BNykuzMmlFtHHgQQAwFMiPVf9IhLV6g/IgQInWqxECLrlqBo64ytFPZH7qeZjahD1TOvl/wp8dL6LA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

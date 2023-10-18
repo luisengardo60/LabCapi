@@ -1,0 +1,41 @@
+body { background: url(../../Linux-ayudas/img/bookwood.jpg) no-repeat center center fixed;
+ 	background-size: cover; font-family: "Sofia", sans-serif;}
+
+header { border-radius: 5px; border: 4px solid orange; 
+            background-color: black; position: fixed; width: 99.2%; margin: 0.1em; padding-top: 0px; padding-bottom: 0px; }
+
+        header img {padding: 2px; float: right; width: 50px; height: 50px; border-radius: 8px; margin: 1px;}
+
+            header span { font-size: 3em; color: white;}
+
+                 header a {	color:yellow; display: inline-block; background-color: blue;box-sizing: content-box; font-size: 15px;margin: 10px; border-radius: 15px;
+                 border: 8px outset grey; text-decoration: none; }
+
+section { padding-top: 5em;}
+
+article p { color: yellow; font-size: 1.5em;}
+
+    article b{ color: red}
+
+       article .uno { color: yellow;}
+
+h2 { color:white; }
+
+article table,th {padding: 12px; background-color: transparent; color: white; text-align: center;
+         border: 5px lightblue; font-size: 26px; border-radius:4px }
+
+article table,td { background-color: transparent; color:yellow; border: 3px solid orange;
+         border-radius:4px ;text-align: left; padding: 8px; font-size: 17px; }
+
+article pre{ color:white}
+
+article hr { height: 5px; background-color:blue; margin: 10px;
+	border-radius: 5px; border: 5px outset grey; }
+
+article a {	color: white; display: inline-block; background-color: blue;
+    box-sizing: content-box; font-size: 15px;margin: 2px; border-radius: 4px;
+    border: 8px outset grey; text-decoration: none;}
+
+footer { color: darkblue; text-align: center; border-radius: 5px; border: 4px solid orange; 
+    background-image: linear-gradient(to right,blue,lightblue,lightblue); 
+    width: 99.2%; margin: 0.1em; padding-top: 15px; padding-bottom: 15px;}

@@ -1,0 +1,19 @@
+body { background: url(../img/bookwood.jpg) no-repeat center center fixed;
+    background-size:cover;}
+
+article a {color: white; display: inline-block;
+           background-color: blue; box-sizing: content-box;
+           font-size: 20px;margin: 2px; border-radius: 4px;
+           border: 8px outset grey; text-decoration: none;}
+
+article span {color: aquamarine; font-size: 2em;}
+
+article h2 {color: white;}
+article h3 {color: red;}
+
+article b { color: greenyellow;font-size: 1.4em;}
+article .uno { color:lightblue; font-size: 1em;}
+article .dos { color:blue; font-size: 1em;}
+article .tres {color: aquamarine; font-size: 1em;}
+
+article p { color: aquamarine; font-size: 1em;}

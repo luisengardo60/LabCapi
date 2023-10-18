@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    /*background-color: blue;*/
+    background-image: url(../img/venezuela9.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: verdana;
+    color: black;
+
+}
+
+.unico { font-size: 30px; color: lightblue;}
+
+.segundo { font-size: 20px; color: whitesmoke;}
+
+span { font-size:18px; color: whitesmoke;}
+
+
+.navbar {
+    background-color: transparent !important;
+    padding: 7px 0px; 
+}
+
+.navbar-nav li:hover>ul.dropdown-menu{ /*menu desplegable cabecera*/
+    display: block; background-color: lightseagreen;
+}    
+
+.dropdown-submenu{
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu{
+    top:0;
+    margin-top: -5px;
+    left: 90%; 
+}
+
+.dropdown-menu>li>a:hover::after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
+
+      div.nav-link li a:link,
+      div.nav-link  a:visited {
+            color: red;
+            background-color: white;
+        }
+    
+        div.navbar-collapse a:hover {
+            background-color: red;
+            color: white;
+            transition: .5s;
+        }
+    
+    
+        ul.navbar-nav li a:link,
+        ul.navbar-nav li a:visited {
+            text-decoration: none;
+            color: white;
+            background-color: transparent;
+        }
+        div.navbar-nav li a:hover,
+        ul.navbar-nav li a:hover {
+            background-color: lightseagreen;
+            color: black;
+            transition: .5s;
+        }
+    
+  
+       
+                .icons-social-networks>a:hover {
+                    filter: opacity(0.5);
+                }
+                .bg-linux {
+                    background-color: #023693;
+                }
+                .venezuela, .mercantil {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+ 
+                .navbar .nav-item li {
+                    color: chocolate
+                }
+        
+                .sombra1 {
+                    color: #C2BFBF;
+                    text-shadow: -12px -10px 5px #050505;
+                    font-size: 70px;
+                    font-family: 'Unna', serif;
+                }
+                

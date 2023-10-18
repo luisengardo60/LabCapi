@@ -1,0 +1,41 @@
+body { background: url(../img/bookwood.jpg) no-repeat center center fixed;
+    background-size:cover; }
+
+header { border-radius: 5px; border: 4px solid orange; 
+            background-color: transparent;
+          /*background-image: linear-gradient(to right,blue,lightblue,lightblue);*/ 
+          position: fixed; width: 98%; margin: 0em; padding-top: 0px; padding-bottom: 1px;} 
+
+header img {padding: 2px; float: right; width: 50px; height: 50px; border-radius: 8px; margin: 1px;}
+
+header span { font-size: 3em; color: white; }
+
+header a {color: white; display: inline-block; text-decoration: none;
+               background-color: blue; box-sizing: content-box;font-size: 15px;
+               margin: 10px; border-radius: 15px;border: 8px outset grey;}
+
+header b { color:yellow}
+
+section { padding-top: 5em;}
+
+article span { color: aquamarine; font-size: 2em;}
+
+article a {color: white; display: inline-block; background-color: blue;
+     box-sizing: content-box; font-size: 15px;margin: 2px; border-radius: 4px;
+     border: 8px outset grey; text-decoration: none;}
+
+article b { color: yellow;}
+
+article p { color:yellow; font-size: 2em;}
+
+article pre { color:red; font-size: 1.5em;}
+
+article li {color: greenyellow;}
+
+article table,th { padding: 12px; background-color: transparent; color: white;            text-align: left; font-size: 25px; border: 5px blueviolet; text-decoration:none;}
+
+article table,td { background-color: transparent; color:white; border: 2px solid orange;
+        text-align: left; padding: 8px; font-size: 20px; width: 100%; text-decoration:none; }
+
+article hr { height: 5px; background-color:blue; margin: 10px;
+	    border-radius: 5px; border: 5px outset grey; }

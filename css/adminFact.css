@@ -1,0 +1,159 @@
+body {
+    background: url(../img/azul.jpg) no-repeat center center fixed;
+     background-size: cover;
+     font-family: "Sofia", sans-serif;
+}
+
+   .sombra1 {
+    background: cyan;
+    text-align: center;
+    color: black;
+    text-shadow: 2px -5px 7px #050505;
+    font-size: 35px;
+    font-family: 'Unna';
+   }
+
+#uno {
+    color: black; font-size: 15px;
+}
+
+.unico {
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: .5px;
+    border-left-style: solid;
+    text-shadow: 1px 0px 1px black; width: 100%;
+}
+
+a {
+    color: lightblue;
+    display: inline-block;
+    background-color: black;
+    box-sizing: content-box;
+    font-size: 15px;
+    margin: 4px;
+    border-radius: 4px;
+    border: 5px outset black;
+    text-decoration:none;
+}
+
+a:hover {
+    color: yellow;
+    transition: .5s;
+    text-decoration: none;
+}
+
+table {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+       /* border-collapse: collapse;
+        border: 2px solid black; */
+        width: 100%;
+        border: 12px ridge;
+        border-radius: 12px;
+    }
+
+th {
+    border: 2px solid black;
+    padding: 8px;
+    font-size: 18px;
+    text-align: left;
+    background: cyan;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    color:white;
+   /*text-decoration: underline;*/
+}
+            
+td {
+    border: 4px solid blue;
+    padding: 4px; font-size: 18px;
+    text-align: left; color: darkblue;
+}
+
+tr {
+    background-color: #318aac; text-align: center;
+}
+            
+tr:nth-child(even) {
+        background-color: black; 
+    }
+
+            
+/*tr:hover {
+        background-color: #ddd;
+    }*/
+            
+           
+            		
+
+/*table {
+    width: 100%;
+}
+
+th {
+    font-size: 22px;
+    padding: 15px;
+    background-color: lightblue;
+    color:darkblue;
+    text-align: center;
+    border: 4px solid blue;
+}
+
+
+
+td {
+    font-size: 18px;
+    background-color: transparent;
+    color: black;
+    font-family:'Lucida grande';
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}*/
+
+button {
+    margin: 0px;
+    font-family: "Sofia", sans-serif;
+}
+
+.boton {
+    color: lightgreen;
+    font-size: 7px;
+    /*  font-weight: 500; */
+    padding: 0.5em 1.2em;
+    background: rgba(21, 74, 248, 0);
+    position: relative;
+    border: 0px solid #318aac;
+    outline: 3px solid;
+    outline-color: rgba(49, 138, 172, 0.4);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/*.boton:hover {
+    background: blue;
+    color: white;
+    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    border: 2px;
+    transform: rotate(-7deg);
+}
+*/
+div {
+    background-color: blue;
+    color:aliceblue;
+    width: 1420px;
+    border: 10px solid grey;
+    padding: 1px;
+    margin: 2px;
+    text-align: justify;
+} 
+
+img {
+    width: 1100px;
+    height: 1200px,
+}

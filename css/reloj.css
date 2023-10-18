@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;*/
+}
+
+body {
+    text-align: center;
+    background-repeat: no-repeat;
+    color: cyan;
+}
+
+.wrap {
+    width: 80%;
+    max-width: 700px;
+    /*margin:auto;*/
+}
+
+.widget {
+    width: 40%;
+    margin-top: 10em;
+    background-color: transparent;/*
+    background-image: radial-gradient(circle at 50% -20.71%, #dff0db 0, #dbf0dd 6.25%, #d8f1e0 12.5%, #d5f1e3 18.75%, #d3f2e6 25%, #d1f2e9 31.25%, #cff2ec 37.5%, #cef2ef 43.75%, #cdf2f2 50%, #cdf2f5 56.25%, #cdf1f8 62.5%, #cef1fa 68.75%, #cff0fc 75%, #d1f0fe 81.25%, #d3efff 87.5%, #d6eeff 93.75%, #d9edff 100%);*/
+    float:left;
+    border-radius: 12px;
+    /*marin:32px*/
+}
+
+.widget p {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.fecha {
+    font-family: Oswald, Arial;
+    text-align: center;
+    font-size: 1.1em;
+    color: green;
+    /*margin-bottom: 5px;
+    background: rgba(0,0,0,.5);*/
+    background: transparent;
+    padding: 15px;
+    width: 100%;
+}
+
+.reloj {
+    font-family: Oswald, Arial;
+    width: 100%;
+    padding: 5px;
+    font-size: 2em;
+    text-align: center;
+    /*background: rgba(0,0,0,.5);
+    background: transparent;*/
+}
+
+/*.horas {
+    background: black;
+    border-radius: 4px;
+    border-radius: 8px;
+}
+
+.minutos {
+    background: grey;
+    border-radius: 8px;
+}*/
+
+.reloj .caja-segundos {
+    display: inline-block;
+}
+
+.reloj .segundos,
+.reloj .ampm {
+    font-size: 1rem;
+    display: block;
+    color: yellowgreen;/*
+    background: white;
+    border-radius: 2px;*/
+}
+

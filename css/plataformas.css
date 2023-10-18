@@ -1,0 +1,76 @@
+body {
+    background-color: black;
+    font-family: "Sofia", sans-serif;
+}
+
+.container {
+    /*OK*/
+    margin: auto;
+    background-color: black;
+    width: 1000px;
+    height: 600px;
+    padding: 30px;
+}
+
+ul,
+li {
+    /*OK*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.slider {
+    /*OK*/
+    position: relative;
+    width: 1000px;
+    height: 550px;
+}
+
+ul.slider li {
+    /*OK*/
+    position: absolute;
+    left: 10;
+    top: 20;
+    opacity: 0;
+    width: 900px;
+    height: initial;
+    background-color: transparent;
+    transition: opacity .5s;
+}
+
+ul.slider li img {
+    width: 830px;
+    height: 550px;
+    object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+}
+
+ul.slider li:target {
+    opacity: 1;
+}
+
+.menu {
+    text-align: center;
+    margin: 5px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a {
+    color: white;
+    display: inline-block;
+    background-color: black;
+    box-sizing: content-box;
+    font-size: 12px;
+    margin: 6px;
+    border-radius: 8px;
+    border: 8px outset grey;
+    text-decoration: none
+}

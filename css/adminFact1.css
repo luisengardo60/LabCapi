@@ -1,0 +1,166 @@
+body {
+    background: url(../img/pizarra.png) no-repeat center center fixed;
+    background-size: cover;
+    /* background-color: black;*/
+    font-family: "Sofia", sans-serif;
+}
+
+h1 {
+    color: yellow;
+    text-align: center;
+    background-color: transparent;
+}
+
+b {
+    color: lightgreen;
+    font-size: 17px;
+}
+
+#uno {
+    color: black;
+}
+
+p {
+    background-color: transparent;
+    color: lightblue;
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: .5px;
+    border-left-style: solid;
+    text-shadow: 1px 0px 1px darkblue;
+    width: 100%;
+}
+
+.unico {
+    color: black;
+}
+
+a {
+    color: grey;
+    display: inline-block;
+    background-color: black;
+    box-sizing: content-box;
+    font-size: 15px;
+    margin: 2px;
+    border-radius: 4px;
+    border: 8px outset grey;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    transition: .5s;
+}
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    /* border-collapse: collapse;*/
+    border: 3px solid black;
+    width: 100%;
+}
+
+th {
+    border: 2px solid black;
+    padding: 8px;
+    font-size: 21px;
+    text-align: left;
+    color: #ddd;
+}
+
+td {
+    border: 3px solid blue;
+    padding: 8px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: black;
+    /* color #f2f2f2 forma un cuaderno*/
+}
+
+tr {
+    background-color: black;
+    /* color #318aac forma un cuaderno*/
+}
+
+/*tr:hover {
+        background-color: #ddd;
+    }*/
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+/*table {
+    width: 100%;
+}
+
+th {
+    font-size: 22px;
+    padding: 15px;
+    background-color: lightblue;
+    color:darkblue;
+    text-align: center;
+    border: 4px solid blue;
+}
+
+
+
+td {
+    font-size: 18px;
+    background-color: transparent;
+    color: black;
+    font-family:'Lucida grande';
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}*/
+
+button {
+    margin: 0px;
+    font-family: "Sofia", sans-serif;
+}
+
+.boton {
+    color: lightgreen;
+    font-size: 7px;
+    /*  font-weight: 500; */
+    padding: 0.5em 1.2em;
+    background: rgba(21, 74, 248, 0);
+    position: relative;
+    border: 0px solid #318aac;
+    outline: 3px solid;
+    outline-color: rgba(49, 138, 172, 0.4);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.boton:hover {
+    background: blue;
+    color: white;
+    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    border: 2px;
+    transform: rotate(-7deg);
+}
+
+div {
+    background-color: lightblue;
+    width: 600px;
+    border: 10px solid brown;
+    padding: 1px;
+    margin: 2px;
+    text-align: justify;
+}

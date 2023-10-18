@@ -1,0 +1,72 @@
+body {
+    background: url(../img/pantalla_numeros.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Sofia", sans-serif;
+}
+
+.container {
+    margin: auto;
+    background-color: white;
+    width: 950px;
+    height: 400px;
+    padding: 10px;
+}
+
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.slider {
+    position: relative;
+    width: 1800px;
+    height: 80px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 10;
+    top: 20;
+    opacity: 0;
+    width: 900x;
+    height: initial;
+    background-color: lightblue;
+    transition: opacity .5s;
+}
+
+ul.slider li img {
+    width: 800px;
+    height: 590px;
+    object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+}
+
+ul.slider li:target {
+    opacity: 1;
+}
+
+.menu {
+    text-align: center;
+    margin: 40px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a {
+    color: white;
+    display: inline-block;
+    background-color: black;
+    box-sizing: content-box;
+    font-size: 12px;
+    margin: 6px;
+    border-radius: 4px;
+    border: 8px outset grey;
+    text-decoration: none
+}

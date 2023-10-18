@@ -1,0 +1,108 @@
+        body {
+            background-color: blue;
+            margin: 0;/*
+            font-size: 1rem;
+            line-height: 2.6em;*/
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: aqua;
+        }
+
+        header {
+            background: blue;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 1400px;
+        }
+
+        .page-container {
+            max-width: 1200px;
+            margin: 1rem auto;
+        }
+
+        .table-cebra {
+            border: solid 3px brown;
+            border-spacing: 0;
+        }
+
+        .table-cebra thead tr {
+            background-color: blue;
+            color: whitesmoke;
+        }
+
+        .table-cebra th {
+            /*min-width: 0.2rem;
+            padding: 1.2rem;*/
+            text-align: center;
+            font-size: 18px;
+            border: 2px solid brown;
+        }
+
+        .table-cebra td {
+            border-right: 1px solid brown;
+            border-bottom: 1px solid brown;
+            border: 2PX solid brown;
+            min-width: 80px;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .table-cebra th:last-child,
+        .table-cebra td:last-child {
+            border-right: 0;
+        }
+
+        .table-cebra tbody tr {
+            background: white;
+        }
+
+        .table-cebra tbody tr:nth-child(2n) {
+            background: #f2f2f2;
+        }
+
+        .table-cebra tbody tr:hover {
+            background: lightgrey;
+        }
+
+        article {
+            padding-top: 12rem;
+        }
+
+        .sombra1 {
+            text-align: center;
+            color: cyan;
+            text-shadow: 2px -5px 7px #050505;
+            font-size: 40px;
+            font-family: 'Unna', serif;
+                   }
+
+#uno {
+    color: white;
+    font-size: 16px;
+}
+a {
+    color: lightblue;
+    display: inline-block;
+    background-color: black;
+    box-sizing: content-box;
+    font-size: 15px;
+    margin: 4px;
+    border-radius: 4px;
+    border: 5px outset black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: yellow;
+    transition: .5s;
+    text-decoration: none;
+}
+

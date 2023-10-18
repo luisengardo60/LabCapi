@@ -1,0 +1,134 @@
+body {
+  /*background: url(../../Linux-ayudas/img/newcantv1.jpg) no-repeat center center fixed;*/
+  --color-blue-medium: #8fe2e4;
+  --color-purple: #632ce7;
+  --color-gray: #ccc;
+  --color-gray-medium: #f8f9fa;
+  --color-yellow: #fac32c;
+}
+
+/* --- General Style --- */
+a {
+  color: inherit;
+}
+
+h2 {
+  color:#f8f9fa
+}
+/* --- Sections Nav ---*/
+
+.navbar-brand > img {
+  width: 55px;
+} 
+
+.mainNav {
+  color: green;
+}
+
+.navbar-main .active {
+text-decoration: underline wavy var(--color-purple);
+  text-underline-offset: 12px;
+  transition: 2.5s filter;
+}
+
+.navbar-main .nav-link {
+  color: black;
+  font-size: 18px;
+  transition: 1s filter;  
+}
+
+    div.navbar-collapse a:link,
+    div.navbar-collapse a:visited {
+      color: black;
+      background-color: white;
+    }
+
+    div.navbar-collapse a:hover {
+      background-color: blue;
+      color: white;
+      transition: 1s;
+    }
+
+
+    ul.navbar-nav li a:link,
+    ul.navbar-nav li a:visited {
+      text-decoration: none;
+      color: black;
+      background-color: white;
+    }
+  
+    ul.navbar-nav li a:hover {
+      background-color: blue;
+      color: white;
+      transition: 1s;
+    }
+
+
+.container {
+  font-size: 20x; color: black;
+  
+}
+
+
+/* --- Header ---- */
+
+.icons-social-networks > a {
+  size: 2px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: right;
+  transition: 1s filter;
+}
+
+.icons-social-networks > a:hover {
+  filter: opacity(0.5);
+}
+
+.bg-linux {
+  background-color: #023693; 
+}
+.bg-twitter {
+  background-color: #33a9f3;
+}
+.bg-dribbble {
+  background-color: #f1066b;
+}
+
+.photo-frame {
+  font-size: 20px;
+}
+
+.photo-frame::before,
+.photo-frame::after {
+  contain: "";
+  display: block;
+  width: var(--box-size);
+  height: var(--box-size);
+  position:absolute;
+  z-index: -10;
+  animation: turnZ 7s linear alternate-reverse;
+}
+
+.photo-frame::before {
+  --box-size: 3em;
+  background-image: radial-gradient(
+    var(--color-blue-medium) 50%,
+    var(--color-purple) 50%
+  );
+  top: calc(99% - (var(--box-size) / 2 ));
+  right: calc(99% - (var(--box-size ) / 2));
+}
+
+.navbar .nav-item li {
+  color:chocolate
+}
+
+     .sombra1 {
+       color: #C2BFBF;
+       text-shadow: -12px -10px 5px #050505;
+       font-size: 45px;
+       font-family: 'Unna', serif;
+     }

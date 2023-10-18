@@ -1,0 +1,155 @@
+   body {
+       background-image: url(../img/bloques.jpg);
+       background-repeat: repeat;
+       background-position: top;
+       background-attachment: scroll;
+       /*background-color: lightblue;
+       font-family: verdana;
+       color: black;*/
+   }
+
+   h1 {
+    text-align: center;
+   }
+
+
+   .uno {
+       color: grey;
+       display: inline-block;
+       background-color: black;
+       box-sizing: content-box;
+       font-size: 15px;
+       margin: 2px;
+       border-radius: 4px;
+       border: 8px outset grey;
+       text-decoration: none;
+   }
+
+   .uno:hover {
+    color: white;
+    transition: .5s;
+   }
+
+   .dos {
+    font-size: 12   px;
+   }
+
+   .sombra1 {
+       color: blue;
+       text-shadow: 2px -5px 7px #050505;
+       font-size: 40px;
+       font-family: 'Unna', serif;
+   }
+
+   button {
+       color: white;
+       text-align: center;
+       display: inline-block;
+       background-color: black;
+       box-sizing: content-box;
+       font-size: 18px;
+       margin: 5px;
+       border-radius: 5px;
+       border: 8px outset grey;
+       text-decoration: none;
+   }
+
+   button:hover a {
+       color: white;
+       text-decoration: none;
+   }
+
+
+   /*  ul.menuVert1 { list-style: none; text-align: left; text-shadow: 2px 2px 2px 4px red; padding: 0px ; }*/
+
+
+   ul.menuVert1 li {
+       list-style: none;
+       text-align: left;
+       width: 16%;
+       padding: 2px 2px 4px;
+       border: 8px inset black;
+       border-width: 4px 4px 6px;
+       color: black;
+       background-color: transparent;
+       font-size: 18px;
+       float: left;
+   }
+
+   ul.menuVert1 li a:link,
+   ul.menuVert1 li a:visited {
+       text-decoration: none;
+       color: black;
+   }
+
+   ul.menuVert1 li a:hover {
+       background-color: yellow;
+       color: blue;
+       transition: .5s;
+   }
+
+   ul.menuVert2 li {
+       list-style: none;
+       text-align: left;
+       width: 16%;
+       padding: 2px 2px 4px;
+       border: 8px inset black;
+       border-width: 4px 4px 6px;
+       background-color: transparent;
+       color: black;
+       font-size: 18px;
+       float: left;
+   }
+
+   ul.menuVert2 li a:link,
+   ul.menuVert2 li a:visited {
+       text-decoration: none;
+       color: black;
+   }
+
+   ul.menuVert2 li a:hover {
+       background-color: blue;
+       color: white;
+       transition: .5s;
+   }
+
+   ul.menuVert3 li {
+       list-style: none;
+       text-align: left;
+       width: 16%;
+       padding: 2px 2px 4px;
+       border: 8px inset black;
+       border-width: 4px 4px 6px;
+       background-color: transparent;
+       font-size: 18px;
+       float: left;
+   }
+
+   ul.menuVert3 li a:link,
+   ul.menuVert3 li a:visited {
+       text-decoration: none;
+       color: black;
+   }
+
+   ul.menuVert3 li a:hover {
+       background-color: red;
+       color: antiquewhite;
+       transition: .5s;
+   }
+
+   .limpiador {
+       padding: 0;
+       border-style: none;
+       clear: both;
+   }
+
+
+   /* p.dashed {outline-style: dashed;} */
+
+   address {
+       margin-top: 1em;
+       padding-top: 1em;
+       border-top: thin dotted
+   }
+
+ 
