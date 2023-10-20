@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #41a0e2;
+}
+
+.fondo {
+  width: 1270px;
+  padding: 20px;
+  background-color: white;
+  border: 10px solid #ccc;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.usuario {
+  background-color: blue;
+}
+
+.azul {
+  background: blue;
+  color: white;
+}
+
+.azul1 {
+  background-color: #41a0e2;
+ color: white;
+}
+
+.sombra {
+  color: black;
+  text-shadow: -10px -8px 5px #050505;
+  font-size: 30px;
+  font-family: 'Unna', serif;
+  text-align: center;
+}
+
+.sombra1 {
+  color: lightseagreen;
+  text-shadow: -12px -10px 5px #050505;
+  font-size: 25px;
+  font-family: 'Unna', serif;
+  text-align: center;
+}
+
+.sombra2 {
+  color: white;
+  text-shadow: -5px -4px 5px #050505;
+  font-size: 25px;
+  font-family: fantasy;
+  text-align: center;
+
+}
+
+.sombra3 {
+  color: black;
+  text-shadow: -5px -4px 5px #050505;
+  font-size: 30px;
+  font-family: 'serif';
+  text-align: center;
+
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+
+a {
+  color: lightblue;
+  display: inline-block;
+  background-color: black;
+  box-sizing: content-box;
+  font-size: 15px;
+  margin: 4px;
+  border-radius: 4px;
+  border: 5px outset black;
+  text-decoration:none;
+}
+
+a:hover {
+  color: yellow;
+  transition: .5s;
+  text-decoration: none;
+}

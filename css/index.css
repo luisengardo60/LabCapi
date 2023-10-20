@@ -8,20 +8,20 @@
     font-family: 'Popins', sans-serif;
 }
 
-nav.ini, .ini1, .ini2, .ini3, .ini4 {
-     display: inline-block;
+
+div.ini {
+        display: inline-block; padding-left: 0px;
 }
 
-nav.ini5, .ini6, .ini7, .ini8 {
-    display: inline-block;
+div.ini2 {
+        display: inline-block; padding-left: 3px;
 }
-
-nav.ini9 {
-    display: inline-block;
+div.ini3 {
+        padding-left: 7px;
 }
 
 body {
-    min-width: 90vmin;
+    min-width: 100vmin;
     background: url(../img/venezuela9.jpg) no-repeat center center fixed;
     background-size: cover;
 }
@@ -83,7 +83,7 @@ h1 {
 }
 
 .sombra2 {
-    color: cyan;
+    color: white;
     text-shadow: -5px -4px 5px #050505;
     font-size: 25px;
     font-family: Georgia, 'Times New Roman', Times, serif;
