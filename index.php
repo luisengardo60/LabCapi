@@ -24,7 +24,7 @@
 
   </nav><br><br><br>
 
-  <a href="inicio.php"><button class="boton"><b>Entrar</b></button></a>
+  <a href="php/inicio.php"><button class="boton"><b>Entrar</b></button></a>
 
 
 

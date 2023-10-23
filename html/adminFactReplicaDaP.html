@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/newcantv.jpg">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/adminReplicateDaP.css">
+    <title>Slider Integracion Kenan</title>
+</head>
+<body>
+    <div class="container-slider">
+    <a class="dos" href="indexAdminfact.php">Adminfact</a>
+        <div class="slider" id="slider">
+
+            <div class="slider__section"><pre>1.- <b style="color: yellow;">Obtener las Tablas a REPLICAR</b>, desde el correo que envia el grupo de Maigualida, en este caso el ejemplo es con:<br> RATE_RC / RATE_NRC
+            2.- Conectar a la <b style="color: yellow;">BD KP01ADM</b> con el usuario de <b style="color: yellow;">KENAN</b><br>
+            3.- Abrir el <b style="color: yellow;">SCHEMA BROWSER</b>:</pre><img src="../img/Replicate01.png" class="slider__img"></p></div>
+
+            <div class="slider__section"><pre>4.-Ir a <b style="color: yellow;">TRIGGERS:</b></pre><img src="../img/Replicate02.png" class="slider__img"></div>
+
+            <div class="slider__section style="width: 1200rem, height:850rem"><pre>5.-<b>Seleccionar los 4 TRIGGERS con <b style="color: yellow;">RATE_RC:</b></pre><img src="../img/Replicate03.png" class="slider__img"></div>
+
+            <div class="slider__section style="width: 1200rem, height:900rem"><pre>6.- Pulsas boton derecho y pulsas Disable Selected.
+7.- Se va abrir una ventana y debes de seleccionar <b style="color: yellow;">“Drop Storage”</b> y aceptar
+8.- Ir a la opción Tablas y seleccionas La Tabla <b style="color: yellow;">RATE_RC</b> (En este ejecmplo) Le das <b style="color: yellow;">>Boton Derecho</b> y luego le das <b style="color: yellow;">“Truncate table”</b>
+Este procedimiento también aplica desde el <b style="color: yellow;">paso 1</b> para la otra Tabla del ejemplo <b style="color: yellow;">RATE_NRC</b>.<br> Se puede ejecutar en paralelo hasta aca. Desde el <b style="color: yellow;">paso 9</b> en adelante se debe realizar para cada una de las Tablas, es decir:<br><b style="color:yellow">QUERYS, COMMIT Y COMANDOS</b> de Replicates individual por Tabla a Replicar.</pre></pre><img src="../img/Replicate04.png" class="slider__img"></div>
+
+            <div class="slider__section"><pre>9.- Ahora vas a <b style="color: yellow;">SQL EDITOR</b>:</pre>
+                <img src="../img/Replicate05.png" class="slider__img"></div>
+
+            <div class="slider__section"><pre>10.- Ejecutar el siguiente comando: 
+                    <b style="color:yellow">Insert into RATE_RC select * from RATE_RC@kd02adm</b></pre>
+                    <img src="../img/Replicate06.png" class="slider__img"></div>
+
+            <div class="slider__section"><pre>Como el ejemplo es para las 2 TABLAS, Ejecutamos el QUERY ahora para la otra Tabla:<b style="color:yellow">Insert into RATE_NRC select * from RATE_NRC@kd02adm</b>
+Tarda algunos 10 segundos aproximadamente.</pre>
+                    <img src="../img/Replicate07.png" class="slider__img"></div>
+
+            <div class="slider__section"><pre>11.- Darle <b style="color:yellow">COMMIT</b> tiene una flecha roja OP escribes COMMIT y lo ejecutas:</pre>
+                <img src="../img/Replicate08.png" class="slider__img"></div>
+
+            <div class="slider__section"><pre>12.- Ahora te conectas al servidor <b>SRVFT01</b> con el usuario <b>kbpp01</b>
+13.- Ejecutar el comando <b>cd $ARBORBIN</b>
+14.- Ejecutar el comando para replicar:
+    <b style="color: yellow;">./replicate.ksh –Uarbor –Pkenan_hpux_2008 –SYNC –TRATE_RC</b>
+    Contestar con <b style="color: yellow;">“Y” mayuscula</b> a las dos preguntas que realiza y esperar a que termine el Replicate.</b></pre><!--<b class="uno">Adminfact</b><a class="dos" href="indexAdminfact.php">&#10132</a>--><img src="../img/fin.jpg" style="width: 1200px; height: 600px" class="slider__img"></div>
+
+<div class="slider__section"><pre style="color:yellow; font-size:32px; text-align: center"></pre>
+    <img src="../img/replicate_presentacion.PNG" class="slider__img"></div>
+        </div>
+        <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+        <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+    
+    <ul class="menu">
+        <li><a href="#slide1">1</a></li>
+        <li><a href="#slide2">2</a></li>
+        <li><a href="#slide3">3</a></li>
+        <li><a href="#slide4">4</a></li>
+        <li><a href="#slide5">5</a></li>
+        <li><a href="#slide6">6</a></li>
+        <li><a href="#slide7">7</a></li>
+        <li><a href="#slide8">8</a></li>
+        <li><a href="#slide9">9</a></li>
+        <!--<li><a href="indexAdminfact.php">&#10132</a></li>-->
+    </ul>
+    <script src="../js/slider.js"></script>
+    
+  
+
+    <!--<b>Inicio</b><a href="../html/index.html">&#10132</a>
+    <div class="container">
+        <ul class="slider">
+            <li id="slide1">
+                <img src="../img/integracion1.PNG" alt="">
+            </li>
+            <li id="slide2">
+                <img src="../img/crm2.PNG" alt="">
+            </li>
+            <li id="slide3">
+                <img src="../img/crm3.PNG" alt="">
+            </li>
+            <li id="slide4">
+                <img src="../img/crm4.ong.PNG" alt="">
+            <li id="slide5">
+                <img src="../img/crm5.PNG" alt="">
+            <li id="slide6">
+                <img src="../img/crm6.PNG" alt="">
+            <li id="slide7">
+                <img src="../img/crm7.PNG" alt="">
+            <li id="slide8">
+                <a href="#"></a>
+            </li>
+
+        </ul>
+        <ul class="menu">
+            <li><a href="#slide1">1</a></li>
+            <li><a href="#slide2">2</a></li>
+            <li><a href="#slide3">3</a></li>
+            <li><a href="#slide4">4</a></li>
+            <li><a href="#slide5">5</a></li>
+            <li><a href="#slide6">6</a></li>
+            <li><a href="#slide7">7</a></li>
+            <li><a href="../html/index.html">&#10132</a></li>
+        </ul>
+        <script src="../js/slider.js"></script>-->
+    </body>
+
+</html>

@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.A.P.I.</title>
     <!--<link rel="stylesheet" href="../css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/cdnjscloudflareAjax.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">
     <script src="../js/jquery-3.4.1.js"></script>
 </head>
 <!--<body style="background: darkblue;">-->
-<body style="background: url(img/tierra.jpg) no-repeat center center fixed; background-size:cover;">-->
+<body style="background: url(../img/tierra.jpg) no-repeat center center fixed; background-size:cover;">-->
     <header>
-        <img src="img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:left;">
-        <img src="img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:right;">
+        <img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:left;">
+        <img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:right;">
 
     </header>
 
-    <?php include 'titulo/titulo1.html' ?>
+    <?php include '../titulo/titulo1.html' ?>
 
-    <br><br><br><br>
+    
     <div class="ini">
         <a href="indexAdminfact.php"><button class="boton"><b>ADMINFACT</b></button></a>
 
@@ -50,7 +50,7 @@
     </div>
 
 
-        <?php include 'reloj/reloj.html' ?>
+        <?php include '../reloj/reloj1.html' ?>
 
 </body>
 

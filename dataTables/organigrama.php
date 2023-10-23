@@ -7,55 +7,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="../js/jquery-3.4.1.js"></script>
-  <link rel="stylesheet" href="../css/estilos2.css">
+  <link rel="stylesheet" href="../css/estilos.css">
   <link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">
-
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">-->
   <title>Organigrama</title>
-
-  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+ 
 </head>
 
-<body id="body" style="background:grey">
+<body id="body" style="background:lightskyblue;">
 
-  <div class="icon__menu">
-    <i class="fas fa-bars" id="btn_open"></i>
-  </div>
-
-
-  <div class="menu__side" id="menu_side">
-
-    <div class="name__page">
-      <a href="../index.php" title="Inicio" style="color:transparent;">Inicio<img src="../img/menu_inicio6.jpg" style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
+    <div class="icon__menu">
+        <i class="fas fa-bars" id="btn_open"></i>
     </div>
 
-    <a href="#" style="text-decoration: none;">
-      <div class="option">
-      <i title="Servidores" style="font-size:30px; color:white"><h4> Servidores</h4></i>
-  </div>
-  </a>
+    
+    <div class="menu__side" id="menu_side">
 
-  <a href="#">
-    <div class="option">
-      <i class="fas fa-video" title="Cursos"></i>
-      <h4><b>Diapositivas</b></h4>
+        <div class="name__page">
+            <a href="../php/inicio.php" title="Inicio" style="color:transparent;">Inicio<img src="../img/menu_inicio6.jpg" style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
+        </div>
+        <ul>
+        <div class="options__menu">
+        <nav class="sidebar>
+            <li><a href="#">
+                <div class=" option">
+                    <i title="Adminfact" ></i>
+                    <b>Adminfact</b>
+                </div></a></li>
+            <ul class="feat-show">
+
+            <li><a href="../php/indexAdminfact.php">
+                <div class="option">
+                    <i title="Menu Adminfact" style="font-size:18px">&#10146;</i>
+                    <h6><b>Menu Adminfact</b></h6>
+                </div>
+            </a></li></ul>
+
+         <!--   <li><a href="../html/adminFactServidoresAC.html">
+                <div class="option">
+                    <i title="Cursos" style="font-size:18px">&#10146;</i>
+                    <h6><b>Servidores Producción</b></h6>
+                </div>
+            </a></li>
+
+            <li><a href="../html/adminFactSuperDome.html">
+                <div class="option">
+                    <i title="Cursos" style="font-size:18px">&#10146;</i>
+                    <h6><b>Particiones SuperDome</b></h6>
+                </div>
+            </a></li>
+
+            <li><a href="../html/adminFactPassword.html">
+                <div class="option">
+                    <i title="Cursos" style="font-size:18px">&#10146;</i>
+                    <h6><b>Contraseñas Unix</b></h6>
+                </div>
+            </a></li>
+
+            <li><a href="../html/adminfactBdOracle.html">
+                <div class="option">
+                    <i title="Cursos" style="font-size:18px">&#10146;</i>
+                    <h6><b>Base de Datos Oracle</b></h6>
+                </div>
+            </a></li>
+
+            <li><a href="../html/adminFactPuertosReq.html">
+                <div class="option">
+                    <i title="Cursos" style="font-size:18px">&#10146;</i>
+                    <h6><b>Puertos Requeridos</b></h6>
+                </div>
+            </a></li>
+
+            <li><a href="../html/kenan18_ServidoresQA.html">
+                <div class="option">
+                    <i title="Cursos" style="font-size:18px">&#10146;</i>
+                    <h6><b>Servidores QA </b></h6>
+                </div>
+            </a></li>
+
+            <li><a href="../html/adminFactIntegKenan.html">
+                <div class="option">
+                    <i title="Cursos" style="font-size:18px">&#10146;</i>
+                    <h6><b>Diapositivas Kenan</b></h6>
+                </div>
+            </a></li>
+            <li><a href="../html/adminFactIntegracionEdi.html">
+                <div class="option">
+                    <i title="Cursos" style="font-size:18px">&#10146;</i>
+                    <h6><b>Diapositivas EDI</b></h6>
+                </div>
+            </a></li>
+
+            <li><a href="../html/adminFactIntegracionKenan.html">
+                <div class="option">
+                    <i title="Cursos" style="font-size:18px">&#10146;</i>
+                    <h6><b>Diapositivas Integación</b></h6>
+                </div>
+            </a></li>
+
+
+            <li><a href="../html/adminfactChecklistCAPI.html">
+                <div class="option">
+                    <i title="Blog" style="font-size:18px">&#10146;</i>
+                    <h6><b>Check List Aplicativos CAPI</b></h6>
+                </div>
+            </a></li>
+
+            <li><a href="../html/adminfactModuloKenan.html">
+                <div class="option">
+                    <i title="Contacto" style="font-size:18px">&#10146;</i>
+                    <h6><b>Modulo Kenan SAecurity (KUS)</b></h6>
+                </div>
+            </a></li></ul>
+            <ul class="feat-show">
+            <li><a href="#">
+                <div class="option">
+                    <i title="Nosotros"></i>
+                    <h6><b>Facturación</b></h6>
+                </div>
+            </a></li>
+            <li><a href="../html/adminFactciclos.html">
+                <div class="option">
+                    <i title="Nosotros" style="font-size:18px">&#10161;</i>
+                    <h6><b>Ciclos de Facturación</b></h6>
+                </div>
+            </a></li>
+            <li><a href="../html/adminFactConsultar.html">
+                <div class="option">
+                    <i title="Nosotros" style="font-size:18px">&#10161;</i>
+                    <h6><b>Consultar Servicios</b></h6>
+                </div>
+            </a></li>
+            <li><a href="../html/adminFactServicio.html">
+                <div class="option">
+                    <i title="Nosotros" style="font-size:18px">&#10161;</i>
+                    <h6><b>Refrescar Servicios</b></h6>
+                </div>
+            </a></li>
+            <li><a href="../html/adminFactAreasAtencion.html">
+                <div class="option">
+                    <i title="Nosotros" style="font-size:18px">&#10161;</i>
+                    <h6><b>Áreas de atención</b></h6>
+                </div>
+            </a></li>
+            <li><a href="../html/adminFactIncidencias.html">
+                <div class="option">
+                    <i title="Nosotros" style="font-size:18px">&#10161;</i>
+                    <h6><b>Incidencias</b></h6>
+                </div>
+            </a></li>
+            <li><a href="../html/adminFactStatus.html">
+                <div class="option">
+                    <i title="Nosotros" style="font-size:18px">&#10161;</i>
+                    <h6><b>Status</b></h6>
+                </div>
+            </a></l>
+            <li><a href="../html/adminFactDocMenu.html">
+                <div class="option">
+                    <i title="Nosotros" style="font-size:18px">&#10161;</i>
+                    <h6><b>Control-M</b></h6>
+                </div>
+            </a></li>
+            <li><a href="../html/adminFactReplicaDaP.html">
+                <div class="option">
+                    <i title="Nosotros" style="font-size:18px">&#10161;</i>
+                    <h6><b>Replicar Tablas</b></h6>
+                </div>
+            </a><li>
+            <a href="../html/Menu_Main1.html">
+                <div class="option">
+                    <i title="Mainframe"><img src="../img/images.dinosauro.jpg" style="border-radius: 50px; float:right; width: 25px; height: 25px;"></i>
+                    <h6><b>Mainframe</b></h6>
+                </div>
+            </a>-->
+        </div>
+
     </div>
-  </a>
-
-  <a href="#">
-    <div class="option">
-      <i class="far fa-sticky-note" title="Blog"></i>
-      <h4><b>Check List Aplicativos CAPI</b></h4>
-    </div>
-  </a>
-
-  </div>
-
-  </div>
-  <main>
+    <main>
 
     <div class="container fondo">
 
@@ -85,7 +217,7 @@
               <th style="background-color: blue; color:white">Área</th>
               <th style="background-color: blue; color:white">Imagen</th>
               <!--<th>Fecha de Creación</th>-->
-              <th style="background-color: blue; color:white">Editar</th>
+              <th style="background-color: blue; color:white;">Editar</th>
               <th style="background-color: blue; color:white">Borrar</th>
             </tr>
           </thead>
@@ -177,8 +309,8 @@
           </div>
         </div>
       </div>
-
-      <script src="../js/script.js"></script>
+      
+     
 
 
       <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -314,6 +446,8 @@
 
 
   </main>
+
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

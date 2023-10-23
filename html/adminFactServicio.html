@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/newcantv.jpg">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/adminFact.css">
+    <script src="../js/jquery.min.js"></script>
+    <title>Servicio</title>
+</head>
+
+<body>
+    <a href="../html/indexAdminfact.php"><b>Adminfact</b></a>
+    <h1 class="sombra1">Restaurar Servicios</h1>
+    <table class="table table-active table-hover">
+        <thead>
+        <tr>
+        <th>Security Server / Tuxedo / Middleware</th> 
+        <th>Tuxedo </th>
+        <th>Security Server</th>   
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="table-info">
+        <td>Servidor srvft01 / Usuario kbpp01<br>
+        srvft01 23: pwd<br>
+        /appl/kbpp01<br>
+        srvft01 24: cd utils/Menu<br>Al finalizar las restauraciones,<br> consultar el status de cada uno de los servicios<br><b>Status<br>
+        srvft01 24: menuini.sh</b><br>
+        <b>Menu Principal</b><br>
+        Opción 1.- Security Server<br>
+        <b>Sub-Menu</b><br>
+        3.- Check process Security server<br>
+        <b>Security Server</b><br>Check Process S.S ....<br>
+        Los procesos de KenanFX estan arriba y OK<br>
+        
+        Finalizo proceso, pulse Return ....<br>
+        <b>Menu Principal</b><br>
+        Opción 5.- Verificar procesos Middleware<br>
+    <b>Tuxedo / Middleware</b><br>Chequeando Total de procesos Activos (Middleware) ....<br>
+    
+    
+    Total de procesos activos (Middleware) : 112 TODO OK!<br>
+    
+    Finalizo Proceso, pulse Return ....</td>
+        <td><b>srvft01 38: menuini.sh</b><br><br>
+            <b>Bajar y subir servicios Tuxedo</b><br>
+            Coord. Operaciones de Plataforma<br>
+            Gcia. Ingenieria de Soluciones<br>
+            GGTecnologia Operaciones Telecom. Fijas<br>
+            Adminfact<br>
+            CANTV<br>
+                
+            Menu Administracion KenanFX V11.7<br>
+            <b>=================================</b><br>
+        
+        
+            1 .- Security Server<br>
+        
+            2 .- DataBlitz(Se Necesita Xterm)<br>
+        
+         <b>3 .- Tuxedo</b><br>
+        
+            4 .- Recrear Politicas Seguridad KenanFx<br>
+        
+            5 .- Verificar procesos Middleware<br>
+        
+            0 .- para Terminar ....<br>
+        
+        
+            <b>Elija el Nro. de su opcion seguido de Return :</b><br>
+        
+        
+           <b>Opción 3.- Tuxedo</b><br>
+        <b>Sub-Menu</b><br>
+        1 .- Down Middleware (TMSHUTDOWN)<br>
+        2 .- Up Middleware (TMBOOT) & J2EE<br>
+        </td>
+        <td>
+            <b>srvft01 38: menuini.sh</b><br><br>
+            <b>Bajar y subir servicios Security Server</b><br>
+            Coord. Operaciones de Plataforma<br>
+            Gcia. Ingenieria de Soluciones<br>
+            GGTecnologia Operaciones Telecom. Fijas<br>
+            Adminfact<br>
+            CANTV<br>
+            
+            
+            
+            
+            Menu Administracion KenanFX V11.7<br>
+            <b>=================================</b><br>
+            
+            
+         <b>1 .- Security Server</b><br>
+            
+            2 .- DataBlitz(Se Necesita Xterm)<br>
+            
+            3 .- Tuxedo<br>
+            
+            4 .- Recrear Politicas Seguridad KenanFx<br>
+            
+            5 .- Verificar procesos Middleware<br>
+            
+            0 .- para Terminar ....<br>
+            
+            
+            <b>Elija el Nro. de su opcion seguido de Return :</b><br>
+            
+            <b>Opción 1.- Security Server</b><br>
+            <b>Sub-Menu</b><br>
+            Opción 1.- Up Security Server<br>
+            Opción 2.- Down Security Server<br></td>
+        </tr>
+        </tbody>
+    </table><br><br>
+    <table class="table table-active table-hover">
+        <thead>
+        <tr>
+            <th colspan="6">Instancias de los servidores <br>srvft30 - srvft31</th>
+            <th>Comando</th>
+            <th>Resultado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="table-info">
+            <td>ddfp01</td>
+            <td>ddfp02</td>
+            <td>ddfp03</td>
+            <td>ddfp04</td>
+            <td>ddfp05</td>
+            <td>ddfp06</td>
+            <td>[srvft30]: /appl/ddfp01# sagent stat<br>
+            [srvft30]: /appl/ddfp01# sagent restart<br>
+            [srvft30]: /appl/ddfp01# sagent stop<br>
+            [srvft30]: /appl/ddfp01# sagent start</td>
+            <td>MW-RPC Server is running (PID=20872)<br>
+            DFS Manager is running (PID=21182)<br>
+            DFS is running (PID=21299)<br>
+            REGSS is running (PID=20854)<br>
+            Watchdog is running (PID=20853)<br>
+            [srvft30]:/appl/ddfp01#</td>
+        </tr>
+    </tbody>        
+    </table><br><br>
+       
+    <table class="table table-active table-hover">
+        <thead>
+        <tr>
+        <th>Servidores y LTP</th>
+        <th>script</th>
+        <th>Resultado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="table-info">
+        <td>srvft01 usuario kbpltp<br>
+        srvft01 23: pwd<br>
+        /home/kbpltp<br>
+        Servicios LTP<br>
+        srvft03 ltp01 ltp04 ltp07<br>
+        srvft04 ltp02 ltp05 ltp08<br>
+        srvft05 ltp03 ltp06 ltp09</td>
+        <td>srvft01 22: cd /home/kbpltp<br>
+        srvft01 23: ls<br>    
+        stop_LTP.sh<br>
+        start_LTP.sh<br>
+        stop_start_LTP.sh</td>
+        <td><pre>srvft01 22: ps -fu kbpltp
+        UID PID PPID C STIME TTY TIME COMMAND
+        kbpltp 10910 1 0 May 16 ? 371:18 LTP ltp02 4
+        kbpltp 10940 1 0 May 16 ? 383:04 LTP ltp08 4
+        kbpltp 10918 1 0 May 16 ? 419:27 LTP ltp04 3
+        kbpltp 10908 1 0 May 16 ? 579:37 LTP ltp01 3
+        kbpltp 10929 1 0 May 16 ? 650:03 LTP ltp05 4
+        kbpltp 10938 1 0 May 16 ? 426:02 LTP ltp07 3
+        kbpltp 10935 1 0 May 16 ? 499:45 LTP ltp06 5
+        kbpltp 12211 12209 0 10:28:51 pts/3 0:00 -csh
+        kbpltp 10942 1 0 May 16 ? 351:06 LTP ltp09 5
+        kbpltp 10916 1 0 May 16 ? 556:53 LTP ltp03 5
+        kbpltp 12447 12211 2 10:29:20 pts/3 0:00 ps -fu kbpltp
+        kbpltp 12209 12202 0 10:28:50 ? 0:00 sshd: kbpltp@pts/3
+        srvft01 23:</pre></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="../html/indexAdminfact.php"><b>Adminfact</b></a>
+</body>
+
+</html>

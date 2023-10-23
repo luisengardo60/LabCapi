@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/adminFactServidores.css">
+    <link rel="icon" href="../img/cantvnetci.jpg">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">
+    <!--<link rel="stylesheet" href="css/sidebar0.css">-->
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <title>Servidores de Producción</title>
+</head>
+<body id="body" style="background:lightskyblue;">
+
+    <div class="icon__menu">
+        <i class="fas fa-bars" id="btn_open"></i>
+    </div>
+
+    
+    <div class="menu__side" id="menu_side">
+
+        <div class="name__page">
+            <a href="../php/inicio.php" title="Inicio" style="color:transparent;">Inicio<img src="../img/menu_inicio6.jpg" style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
+        </div>
+        <ul>
+        <div class="options__menu">
+        <nav class="sidebar>
+            <li><a href="#">
+                <div class=" option">
+                    <i title="Admoinfact" ></i>
+                    <b>Adminfact</b>
+                </div></a></li>
+            <ul class="feat-show">
+
+            <li><a href="../php/indexAdminfact.php">
+                <div class="option">
+                    <i title="Menu Adminfact" style="font-size:18px;">&#10146;</i>
+                    <h6><b>Menu Adminfact</b></h6>
+                </div>
+            </a></li></ul>
+           
+        </div>
+    </div>
+    <main>
+        <br><br>
+    <!--<a href="indexAdminfact.php">Adminfact</a>
+    <a href="adminFactMenuServidores.html">Menu Servidores</a>-->
+    <a href="https://docs.google.com/spreadsheets/d/15Fmkb99vcLrG86ILcvki4MVw7xsUcBe5nuolUmZTKrM/edit#gid=209119085" target="_blank">Excel</a>
+        <h1 class="sombra2">Servidores de Producción</h1> 
+        
+    <table class="table-cebra">
+                                   
+        <thead>
+        <tr>
+            <th>Aplicación</th>
+            <th>Ambiente</th>
+            <th>Nombre</th=>
+            <th>Dirección IP</th>
+            <th>Modelo Servidor</th>
+            <th>CPUs</th>
+            <th>Modelo CPU</th>
+            <th>Núcleos CPU</th>
+            <th>Velocidad CPUs (Mhz)</th>
+            <th>Memoria (GB)</th=>
+            <th>Módulos Memoria</th>
+            <th>Aplicativo</th>
+            <th>Base de datos</th>
+            <th>Control<br>M</thyle=>
+            <th></th>
+        </tr>
+        
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>KDM</td>
+            <td>Producción</td>
+            <td>SRVFT20</td>
+            <td>161.196.11.181</td>
+            <td>SuperDome SD32</td>
+            <td>4</td>
+            <td>PA-8800</td>
+            <td>8</td>
+            <td>1000</td>
+            <td>12</td>
+            <td>8 x 1024 MB<br>
+            8 x 512 MB</td>
+            <td>X</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>KDM</td>
+            <td>Desarrollo y Calidad</td>
+            <td>SRVFT25</td>
+            <td>161.196.189.184</td>
+            <td>rp3440</td>
+            <td>2</td>
+            <td>PA-8800</td>
+            <td>4</td>
+            <td>1000</td>
+            <td>6</td>
+            <td>4 x 1024 MB<br>
+            4 x 512 MB</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Producción</td>
+            <td>SRVFT01</td>
+            <td>161.196.11.138</td>
+            <td>SuperDome SD32</td>
+            <td>20</td>
+            <td>PA-8800</td>
+            <td>40</td>
+            <td>1000</td>
+            <td>60</td>
+            <td>12 x 2048 MB
+            24 x 1024 MB
+            24 x 512 MB</td>
+            <td>X</td>
+            <td></td>
+            <td>X</td>
+            <td>Aplicativo Produccion</td>
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Producción</td>
+            <td>SRVFT02</td>
+            <td>161.196.11.143</td>
+            <td>SuperDome SD32</td>
+            <td>4</td>
+            <td>PA-8800</td>
+            <td>8</td>
+            <td>1000</td>
+            <td>36</td>
+            <td>6 x 2048 MB
+            24 x 1024 MB</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+            <td>Base de Datos Producción</td>
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Producción</td>
+            <td>SRVFT03</td>
+            <td>161.196.11.144</td>
+            <td>SuperDome SD32</td>
+            <td>4</td>
+            <td>PA-8800</td>
+            <td>8</td>
+            <td>1000</td>
+            <td>40</td>
+            <td>40 x 1024 MB</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+            <td>Cus 1 Producción</td>
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Producción</td>
+            <td>SRVFT04</td>
+            <td>161.196.11.145</td>
+            <td>SuperDome SD32</td>
+            <td>4</td>
+            <td>PA-8800</td>
+            <td>8</td>
+            <td>1000</td>
+            <td>40</td>
+            <td>8 x 2048 MB
+            24 x 1024 MB</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+            <td>Cus 2 Producción</td>
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Producción</td>
+            <td>SRVFT05</td>
+            <td>161.196.11.146</td>
+            <td>SuperDome SD32</td>
+            <td>4</td>
+            <td>PA-8800</td>
+            <td>8</td>
+            <td>1000</td>
+            <td>40</td>
+            <td>8 x 2048 MB
+            24 x 1024 MB</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+            <td>Cus 3 Producción</td>
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Pruebas (Técnico)</td>
+            <td>SRVFT11</td>
+            <td>161.196.189.233</td>
+            <td>rp4440</td>
+            <td>1</td>
+            <td>PA-8800</td>
+            <td>2</td>
+            <td>1000</td>
+            <td>2</td>
+            <td>8 x 256 MB</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+            <td>Todo en el mismo servidor</td>
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Desarrollo (Configuración Técnica)</td>
+            <td>SRVFT12</td>
+            <td>161.196.189.235</td>
+            <td>rp4440</td>
+            <td>3</td>
+            <td>PA-8800</td>
+            <td>6</td>
+            <td>1000</td>
+            <td>20</td>
+            <td>8 x 2048 MB<br>
+            8 x 512 MB</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+            <td>Todo en el mismo servidor</td>
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Desarrollo (Continuidad Operativa)</td>
+            <td>SRVFT13</td>
+            <td>161.196.189.236</td>
+            <td>rp4440</td>
+            <td>2</td>
+            <td>PA-8800</td>
+            <td>4</td>
+            <td>1000</td>
+            <td>22</td>
+            <td>8 x 2048 MB<br>
+            4 x 1024 MB<br>
+            4 x 512 MB</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+            <td>Todo en el mismo servidor</td>
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Recuperación (Archiving)</td>
+            <td>SRVFT14</td>
+            <td>161.196.189.239</td>
+            <td>rp4440</td>
+            <td>2</td>
+            <td>PA-8800</td>
+            <td>4</td>
+            <td>1000</td>
+            <td>14</td>
+            <td>4 x 2048 MB
+            12 x 512 MB</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+            <td>Todo en el mismo servidor</td>            
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Pruebas (Continuidad Operativa)</td>
+            <td>SRVFT15</td>
+            <td>161.196.189.189</td>
+            <td>rp4440</td>
+            <td>4</td>
+            <td>PA-8800</td>
+            <td>8</td>
+            <td>1000</td>
+            <td>14</td>
+            <td>12 x 1024 MB
+            4 x 512 MB</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Kenan</td>
+            <td>Réplica Kenan</td>
+            <td>SRVFT50</td>
+            <td>161.196.109.218</td>
+            <td>SuperDome SD32</td>
+            <td>8</td>
+            <td>PA-8800</td>
+            <td>16</td>
+            <td>1000</td>
+            <td>56</td>
+            <td>24 x 2048 MB
+            16 x 512 MB</td>
+            <td>X</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>kenan</td>
+            <td>Calidad y Pruebas</td>
+            <td>SRVFT51</td>
+            <td>161.196.11.198</td>
+            <td>SuperDome SD32</td>
+            <td>12</td>
+            <td>PA-8800</td>
+            <td></td>
+            <td>1000</td>
+            <td>36</td>
+            <td>32 x 1024 MB
+            8 x 512 MB</td>
+            <td>X</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Data Flow / Generate</td>
+            <td>Producción</td>
+            <td>SRVFT30</td>
+            <td>161.196.11.194</td>
+            <td>SuperDome SD32</td>
+            <td>6</td>
+            <td>PA-8800</td>
+            <td>12</td>
+            <td>1000</td>
+            <td>20</td>
+            <td>8 x 2048 MB<br>
+            8 x 512 MB</td>
+            <td>X</td>
+            <td></td>
+            <td>X</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Data Flow</td>
+            <td>Producción</td>
+            <td>SRVFT31</td>
+            <td>161.196.11.195</td>
+            <td>SuperDome SD32</td>
+            <td>4</td>
+            <td>PA-8800</td>
+            <td>8</td>
+            <td>1000</td>
+            <td>20</td>
+            <td>4 x 2048 MB
+            12 x 1024 MB</td>
+            <td>X</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Data Flow / Generate</td>
+            <td>Desarrollo (Continuidad Operativa)</td>
+            <td>SRVFT36</td>
+            <td>161.196.189.234</td>
+            <td>rp4440</td>
+            <td>1</td>
+            <td>PA-8800</td>
+            <td>2</td>
+            <td>1500</td>
+            <td>2</td>
+            <td>8 x 256 MB</td>
+            <td>X</td>
+            <td>X</td>
+            <td></td>
+            <td></td>
+
+        </tr>
+    </tbody>    
+    </table>
+    </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
