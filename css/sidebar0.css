@@ -98,12 +98,14 @@ content: '\f00d';
   left: -250px;
   background: #042331;
   transition: left 0.4s ease;
+  text-decoration: none;
 }
 
 .sidebar.show{
   left: 0px;
   right: 1px;
   overflow:scroll;
+  text-decoration: none;
 }
 
 .sidebar .text{
@@ -114,6 +116,7 @@ content: '\f00d';
   text-align: center;
   background: #042331;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 
 .serv-show {
@@ -125,6 +128,7 @@ nav ul{
   height: 100%;
   width: 100%;
   list-style: none;
+  text-decoration: none;
 }
 
 nav ul li{
@@ -162,49 +166,58 @@ nav ul li a{ /*Adminfact Plataformas Facturación Mainframe*/
 }
 
 nav ul li.active a{
-  color:cyan;
+  color:blue;
   background: grey;
   border-left-color: yellow;
+  text-decoration: none;
 }
 
 nav ul ul{
   position: static;
   display: none;
+  text-decoration: none;
 }
 
 nav ul .feat-show.show{
   display: block;
+  text-decoration: none;
 }
 
 nav ul .serv-show.show1{
   display: block;
+  text-decoration: none;
 }
 
 nav ul .serv-show.show2{
   display: block;
+  text-decoration: none;
 }
 
 
 nav ul ul li{
   line-height: 42px;
   border-bottom: none;
+  text-decoration: none;
 }
 
 nav ul ul li a{
   font-size: 17px;
   color: #e6e6e6;
   padding-left: 80px;
+  text-decoration: none;
 }
 
 nav ul li.active ul li a{
   color: #e6e6e6;
   background: #1b1b1b;
   border-left-color: transparent;
+  text-decoration: none;
 }
 
 nav ul ul li a:hover{
   color: cyan!important;
   border-left-color: #1e1e1e!important;
+  text-decoration: none;
 }
 
 nav ul li a span{
@@ -214,10 +227,12 @@ nav ul li a span{
   transform: translateY(-50%);
   font-size: 22px;
   transition: transform 0.4s;
+  text-decoration: none;
 }
  
 nav ul li a span.rotate{
   transform: translateY(-50%) rotate(-180deg);
+  text-decoration: none;
 }
 
 .icons-social-networks>a:hover {

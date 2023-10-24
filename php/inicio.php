@@ -12,10 +12,10 @@
     <script src="../js/jquery-3.4.1.js"></script>
 </head>
 <!--<body style="background: darkblue;">-->
-<body style="background: url(../img/tierra.jpg) no-repeat center center fixed; background-size:cover;">-->
+<!--<body style="background: url(../img/tierra.jpg) no-repeat center center fixed; background-size:cover;">-->
     <header>
-        <img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:left;">
-        <img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:right;">
+        <!--<img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:left;">
+        <img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:right;">-->
 
     </header>
 
@@ -26,27 +26,27 @@
         <a href="indexAdminfact.php"><button class="boton"><b>ADMINFACT</b></button></a>
 
 
-        <a href="html/indexAdminBasis.php"><button class="boton"><b>ADMINBASIS</b></button></a>
+        <a href="indexAdminBasis.php"><button class="boton"><b>ADMINBASIS</b></button></a>
 
-        <a href="html/indexAdminCrm.php"><button class="boton"><b>ADMINCRM</b></button></a>
+        <a href="indexAdminCrm.php"><button class="boton"><b>ADMINCRM</b></button></a>
 
-        <a href="html/indexAdminEdi.php"><button class="boton"><b>ADMINEDI</b></button></a>
+        <a href="indexAdminEdi.php"><button class="boton"><b>ADMINEDI</b></button></a>
 
-        <a href="html/indexProyectos.php"><button class="boton"><b>PROYECTOS</b></button></a>
+        <a href="indexProyectos.php"><button class="boton"><b>PROYECTOS</b></button></a>
     </div>
 
 
     <div class="ini2">
-        <a href="html/indexRecaudacion.php"><button class="boton"><b>FACTURACIÓN</b></button></a>
+        <a href="indexRecaudacion.php"><button class="boton"><b>FACTURACIÓN</b></button></a>
 
-        <a href="html/indexEmpresarial.php"><button class="boton"><b>EMPRESARIAL</b></button></a>
+        <a href="indexEmpresarial.php"><button class="boton"><b>EMPRESARIAL</b></button></a>
 
-        <a href="html/indexAprovision.php"><button class="boton"><b>APROVISIONAMIENTO</b></button></a>
-        <a href="html/indexTecnologia.php"><button class="boton"><b>TECNOLOGÌA</b></button></a>
+        <a href="indexAprovision.php"><button class="boton"><b>APROVISIONAMIENTO</b></button></a>
+        <a href="indexTecnologia.php"><button class="boton"><b>TECNOLOGÌA</b></button></a>
     </div>
 
     <div class="ini3">
-        <a href="http://www.google.com.ve"><button class="boton"><b style="color:darkblue">SALIR</b></button></a>
+        <a href="http://www.google.com.ve"><button class="boton"><b>SALIR</b></button></a>
     </div>
 
 

@@ -82,6 +82,7 @@ main{
 .name__page i{
     width: 20px;
     margin-right: 20px;
+    text-decoration: none;
 }
 
 .options__menu{
@@ -113,6 +114,7 @@ main{
     width: 20px;
     margin-right: 20px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .options__menu .option h4{
@@ -230,6 +232,7 @@ a.selected{
     color:cyan;
     background: grey;
     border-left-color: yellow;
+    text-decoration: none;
   }
   
   nav ul ul{
@@ -253,23 +256,27 @@ a.selected{
   nav ul ul li{
     line-height: 42px;
     border-bottom: none;
+    text-decoration: none;
   }
   
   nav ul ul li a{
     font-size: 17px;
     color: #e6e6e6;
     padding-left: 80px;
+    text-decoration: none;
   }
   
   nav ul li.active ul li a{
     color: #e6e6e6;
     background: #1b1b1b;
     border-left-color: transparent;
+    text-decoration: none;
   }
   
   nav ul ul li a:hover{
     color: cyan!important;
     border-left-color: #1e1e1e!important;
+    text-decoration: none;
   }
   
   nav ul li a span{
@@ -279,10 +286,12 @@ a.selected{
     transform: translateY(-50%);
     font-size: 22px;
     transition: transform 0.4s;
+    text-decoration: none;
   }
    
   nav ul li a span.rotate{
     transform: translateY(-50%) rotate(-180deg);
+    text-decoration: none;
   }
 
 .sombra {
@@ -346,15 +355,15 @@ text-align: center;
 }
         
 td {
-border: 3px solid blue;
+border: 3px solid grey;
 padding: 8px; font-size: 16px;
-text-align: left; color: darkblue;
+text-align: center; color: black;
 }
 
 tr {
-background-color: #318aac; text-align: center;
+background-color: white; text-align: center;
 }
         
 tr:nth-child(even) {
-    background-color: black; 
+    background-color: lightgray; 
 }

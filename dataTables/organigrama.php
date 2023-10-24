@@ -15,44 +15,40 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
   <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">-->
   <title>Organigrama</title>
- 
+
 </head>
 
 <body id="body" style="background:lightskyblue;">
 
-    <div class="icon__menu">
-        <i class="fas fa-bars" id="btn_open"></i>
+  <div class="icon__menu">
+    <i class="fas fa-bars" id="btn_open"></i>
+  </div>
+
+
+  <div class="menu__side" id="menu_side">
+
+    <div class="name__page">
+      <a href="../php/inicio.php" title="Inicio" style="color:transparent;">Inicio<img src="../img/menu_inicio6.jpg" style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
     </div>
-
-    
-    <div class="menu__side" id="menu_side">
-
-        <div class="name__page">
-            <a href="../php/inicio.php" title="Inicio" style="color:transparent;">Inicio<img src="../img/menu_inicio6.jpg" style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
-        </div>
-        <ul>
-        <div class="options__menu">
+    <ul>
+      <div class="options__menu">
         <nav class="sidebar>
-            <li><a href="#">
-                <div class=" option">
-                    <i title="Adminfact" ></i>
-                    <b>Adminfact</b>
-                </div></a></li>
-            <ul class="feat-show">
+            <li><a href=" #">
+          <div class=" option">
+            <i title="Adminfact"></i>
+            <b>Adminfact</b>
+          </div></a></li>
+          <ul class="feat-show">
 
             <li><a href="../php/indexAdminfact.php">
                 <div class="option">
-                    <i title="Menu Adminfact" style="font-size:18px">&#10146;</i>
-                    <h6><b>Menu Adminfact</b></h6>
+                  <i title="Menu Adminfact" style="font-size:18px">&#10146;</i>
+                  <h6><b>Menu Adminfact</b></h6>
                 </div>
-            </a></li></ul>
+              </a></li>
+          </ul>
 
-         <!--   <li><a href="../html/adminFactServidoresAC.html">
-                <div class="option">
-                    <i title="Cursos" style="font-size:18px">&#10146;</i>
-                    <h6><b>Servidores Producción</b></h6>
-                </div>
-            </a></li>
+          <!--
 
             <li><a href="../html/adminFactSuperDome.html">
                 <div class="option">
@@ -184,10 +180,10 @@
                     <h6><b>Mainframe</b></h6>
                 </div>
             </a>-->
-        </div>
+      </div>
 
-    </div>
-    <main>
+  </div>
+  <main>
 
     <div class="container fondo">
 
@@ -309,8 +305,8 @@
           </div>
         </div>
       </div>
-      
-     
+
+
 
 
       <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
