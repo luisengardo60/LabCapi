@@ -33,32 +33,36 @@ button {
 
 .boton {
     background-color: transparent;
-    color: white;
+    color: cyan;
     margin: 1em;
-    transition: .5s;
     font-size: 14px;
     box-sizing: content-box;
     border-radius: 5%;
     width: 152px;
-    height: 90px;
+    height: 100px;
     border: 4px outset cyan;
 }
 
 
 .boton:hover {
     /*text-shadow: 5 2 4px;*/
-    color: cyan;
+    color: transparent;
    /* padding: 0.5em 0.7em;*/
-    background-color: transparent;
     box-sizing: content-box;
     font-size: 14px;
     margin: 1em;
-    border-radius: 50%;
+    border-radius: 5%;
     width: 152px;
-    height: 90px;
+    height: 100px;
     border: 4px inset lightgrey;
-   /* transform: rotate(-12deg);*/
     font-family: "Sofia", sans-serif;
+    transform: rotatey(360deg);
+    transition: 2s ease-in-out;
+    background: url(../img/venezuela8.jpg) no-repeat center center fixed;
+    background-size: cover;
+   /* transform: scaley(1);*/
+
+ 
 }
 
 
