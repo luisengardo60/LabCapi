@@ -7,16 +7,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/linux.jpeg">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/adminFactOracle.css">
-    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <!--<link rel="styleshhet" href="../css/sidebar0.css">-->
+    <link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <title>Puertos Requeridos</title>
 </head>
+<body id="body" style="background:lightskyblue;">
+    <div class="icon__menu">
+        <i class="fas fa-bars" id="btn_open"></i>
+    </div>
 
-<body>
-    <header>
-        <a href="indexAdminfact.php">Inicio</a>
-        <a href="adminFactMenuServidores.html">Menu Servidores</a>
-        <h1>Puertos Requeridos</h1>
+    <div class="menu__side" id="menu_side">
+
+        <div class="name__page">
+            <a href="../php/inicio.php" title="Inicio" style="color:transparent;">Inicio<img
+                    src="../img/menu_inicio6.jpg"
+                    style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
+        </div>
+        <ul>
+            <div class="options__menu">
+
+                <nav class="sidebar>
+                
+                <li><a href=" #">
+                    <div class=" option">
+                        <i title="Admoinfact"></i>
+                        <b>Adminfact</b>
+                    </div></a></li>
+                    <ul class="feat-show">
+
+                        <li><a href="../php/indexAdminfact.php" style="text-decoration: none;">
+                                <div class="option">
+                                    <i title="Menu Adminfact" style="font-size:18px;"></i>
+                                    <h6><b>Menu Adminfact</b></h6>
+                                </div>
+                            </a></li>
+
+                        <li><a href="../html/adminFactServidores.html" style="text-decoration: none;">
+                                <div class="option">
+                                    <i title="Menu Adminfact" style="font-size:18px;"></i>
+                                    <h6><b>Servidores VLAN</b></h6>
+                                </div>
+                            </a></li>
+
+                        <li><a href="../html/adminFactServidoresAC.html">
+                                <div class="option">
+                                    <i title="Cursos" style="font-size:18px"></i>
+                                    <h6><b>Servidores Producción</b></h6>
+                                </div>
+                            </a></li>
+                        <li><a href="../html/adminFactSuperDome.html">
+                                <div class="option">
+                                    <i title="Cursos" style="font-size:18px"></i>
+                                    <h6><b>Particiones SuperDome</b></h6>
+                                </div>
+                            </a></li>
+                        <li><a href="../html/adminFactPassword.html">
+                                <div class="option">
+                                    <i title="Cursos" style="font-size:18px"></i>
+                                    <h6><b>Contraseñas Unix</b></h6>
+                                </div>
+                            </a></li>
+
+                        <li><a href="../html/adminfactBdOracle.html">
+                                <div class="option">
+                                    <i title="Cursos" style="font-size:18px"></i>
+                                    <h6><b>Base de Datos Oracle</b></h6>
+                                </div>
+                            </a></li>
+
+                        <li><a href="../html/kenan18_ServidoresQA.html">
+                                <div class="option">
+                                    <i title="Cursos" style="font-size:18px"></i>
+                                    <h6><b>Servidores QA </b></h6>
+                                </div>
+                            </a></li>
+                    </ul>
+
+
+            </div>
+    </div>
+    <main><br>
+
+
+        <h1 class="sombra4">Puertos Requeridos</h1>
         <table class="table table-success table-hover" style="width: 1528px;">
             <thead>
             <tr>
@@ -28,9 +104,6 @@
             </tr>
             </thead>
         </table>
-    </header>
-    <section>
-        <article>
             <table class="table table-success table-hover" style="width: 1528px;">
                 <tbody>
                 <tr>
@@ -414,9 +487,7 @@
             </tbody>        
 
             </table>
-        </article>
-    </section>
-
+<script src="../js/script.js"></script>
 </body>
 
 </html>

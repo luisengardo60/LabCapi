@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Simbolos
+     &#10146; flechja a la izquierda -->
 
 <head>
     <meta charset="UTF-8">
@@ -7,30 +9,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.A.P.I.</title>
     <script src="js/jquery-3.4.1.js"></script>
-    <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/sidebar0.css">
-    <link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">
-    <!--<link rel="stylesheet" href="css/sidebar0.css">-->
+    <link rel="stylesheet" href="../css/estilo1.css">
+    <!--<link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">-->
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="body">
 
-    <div class="icon__menu">
-        <i class="fas fa-bars" id="btn_open"></i>
-    </div>
-
+        <div class="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+    
     <nav class="sidebar">
         <div class="menu__side" id="menu_side">
             <ul>
-                <li><a href="inicio.php"><img src="../img/menu_inicio6.jpg" alt="C.A.P.I" style="padding-left:5x;padding-right:1px;padding-top: 1px; border-radius: 50px; float:center; width: 80px; height: 80px; background-color:green"></a></li>
-                <li><a href="#" class="feat-btn">Adminfact<br>Fritne Blanco<span class="first">&#x021D3; </span></a>
+                <li><a href="inicio.php"><img src="../img/menu_inicio6.jpg" title="C.A.P.I" style="padding-left:5x;padding-right:1px;padding-top: 1px; border-radius: 50px; float:center; width: 80px; height: 80px;"></a></li>
+                <li><a href="#" class="feat-btn">Adminfact<br>José Enrique Gonzalez<span class="first">&#x021D3; </span></a>
                     <ul class="feat-show">
-                        <li><a href="../dataTables/organigrama.php">&#10146; Organigrama</a></li>
-                        <li><a href="../html/adminFactServidores.html">&#10146; Servidores</a></li>
-                        <li><a href="../html/adminFactGraficos.html">&#10146; Diapositivas</a></li>
-                        <li><a href="../html/adminfactChecklistCAPI.html">&#10146; CheckList aplicativos CAPI</a></li>
-                        <li><a href="../html/adminFactModuloKenan.html">&#10146; Módulo Kenan User Security (KUS)</a></li>
+                        <li><a href="../dataTables/organigrama.php"> Organigrama</a></li>
+                        <li><a href="../html/adminFactServidores.html"> Servidores VLAN</a></li>
+                        <li><a href="../html/adminFactGraficos.html"> Diapositivas</a></li>
+                        <li><a href="../html/adminfactChecklistCAPI.html"> CheckList aplicativos CAPI</a></li>
+                        <li><a href="../html/adminFactModuloKenan.html"> Módulo Kenan User Security (KUS)</a></li>
                     </ul>
                 </li>
                 <li><a href="#" class="serv-btn">Facturación<span class="second">&#x021D3;</span></a>

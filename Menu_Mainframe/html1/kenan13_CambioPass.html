@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>GGTO</title>
+		<link rel="stylesheet" href="../../Menu_Mainframe/css/miestilo.css" type/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../../Menu_Mainframe/img/images.dinosauro.jpg";>
+		<img src="../../Menu_Mainframe\img/notebook-background.jpg" alt="../../Menu_Mainframe\img\notebook-background.jpg" style="float:right ;width:60px;height:60px;">
+		<h3>Gerencia Sistemas Gestión Empresarial<br>                   
+			Normas y procedimentos para el usuario de Ambiente</h3>
+		<hr/>	
+	</head>
+
+<body>
+
+	<ul>
+		<!--<ul class="navbar">-->
+ 	 	<li><a href="../../Menu_Mainframe\Index_Gcc.html"><b>Ir al Menu&#769 Principal</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\menu_Main1.html"><b>Ir al menu&#769 Ambientes</a></b>
+  		</ul>
+
+	<marquee bgcolor="#006699" behavior="alternate" direction="right"><p style="font-size: 5px"; style="text-align:center";><span class='sombra1'><ins>Cambio de Password pass.bat</ins></span></p></marquee>
+	<p> Cuando estamos consultando una cuenta Kenan con la herramienta de Ronald, puede ocurrir que se detanga y veras un recuadro que te indica que el password expiro, esto ocurre aproximadamente cada 30 di&#769as, proceder con los siguientas pasos:</p> 
+	<p><b>1.-</b>Buscar la carpeta <b>Consultas/Pruebas</b> en el disco C de tu&#769 PC</b>.</p>
+	<hr />
+
+<p><b>2.-</b> Buscar el archvo <b>pass.bat</b> Editarlo y observaras lo siguiente:</p>
+<pre><b>set passw05=ambi_pf84</b> Cambiar ambi_pf84 por <b><mark>ambi_pf85</mark></b> solo incrementar en uno
+<b>set user05=amb05</b>                  No cambiar<br>
+<b>::set passint=ARBOR-,#ago12</b>  No cambiar<br> 
+<b>:: paint =ambi_pf29</b> No cambiar<br> 
+<b>:: viejo pass de arbor Kenan_HPUX_2008</b> No cambiar<br></pre>
+<hr />
+
+<p><b>3.-</b> Abrir <b>TOAD</b> y entrar a las Base de Datos KP01CUS1, KP01CUS2, KP01CUS3, KP01ADM, KP01CAT y KP01INT con el ususario <b>arbor</b> y  escribiremos la siguiente instruccio&#769n en cada uno de ellos:</p>
+
+<pre><b>Desbloquear usuario</b></pre>
+<pre><b>ALTER USER amb05 ACCOUNT UNLOCK;</b></pre>
+
+<pre><b>Cambiar password</b></pre>	
+<pre><b>alter user amb05 identified by ambi_pf85</b><br> ver siguiente ejemplo:</pre><br>
+<img src="../../Menu_Mainframe\img_kenan\CambioPass.jpg" style="float:left ;width:800px;height:250px;"><br clear="both"></br>
+<p>Una vez culminado el paso anterior procederemos nuevamente a usar la herramienta de Ronald y le comunicaremos al resto de nuestros compa&#241eros<br>
+que por favor realicen el cambio en sus respectivas carpetas <b>C:Consultas/Pruebas</b> y en <b>pass.bat</b> efectuar el cambio que hicimos para nuestro caso:<br>
+Cambiar ambi_pf84 por <b><mark>ambi_pf85</mark></b>
+<hr />
+
+	
+<mark><b>Fin del proceso</b></p></mark>
+<a href="#"><img src="../../Menu_Mainframe/img_kenan/Arrow_top.jpg" title="Ir" style="width:40px;height:50px;position: fixed; bottom: 2px; right: 1%;"/></a>
+</body>
+</html>

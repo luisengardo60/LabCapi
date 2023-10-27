@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login Usuarios de Pruebas</title>
+<link rel="stylesheet" href="../css/miestilo1.css">                        
+<link rel="shortcut icon" type="image/x-icon" href="../img/images.dinosauro.jpg">
+<script src="../js/bloomfilter.js" type="text/javascript"></script>
+<img src="../img/Cabecera_cantv_new.JPG" style="float:left;width:100%">
+<!--<img src="img_kenan\cabezal_bolivariano200v3.jpg" style="float:left;width:1270px;height:70px;">-->
+<p id="para1">
+    <br>
+    <br>
+    <br>  
+    <b>Coordinación Soporte Te&#769cnico Ambientes de Pruebas</b><br>
+    <b>Gerencia Gestio&#769n de Soluciones TI</b><br>
+    <b>Gerencia Sistemas</b></br>
+    <b>Gerencia General Tecnologi&#769a y Operaciones</b></p>
+<!--<img src="https://portalmc.cantv.com.ve/cabecera_gobenlinea.gif" style="float:center;width:1100px;height:50px;">-->
+</head>
+<body>       
+    <!--<left><embed mode="transparent" src="http://www.poodwaddle.com/clock10" width="220" height="220" type="application/x-shockwave-flash" bgcolor="#FFFFFF" /></left></embed>
+    <div style="text-align:left;width:420px;height:100px;padding:1em;"><a style="text-decoration:none;" href="http://www.zeitverschiebung.net/es/city/3646738"></div>>-->
+    <iframe src="http://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&timezone=America%2FCaracas" width="80%" height="148" frameborder="0" seamless></iframe>
+    
+    <p style="color:black;font-size:22px;text-align:center;"><b>C.A.N.T.V. Caracas, Venezuela</p></b>
+    <p id="para1" style="font-size:30px;color:black;text-align:center"><b>Manual en Linea - Procedimientos Diarios - Ambientes de Pruebas</b></p>
+    <form style="font-size:15px;text-align:center"; name="login"> 
+     <table style="font-size:25px;text-align:left;width:5px;border:3px";> 
+       <tr> 
+         <th scope="row"><h4 style="font-size:16px;text-align:center";>Usuario</h4></th> 
+         <td><span class="cnt"> 
+           <input name="usuario" type="text" class="Input" value="" size="3"> 
+         </span></td> 
+       </tr> 
+       <tr> 
+         <th height="33" scope="row"><h4 style="font-size:16px;text-align:left";>Clave</h4></th> 
+         <td><span class="cnt"> 
+           <input name="password" type="password" class="Input" value="" size="3"> 
+         </span></td> 
+         <td><span class="cnt"> 
+           <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"></span></td> 
+          <td><input type="reset" name="Borrar" id="Borrar" value="Reset" class="boton"></span></td> 
+       </tr> 
+     </table> 
+</form> 
+<!--<a style="color:black;" target="_blank" href="http://www.google.co.ve/">Ir a Google</a>
+<!-- <a style="color:black;" target="_blank" href="http://www.google.co.ve/">Ir a Google</a>-->
+<script language="JavaScript"> 
+
+  function Login(){
+var done=0; 
+var usuario=document.login.usuario.value; 
+var password=document.login.password.value;
+  
+if (usuario=="lgarci19" && password=="Cantv2022") { window.location="file:Index_Gcc.html"; } 
+  else if (usuario=="mvega1" && password=="Cantv2022") { window.location="file:Index_Gcc.html"; } 
+  else if (usuario=="omarin" && password=="Cantv2022") { window.location="file:Index_Gcc.html"; }
+  else if (usuario=="apere7" && password=="Cantv2022") { window.location="file:Index_Gcc.html"; } 
+  else if (usuario=="crinco" && password=="Cantv2022") { window.location="file:Index_Gcc.html"; }
+  else if (usuario=="jberna" && password=="Cantv2022") { window.location="file:Index_Gcc.html"; }
+  else if (usuario=="atoro03" && password=="Cantv2022") { window.location="file:Index_Gcc.html"; }
+  else if (usuario=="jmarin10" && password=="Cantv2022") { window.location="file:Index_Gcc.html"; }
+  else { alert("Por favor ingrese nuevamente sus Datos.");}  
+
+  endif 
+
+if (usuario=="" && password=="")
+ { 
+window.location="errorpopup.html"; }
+ 
+ }
+ 
+</script> 
+<script language="Javascript"> 
+begin 
+document.oncontextmenu = function(){return false} 
+// End  
+</script>
+</body>
+</html>
+

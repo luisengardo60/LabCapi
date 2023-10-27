@@ -1,0 +1,50 @@
+  body {
+       background-image: none; 
+      <!--background-image: url();-->
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-color: lightblue;
+      font-family: verdana;
+      color: black;}
+     #para1 {color: black; }
+     .colortext {
+    color: grey;
+	}
+
+       {display:none;}
+          ul.menuVert1 { list-style: none; text-align: left; text-shadow: 2px 2px 2px 4px red; padding: 0px ; }
+
+          ul.menuVert1 li {width: 23%; padding: 2px 2px 4px; border: 8px groove blue;  
+                        border-width: 2px 2px 2px ; background-color: #00FFFF; float:left;}
+          ul.menuVert1 li a:link, ul.menuVert1 li a:visited { text-decoration: none; color:black;}  
+          ul.menuVert1 li:hover {background-color: #4169E1;}
+
+          ul.menuVert2{width: 34%; list-style: none;
+      text-align: left; text-shadow: 2px 2px 2px 10px red; padding: 0px;}
+
+        
+    ul.menuVert2 li{padding: 5px 10x 0px; border: groove blue; border-width: 2px 2px 1px ; background-color: #00FFFF; }
+
+    ul.menuVert2 li; last-child{border-bottom: groove blue; border-bottom-width: 4px;}
+    ul.menuVert2 li a:link, ul.menuVert1li a:visited { text-decoration: none; color: #000000; }
+    ul.menuVert2 li:hover{background-color: #FFFF00;} 
+
+          .limpiador{padding:0; border-style:none; clear:both; }
+
+
+      h1, a, b {
+         border: 3px none;
+         outline-style: none; justify-content: right;
+         outline-color: blue; background-color: none;
+       }
+
+      <!-- p.dashed {outline-style: dashed;} -->
+
+
+        
+  address {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted }
+    <!-- background-color: #d8da3d } fondo amarillo verdoso -->

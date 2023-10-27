@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>GGTO</title>
+		<link rel="stylesheet" href="../../Menu_Mainframe/css/miestilo.css" type/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../../Menu_Mainframe/img/images.dinosauro.jpg";>
+		<img src="../../Menu_Mainframe\img/notebook-background.jpg" style="float:right ;width:60px;height:60px;">
+		<!-- alt="../../Menu_Mainframe\img\notebook-background.jpg"-->
+		<h3>Gerencia Sistemas Gestión Empresarial<br>                   
+			Normas y procedimentos para el usuario de Ambiente</h3>
+		<hr/>	
+	</head>
+
+<body>
+	<ul>
+		<!--<ul class="navbar">-->
+ 	 	<li><a href="../../Menu_Mainframe\Index_Gcc.html"><b>Ir al Menu&#769 Principal</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\menu_Main1.html"><b>Ir al menu&#769 Ambientes</a></b>
+  	</ul>
+<marquee bgcolor="#006699" behavior="alternate" direction="right"><p style="font-size: 5px"; style="text-align:center";><span class='sombra1'><ins>SISE / OACSE.</ins></span></p></marquee>
+
+	<p><b>Entrar al servidor SESPE02 y realizar lo siguiente:</b></p>
+    <pre><b>        Usuario ctmagent<br>
+	Clave   Cantv2017</b><br>
+	Al entrar estaremos en:
+	<b>/home/ctmagent</b><br>
+	Nos ubicaremos en el siguiente directorio:
+	<b>cd sise/batch</b>, al consultar con <b>pwd</b> estaremos en <b>/usr/users/ctmagent/sise/batch</b><br>
+	Procedemos a ejecutar el siguiente job:
+	<p><b>1. ./DOASSD001.SH</b> al finalizar mostrara&#769 en pantalla lo siguiente:</pre> 
+
+	<img src="../../Menu_Mainframe\img_kenan\Siseoacse.jpg" style="float:left ;width:1000px;height:550px;"><br clear="both"></br>
+	Copiamos la imagen y la colocaremos en la solicitud del analista de prueba.	
+
+	<p><b>2.-</b><b>Procesar en Mainframe CSIOAD04</b>
+
+	<p><b>3.-</b><b>Procesar en el SESPE02 ./DSSOAD002.SH</b>
+
+	 
+<p><b><mark>FIN DEL PROCESO</mark></b></p>
+<pre><b>
+
+<b>NOTA:</b> 
+Para enviar un correo al usuario que proceso SISE/OACSE,  con el sysout de la corrida
+
+1.- ./DOASSD001.SH > SISESYSOUT.txt
+2.- MAINFRAAME CSIOAD04
+3.- ./DSSOAD002.SH >> SISESYSOUT.txt
+4.- mailx -s "Salida Interzaf SISE/OACSE" lgarci19@cantv.com.ve < SISESYSOUT.txt
+</pre></b>
+</body>
+</html>

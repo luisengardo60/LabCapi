@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>GGTO</title>
+		<link rel="stylesheet" href="../../Menu_Mainframe/css/miestilo.css" type/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../../Menu_Mainframe/img/images.dinosauro.jpg";>
+		<img src="../../Menu_Mainframe\img/notebook-background.jpg" style="float:right ;width:60px;height:60px;">
+		<!-- alt="../../Menu_Mainframe\img\notebook-background.jpg"-->
+		<h3>Gerencia Sistemas Gestión Empresarial<br>                   
+			Normas y procedimentos para el usuario de Ambiente</h3>
+		<hr/>	
+	</head>
+
+<body>
+	<ul>
+		<!--<ul class="navbar">-->
+ 	 	<li><a href="../../Menu_Mainframe\Index_Gcc.html"><b>Ir al Menu&#769 Principal</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\menu_Main1.html"><b>Ir al menu&#769 Ambientes</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\html_kenan\kenan3_Extraccion.html"><b>Ir al menu&#769 Anterior</a></b>
+  	 	</ul>
+<marquee bgcolor="#006699" behavior="alternate" direction="right"><p style="font-size: 5px"; style="text-align:center";><span class='sombra1'><b><ins>Pasos para la extraccio&#769n Medios Magneticos.</ins></b></span></p></marquee>
+
+	<p><b>1.-</b>Esta&#769 extraccio&#769n, solo se realizara&#769 cuando lo solicite el analista de pruebas y que sea Corporativa</p>
+
+	<p><b>2.-</b> Realizar los pasos que se describen en la Extraccio&#769n Corporativa, el cambio importante es a la hora de procesar en el servidor <b><mark>srvft15</mark></b> el proceso <b><mark>crea_saldo_convenio.sh</mark></b>, cuando pida la fecha se le colocara&#769 la u&#769ltima fecha que tenga la cuenta, ver ejemplo para la cuenta <b>1013121507</b><br>
+	<br> <br/>
+	<img src="../../Menu_Mainframe\img_kenan\Extramm1.jpg" style="width:900px;height:250px;"></p><br clear="both"></br>
+
+<p>Cuando solicite <b><mark>Introduzca fecha de ciclo formato YYYYMMDD</mark></b> se colocara&#769 20160522, y cuando pida <b><mark>Introduzca ciclo o consecutivo siguiente #</b></mark> se solocara&#769 para este caso el nu&#769mero <b><mark>22</b></mark> que le corresponde al di&#769a<br>
+
+<p><b>3.-</b> En el TOAD entrar al CUS1 o CUS3 segu&#769n sea el caso, entrar en la tabla ODS_FACTURAS_MM, en la pesta&ntilde;a data llenar
+los siguientes campos:<br> <br/>
+<img src="../../Menu_Mainframe\img_kenan\Extramm3.jpg" style="width:900px;height:250px;"></p><br clear="both"></br>
+
+<p><b>4.-</b> Finalizada la cadena de Extraccio&#769n Corporativa, se procesara&#769 ONDEMAND, ver <b><mark>punto No. 9</mark></b> de los pasos para la Extraccio&#769n Corporativa, luego, procedemos a ordenar en Control-m/Enterprice la cadena de <b>Medios Magneticos</b>, la fecha que usaremos ha de ser la misma que la Extraccio&#769n Corporativa,  ver ejemplo:<br>
+<br> <br/>
+ 
+ <img src="../../Menu_Mainframe\img_kenan\Extramm2.jpg" style="width:900px;height:350px;"><br clear="both"></br>
+
+<p><b>4.-</b>Al finalizar la cadena de Extraccio&#769n Medios MAgneticos generara&#769 un archivo en Mainframe:<br>
+<b>HFTMM.SJBP2000.MEDMAGNE.EXT0XXXX.G0031V00</b>  </p> 
+ 
+<p><b><mark>FIN DEL PROCESO</mark></b></p>
+<a href="#"><img src="../../Menu_Mainframe/img_kenan/Arrow_top.jpg" title="Ir" style="width:40px;height:50px;position: fixed; bottom: 2px; right: 1%;"/></a>
+</body>
+</html>

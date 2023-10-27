@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>GGTO</title>
+		<link rel="stylesheet" href="../../Menu_Mainframe/css/miestilo.css" type/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../../Menu_Mainframe/img/images.dinosauro.jpg";>
+		<img src="../../Menu_Mainframe\img/images.dinosauro.jpg" alt="../../Menu_Mainframe\img\notebook-background.jpg" style="float:right ;width:60px;height:60px;">
+		<h3>Gerencia Sistemas Gestión Empresarial<br>                   
+			Normas y procedimentos para el usuario de Ambiente</h3>
+		<hr/>	
+	</head>
+
+<body>
+
+	<ul>
+		<!--<ul class="navbar">-->
+ 	 	<li><a href="../../Menu_Mainframe\Index_Gcc.html"><b>Ir al Menu&#769 Principal</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\menu_Main1.html"><b>Ir al menu&#769 Mainframe y Kenan</a></b>
+  		</ul>
+
+	<!--<marquee bgcolor="#006699" behavior="alternate" direction="right">--><p style="font-size: 5px"; style="text-align:center";><span class='sombra1'><ins>Instruccio&#769n New Copy</ins></span></p></marquee>
+	<p> Cuando los analistas de pruebas nos solicitan en ENDEVOR un move de un programa tipo COBCICS, procederemos asi&#769:</p> 
+
+<pre><b>A.-</b> Ingresar al Mainframe ambiente ESA1, opcio&#769n <b>A</b> APLIC. ESA1 y opcio&#769n <b>D</b> ENDEVOR realizar la accio&#769n move solicitada por el analista de pruebas,<br> pondremos de ejemplo al programa <b>OABA0001</b> tipo COBCICS.</pre>
+<hr />
+<pre><b>B.-</b> Finalizada la accio&#769n move en ENDEVOR, ingresar al CICSNATT entrar con su usuario, borrar pantalla, e ingresar lo siguiente:
+
+CEMT I PROG(OABA0001) 
+
+  I PROG(OABA0001)                                                              
+  STATUS:  RESULTS - OVERTYPE TO MODIFY                                         
+   Prog(OABA0001) Len(0000000) Cob Pro Ena Pri    Ced
+
+   CEMT I PROG(OABA0001) 
+
+  I PROG(OABA0001)                                                              
+  STATUS:  RESULTS - OVERTYPE TO MODIFY                                         
+   Prog(OABA0001) Len(0000000) Cob Pro Ena Pri <b>NEW</b> Ced                          
+                          
+
+Donde el programa que se le ralizara&#769 el New Copy es el OABA0001  
+
+<hr />
+
+<mark><b>NOTA</mark></b> Mandar correo a todos los analistas de pruebas indicandoles el final de la tarea.</pre> 
+
+	
+<mark><b>Fin del proceso</b></p></mark>
+</body>
+</html>

@@ -57,7 +57,7 @@ button {
     border: 4px inset lightgrey;
     font-family: "Sofia", sans-serif;
     transform: rotatey(360deg);
-    transition: 2s ease-in-out;
+    transition: 1.7s ease-in-out;
     background: url(../img/venezuela8.jpg) no-repeat center center fixed;
     background-size: cover;
    /* transform: scaley(1);*/

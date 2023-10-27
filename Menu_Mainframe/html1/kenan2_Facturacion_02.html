@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>GGTO</title>
+		<link rel="stylesheet" href="../../Menu_Mainframe/css/miestilo.css" type/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../../Menu_Mainframe/img/images.dinosauro.jpg";>
+		<img src="../../Menu_Mainframe\img/notebook-background.jpg" alt="../../Menu_Mainframe\img\notebook-background.jpg" style="float:right ;width:60px;height:60px;">
+		<h3>Gerencia Sistemas Gestión Empresarial<br>                   
+			Normas y procedimentos para el usuario de Ambiente</h3>
+		<hr/>	
+	</head>
+
+<body>
+
+	<ul>
+		<!--<ul class="navbar">-->
+ 	 	<li><a href="../../Menu_Mainframe\Index_Gcc.html"><b>Ir al Menu&#769 Principal</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\menu_Main1.html"><b>Ir al menu&#769 Ambientes</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\html_kenan\kenan2_Facturacion.html"><b>Ir al menu&#769 Anterior</a></b>
+  	 	</ul>
+
+	<!--<p style="color: blue","font-size: 40px"><ins>Insumos</p></ins>-->
+	<marquee bgcolor="#006699" behavior="alternate" direction="right"><p style="font-size: 5px"; style="text-align:center";><span class='sombra1'><ins>Facturacio&#769n Manual</ins></span></p></marquee>
+	<p><b><ins>Pasos para facturar.</ins></b></p>
+<p><b>1.-</b> Conectarse al <b>SRVFT51/User: ctmft</b>.</p>
+
+<p><b>1.1</b> Si la cuenta a facturar esta&#769 en la Base de Datos <mark>CUS1</mark>, escribiremos la siguiente instruccio&#769n:</p>
+<b>arbrun bip ac=40861924 db=kp01cus1 srv=3 prnum=54</b>
+<p>Donde:</p>
+<pre><b>arbrun bip</b>      es la instruccio&#769n para facturar<br>
+<b>ac=40861924</b> va el nu&#769mero de cuenta a facturar<br>
+<b>db=kp01cus1</b>  Base de Datos<br>
+<b>srv=3</b>             Nu&#769mero del servidor<br>
+<b>prnum=54</b>      Nu&#769mero de proceso, cuando se inicie una nueva factura manual, incrementar en 1, quedaria asi <b><mark>prnum=55</mark></b><br></pre>
+<hr />
+
+<p><b>1.2</b> Si la cuenta a facturar esta&#769 en la Base de Datos <mark>CUS2</mark>, escribiremos la siguiente instruccio&#769n:</p>
+<b>arbrun bip ac=42480028 db=kp01cus2 srv=4 prnum=31</b>
+<p>Donde:</p>
+<pre><b>arbrun bip</b>      es la instruccio&#769n para facturar<br>
+<b>ac=42480028</b> va el nu&#769mero de cuenta a facturar<br>
+<b>db=kp01cus2</b>  Base de Datos<br>
+<b>srv=4</b>             Nu&#769mero del servidor<br>
+<b>prnum=31</b>      Nu&#769mero de proceso, cuando se inicie una nueva factura manual, incrementar en 1, quedaria asi <b><mark>prnum=32</mark></b></pre>
+<hr />
+
+<p><b>1.3</b> Si la cuenta a facturar esta&#769 en la Base de Datos <mark>CUS3</mark>, escribiremos la siguiente instruccio&#769n:</p>
+<b>arbrun bip ac=1016192408 db=kp01cus3 srv=5 prnum=41</b>
+<p>Donde:</p>
+<pre><b>arbrun bip</b>          es la instruccio&#769n para facturar<br>
+<b>ac=1016192408</b> va el nu&#769mero de cuenta a facturar<br>
+<b>db=kp01cus3</b>      Base de Datos<br>
+<b>srv=5</b>                 Nu&#769mero del servidor<br>
+<b>prnum=41</b>          Nu&#769mero de proceso, cuando se inicie una nueva factura manual, incrementar en 1, quedaria asi <b><mark>prnum=42</mark></b></pre>
+<hr />
+
+<p><b>2.-</b>Al finalizar, consultar la cuenta con la herramienta de Ronald y la informacio&#769n anexarla a la solicitud del analista de prueba.</p><br>
+<hr />
+
+<p><b>3.-</b>En el supuesto caso, se apague la ma&#769quina en plena facturacio&#769n, proceda asi&#769:</p>
+<p>Reconectarse al servidor SRVFT51, dar el siguiente comando:</p>
+<pre><b>arbrun sin db=kp01cus1 srv=3 prnum=83</b> una pro&#769xima vez incrementar en 1, quedaria asi <b><mark>prnum=84</mark></b>
+
+<b>arbrun sin db=kp01cus2 srv=4 prnum=200</b> una pro&#769xima vez incrementar en 1, quedaria asi <b><mark>prnum=201</mark></b>
+
+<b>arbrun sin db=kp01cus3 srv=5 prnum=100</b> una pro&#769xima vez incrementar en 1, quedaria asi <b><mark>prnum=101</mark></b></pre>
+<hr />
+<p><mark><b>NOTA</mark></b> Si se quiere facturar ma&#769s de una vez, proceder segu&#769n el <b>CUS1, 2 o 3</b> con la isntruccio&#769n dada en los puntos <b>1.1, 1.2 y 1.3</b></p>
+<br> </br>	
+<mark><b>Fin del proceso</b></p></mark>
+<a href="#"><img src="../../Menu_Mainframe/img_kenan/Arrow_top.jpg" title="Ir" style="width:40px;height:50px;position: fixed; bottom: 2px; right: 1%;"/></a>
+</body>
+</html>

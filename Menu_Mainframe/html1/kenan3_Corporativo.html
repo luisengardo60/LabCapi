@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>GGTO</title>
+		<link rel="stylesheet" href="D:/Menu_Mainframe/css/miestilo.css" type/css">
+		<link rel="shortcut icon" type="image/x-icon" href="D:/Menu_Mainframe/img/images.dinosauro.jpg";>
+		<img src="D:/Menu_Mainframe/img/notebook-background.jpg" style="float:right ;width:60px;height:60px;">
+		<!--<img src="../../Menu_Mainframe\img/notebook-background.jpg" style="float:right ;width:60px;height:60px;">-->
+		<!-- alt="../../Menu_Mainframe\img\notebook-background.jpg"-->
+		<h3>Gerencia Sistemas Gestión Empresarial<br>                   
+			Normas y procedimentos para el usuario de Ambiente</h3>
+		<hr/>	
+	</head>
+
+<body>
+	<ul>
+		<!--<ul class="navbar">-->
+ 	 	<li><a href="../../Menu_Mainframe\Index_Gcc.html"><b>Ir al Menu&#769 Principal</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\menu_Main1.html"><b>Ir al menu&#769 Ambientes</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\html_kenan\kenan3_Extraccion.html"><b>Ir al menu&#769 Anterior</a></b>
+  	 	</ul>
+<marquee bgcolor="#006699" behavior="alternate" direction="right"><p style="font-size: 5px"; style="text-align:center";><span class='sombra1'><b><ins>Pasos para la extraccio&#769n Corporativa.</ins></b></p></span></marquee>
+<p><b>1.-</b> En la herramienta Consultas Ronald, verificar si la cuenta a procesar concuerda con los datos que indica el analista de Pruebas,<br>
+	  ver siguiente modelo:<br>
+	  <img src="../../Menu_Mainframe\img_kenan\Extrac22.jpg" style="width:400px;height:250px;">
+	  <br>
+	  <img src="../../Menu_Mainframe\img_kenan\Extrac1.jpg" style="width:600px;height:350px;">
+
+<p><b>2.-</b> Si no posee esta&#769 informacio&#769n, por favor consulte en el TOAD con el usuario <mark><b>arbor</mark>, base de datos <mark>KP01CUS3</mark> o <mark>KP01CUS1</mark></b></mark>, ver siguiente modelo: 
+<img src="../../Menu_Mainframe\img_kenan\Extrac3.jpg" style="width:800px;height:350px;"><br clear="both"></br>
+<img src="../../Menu_Mainframe\img_kenan\Extrac4.jpg" style="left ;width:800px;height:350px;"><br clear="both"></br>
+
+<p><b>3.-</b> Realizados los pasos de verificacio&#769n de la cuenta, proceder a la carga en <b>BIP_EVENTUAL</b> con la <br>
+ herramienta de Consultas Ronald:</p>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac5.jpg" style="width:400px;height:200px;"><br clear="both"></br>
+
+<p><b>4.-</b> Accesamos al servidor <b>srvft15</b>, y procesamos <b>crea_saldo_convenio.sh</b> </p>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac6.jpg" style="width:800px;height:250px;"><br clear="both"></br>
+
+<p><b>5.-</b> Realizara&#769 dos preguntas, la primera fecha con formato <b>YYYYMMDD</b> en nuestro caso colocamos 20160529,<br>
+ y la segunda <b>Introduzca ciclo o consecutivo</b>, en nuestro ejemplo fue <b>N4</b></p>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac7.jpg" style="width:800px;height:300px;"><br clear="both"></br>
+ <b>NOTA:</b><ins>En el caso del mes de <b>Febrero</b> Normal la <b>fecha=AAAAMM28</b> si es Bisiesto <b>fecha=AAAAMM29</b>,<br> para el resto de los meses <b>fecha=AAAAMM29</b></ins>
+
+ <p><b>5.A</b> Si es una extraccio&#769n con <mark><b>Saldos_Convenios</b></mark> siga los siguientes pasos, de lo contrario siga con el <mark><b>paso 6</b></mark></p>
+ <b>5.B</b> El analista de pruebas indicara 2 archivos para ser leidos junto con la cuenta para ser extraidos, <mark><b>tome el siguiente ejemplo</mark></b>:
+ <p><b>Cta.</b>  47072722
+ <p><b>Archivos</b>  RMCA_C22_20170521_SALDODOC1_20400023_PROD.TXT y PRI.RMCA.DDF.20170818.114422.20170522.C22.PROD.txt 
+ <p>Estos archivos se buscaran en el servidor <mark><b>rmcaqa</b></mark>con el producto <mark><b>Core FTP LE</b></mark>
+ <p>Para los archivos que comienzan con la nomeclatura <b>RMCA</b> use la siguiente ruta <b>/ABAP/INTERFAZ/SALDO/DOC1/SALIENTE/</b>
+ <p>Para los archivos que comienzan con la nomeclatura <b>PRI</b>  use la siguiente ruta <b>/ABAP/INTERFAZ/CONVENIO_FACT/DOC1/SALIENTE/</b> 
+ <P>Ahora proceda a copiar en su disco <b>D:\Extraccion_Archivos\</b> los dos archivos anteriores.
+ <p><b>5.C</b> En el punto 5 se crear&oacute;n 2 archivos en blanco, estos son:
+ <p>En el servidor <b>srvft15</b> en la ruta /data/extraccion/ITCVDDFB/Input/Ready/ estara el archivo <b>PRI.RMCA.DDF.20170529.102453.20170529.CL9.PROD.txt</b>
+ y en la ruta /data/extraccion/ITRMDDFB/Input/Ready/ estara el archivo <b>RMCA_CL9_20170529_SALDODOC1_17000L9_PROD.TXT</b>, ahora proceda a copiar en su disco D:\Extraccion_Archivos\ los dos archivos anteriores.
+ <p><b>5.D</b> Copiar los archivos que indico el analista de pruebas en los archivos que se crearon en blanco en el punto 5, usaremos el producto <b>UEDIT32</b>:
+ <img src="../../Menu_Mainframe\img_kenan\Extrac20.jpg" style="width:800px;height:350px;"><br clear="both"></br>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac21.jpg" style="width:800px;height:350px;"><br clear="both"></br>
+ <p>Al finalizar, continuar con el paso 6
+
+
+<p><b>6.-</b>Ahora vamos a Control-M/Enterprise y antes de ordenar la cadena de extraccio&#769n por favor verifcar que las condiciones<br> de fecha no exista&#769n, ver ejemplo: </p> 
+<img src="../../Menu_Mainframe\img_kenan\Extrac17.jpg" style="width:800px;height:350px;"><br clear="both"></br>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac8.jpg" style="width:600px;height:250px;"><br clear="both"></br>
+  <img src="../../Menu_Mainframe\img_kenan\Extrac9.jpg" style="width:600px;height:250px;"><br clear="both"></br>
+
+<p><b>8.-</b> Ordenamos la cadena de extraccio&#769n Corporativa y adicionamos las condiciones para dar inicio, ver ejemplo: </p> 
+ <img src="../../Menu_Mainframe\img_kenan\Extrac10.jpg" style="width:800px;height:100px;"><br clear="both"></br>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac11.jpg" style="width:800px;height:350px;"><br clear="both"></br>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac12.jpg" style="width:800px;height:350px;"><br clear="both"></br>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac13.jpg" style="width:800px;height:350px;"><br clear="both"></br>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac14.jpg" style="width:800px;height:350px;"><br clear="both"></br>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac15.jpg" style="width:800px;height:350px;"><br clear="both"></br>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac16.jpg" style="width:800px;height:350px;"><br clear="both"></br>
+
+<p><b>9.-</b> Finalizada la cadena, creamos ONDEMAND, con un job que se ejecuta en el Mainframe, ver ejemplo: </p> 
+ <img src="../../Menu_Mainframe\img_kenan\Extrac18.jpg" style="width:800px;height:300px;"><br clear="both"></br>
+ <img src="../../Menu_Mainframe\img_kenan\Extrac19.jpg" style="width:800px;height:300px;"><br clear="both"></br>
+ 
+<p><b><mark>FIN DEL PROCESO</mark></b></p>
+<a href="#"><img src="../../Menu_Mainframe/img_kenan/Arrow_top.jpg" title="Ir" style="width:40px;height:50px;position: fixed; bottom: 2px; right: 1%;"/></a>
+
+<!-- acentos = &aacute; &eacute; &iacute; &oacute; &uacute; para la ñ &ntilde; -->
+</body>
+</html>

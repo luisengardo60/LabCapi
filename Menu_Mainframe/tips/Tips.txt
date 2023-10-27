@@ -1,0 +1,25 @@
+Parametros para los parrafos
+********************************************************************************
+<h1>Tamaño de los encabezados de un texto</h1>
+y va de h1 a h5 entre màs pequeño es el nùmero serà màs pequeño el titulo
+********************************************************************************
+<center>centrara un titulo</center>
+********************************************************************************
+<p> Se usa para escribir parrafos.</p>
+********************************************************************************
+<u> Subrayar lineas de caracteres en un parrafo</u>
+********************************************************************************
+<b>colocara en negrillas un texto determinado</b>
+********************************************************************************
+<i>para escribir parrafos largos, los presentara en cursiva, si se combina con
+<p> se presentara en arial </i>
+********************************************************************************
+<ins>subraya el texto</ins>
+********************************************************************************
+<mark>resaltara el texo en color amarillo</mark>
+********************************************************************************
+Para acentuar teclear las vocales, para esta caso la letra o o&#679
+o puedes usar &oacute, para la tilde de la ñ &ntilde
+********************************************************************************
+/home/interfaz/interfase_oacse/intoacse
+/home/interfaz/interfase_oacse/exec_b_oacse.sql

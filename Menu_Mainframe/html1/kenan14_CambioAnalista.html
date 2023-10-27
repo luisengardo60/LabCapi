@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>GGTO</title>
+		<link rel="stylesheet" href="../../Menu_Mainframe/css/miestilo.css" type/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../../Menu_Mainframe/img/images.dinosauro.jpg";>
+		<img src="../../Menu_Mainframe\img/notebook-background.jpg" alt="../../Menu_Mainframe\img\notebook-background.jpg" style="float:right ;width:60px;height:60px;">
+		<h3>Gerencia Sistemas Gestión Empresarial<br>                   
+			Normas y procedimentos para el usuario de Ambiente</h3>
+		<hr/>	
+	</head>
+
+<body>
+
+	<ul>
+		<!--<ul class="navbar">-->
+ 	 	<li><a href="../../Menu_Mainframe\Index_Gcc.html"><b>Ir al Menu&#769 Principal</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\menu_Main1.html"><b>Ir al menu&#769 Ambientes</a></b>
+  		</ul>
+
+	<marquee bgcolor="#006699" behavior="alternate" direction="right"><p style="font-size: 5px"; style="text-align:center";><span class='sombra1'><ins>Cambio de Password Analista del 1 al 20</ins></span></p></marquee>
+	<p> Cuando los analistas de pruebas nos solicitan el cambio o actualizacio&#769n del password de los analistas del 1 al 20, procederemos con los siguientas pasos:</p> 
+
+<p><b>1.-</b> Abrir <b>TOAD</b> y entrar a las Base de Datos KP01CUS1, KP01CUS2, KP01CUS3, KP01ADM, KP01CAT y KP01INT con el ususario <b>arbor</b> y  escribiremos la siguiente instruccio&#769n para desbloquear a cada uno de ellos:</p>
+<div><pre>ALTER USER analista1 ACCOUNT UNLOCK;
+ALTER USER analista2 ACCOUNT UNLOCK;
+ALTER USER analista3 ACCOUNT UNLOCK;
+ALTER USER analista4 ACCOUNT UNLOCK;
+ALTER USER analista5 ACCOUNT UNLOCK;
+ALTER USER analista6 ACCOUNT UNLOCK;
+ALTER USER analista7 ACCOUNT UNLOCK;
+ALTER USER analista8 ACCOUNT UNLOCK;
+ALTER USER analista9 ACCOUNT UNLOCK;
+ALTER USER analista10 ACCOUNT UNLOCK;
+ALTER USER analista11 ACCOUNT UNLOCK;
+ALTER USER analista12 ACCOUNT UNLOCK;
+ALTER USER analista13 ACCOUNT UNLOCK;
+ALTER USER analista14 ACCOUNT UNLOCK;
+ALTER USER analista15 ACCOUNT UNLOCK;
+ALTER USER analista16 ACCOUNT UNLOCK;
+ALTER USER analista17 ACCOUNT UNLOCK;
+ALTER USER analista18 ACCOUNT UNLOCK;
+ALTER USER analista19 ACCOUNT UNLOCK;
+ALTER USER analista20 ACCOUNT UNLOCK;</div>
+<mark><b>NOTA</mark></b> Copiar todos los comandos anteriores y pegarlos en TOAD</pre> 
+
+Dar click en <b>Execute as script</b><img src="../../Menu_Mainframe\img_kenan\CambioAnalista_01.jpg" style="float:middle;width:30px;height:30px;"> ver siguiente ejemplo:</pre><br>
+<img src="../../Menu_Mainframe\img_kenan\CambioAnalista.jpg" style="float:left ;width:800px;height:300px;"><br clear="both"></br>
+<hr />
+<p><b>2.-</b>Ahora escribiremos la siguiente instruccio&#769n para asignarles claves nuevas:</p>
+<div><pre>alter user analista1 identified by soport_10A;
+alter user analista2 identified by soport_10A;
+alter user analista3 identified by soport_10A;
+alter user analista4 identified by soport_10A;
+alter user analista5 identified by soport_10A;
+alter user analista6 identified by soport_10A;
+alter user analista7 identified by soport_10A;
+alter user analista8 identified by soport_10A;
+alter user analista9 identified by soport_10A;
+alter user analista10 identified by soport_10A;
+alter user analista11 identified by soport_10A;
+alter user analista12 identified by soport_10A;
+alter user analista13 identified by soport_10A;
+alter user analista14 identified by soport_10A;
+alter user analista15 identified by soport_10A;
+alter user analista16 identified by soport_10A;
+alter user analista17 identified by soport_10A;
+alter user analista18 identified by soport_10A;
+alter user analista19 identified by soport_10A;
+alter user analista20 identified by soport_10A;</div>
+<mark><b>NOTA</mark></b> Copiar todos los comandos anteriores y pegarlos en TOAD</pre> 
+
+Dar click en <b>Execute as script</b><img src="../../Menu_Mainframe\img_kenan\CambioAnalista_01.jpg" style="float:middle;width:30px;height:30px;"> ver siguiente ejemplo:</pre><br>
+<img src="../../Menu_Mainframe\img_kenan\CambioAnalista_02.jpg" style="float:left ;width:800px;height:300px;"><br clear="both"></br>
+<hr />
+<div class="ex1">Recuerda que los puntos 1 y 2 se deben aplicar en cada Base de datos <b>KP01CUS1, KP01CUS2, KP01CUS3, KP01ADM, KP01CAT y KP01INT</b></div> <br>
+<br> </br>
+	
+<mark><b>Fin del proceso</b></p></mark>
+<a href="#"><img src="../../Menu_Mainframe/img_kenan/Arrow_top.jpg" title="Ir" style="width:40px;height:50px;position: fixed; bottom: 2px; right: 1%;"/></a>
+</body>
+</html>

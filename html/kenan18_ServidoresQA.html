@@ -1,21 +1,98 @@
-<html>
-	<head>
-		<title>QA</title>
+<!DOCTYPE html>
+<html lang="en">
+	<head>		
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="../css/kenan_mainframe.css" type/css">
 		<link rel="shortcut icon" type="image/x-icon" href="../img/images.dinosauro.jpg";>
-		<!--<img src="../img/newcantv.jpg" style="float:right ;width:60px;height:60px;">-->
-		<a href="../html/Menu_Main1.html">Menu Mainframe</a>
-		<a href="adminFactMenuServidores.html">Menu Servidores</a>
-		<a href="indexAdminfact.php">Menu Adminfact</a>
-		<h1>Gerencia Sistemas Gestión Empresarial<br>                   
-			Normas y procedimentos para el usuario de Ambiente</h1>
-			
+		<script src="../js/jquery-3.4.1.js"></script>
+		<link rel="stylesheet" href="../css/estilos.css">
+		<link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">
+		<!--<link rel="stylesheet" href="css/sidebar0.css">-->
+		<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+		<title>Servidores QA</title>
 	</head>
+	<body id="body" style="background:lightskyblue;">
+	
+		<div class="icon__menu">
+			<i class="fas fa-bars" id="btn_open"></i>
+		</div>
+	
+	
+		<div class="menu__side" id="menu_side">
+	
+			<div class="name__page">
+				<a href="../php/inicio.php" title="Inicio" style="color:transparent;">Inicio<img
+						src="../img/menu_inicio6.jpg"
+						style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
+			</div>
+			<ul>
+				<div class="options__menu">
+	
+					<nav class="sidebar>
+	
+	                <li><a href=" #">
+						<div class=" option">
+							<i title="Organigrama" style="font-size:18px"></i>
+							<h4><b>Adminfact</b></h4>
+						</div> </a></li>
+	
+						<ul class="feat-show">
+							<li><a href="../php/indexAdminfact.php">
+									<div class="option">
+										<i title="Servidores" style="font-size:18px"></i>
+										<h4><b>Menu Adminfact</b></h4>
+									</div>
+								</a></li>
+								<li><a href="../html/adminFactServidores.html" style="text-decoration: none;">
+										<div class="option">
+											<i title="Menu Adminfact" style="font-size:18px;"></i>
+											<h4><b>Servidores VLAN</b></h4>
+										</div>
+									</a></li>
+	
+							<li><a href="../html/adminFactServidoresAC.html">
+									<div class="option">
+										<i title="Cursos" style="font-size:18px"></i>
+										<h4><b>Servidores Producción</b></h4>
+									</div>
+								</a></li>
+	
+							<li><a href="../html/adminFactSuperDome.html">
+									<div class="option">
+										<i title="Cursos" style="font-size:18px"></i>
+										<h4><b>Particiones SuperDome</b></h4>
+									</div>
+								</a></li>
+	
+							<li><a href="../html/adminFactPassword.html">
+									<div class="option">
+										<i title="Cursos" style="font-size:18px"></i>
+										<h4><b>Contraseñas Unix</b></h4>
+									</div>
+								</a></li>
+	
+							<li><a href="../html/adminfactBdOracle.html">
+									<div class="option">
+										<i title="Cursos" style="font-size:18px"></i>
+										<h4><b>Base de Datos Oracle</b></h4>
+									</div>
+								</a></li>
+	
+							<li><a href="../html/adminFactPuertosReq.html">
+									<div class="option">
+										<i title="Cursos" style="font-size: 18px"></i>
+										<h4><b>Puertos Requeridos</b></h4>
+									</div>
+								</a></li>
 
-<body>
-   	<p class="primero">SERVIDORES QA<br>Conexio&#769n de aplicacio&#769n PICFTP-QA</p><br clear="both"></br>
-  	<table>
+						</ul>
+				</div>
+		</div>
+		<main>
+	<h1 class="sombra4">Gerencia Sistemas Gestión Empresarial<br>
+				Normas y procedimentos para el usuario de Ambiente</h1>
+   	<h1 class="sombra4">SERVIDORES QA<br>Conexio&#769n de aplicacio&#769n PICFTP-QA</h1><br clear="both"></br>
+  	<table class="table table-primary table-hover">
+			<thead>
 		  	<tr>
     			<th>Aplicacio&#769n</th>
 				<th>Tipo-Ftp</th>
@@ -26,6 +103,8 @@
 				<th>Password</th>
 				<th>Responsable</th>
 			</tr>
+		</thead>
+		<tbody>
 			<tr>
 				<td>AIE</td>
 				<td>FTP</td>
@@ -1881,10 +1960,13 @@
 				<td> </td>
 				<td> </td>			
 			</tr>
+			</thead>
+			<tbody>
 			</table>
  
 <p><b><mark>FIN DE LA TABLA</mark></b></p>
-<a href="#"><img src="../Menu_Mainframe/img_kenan/Arrow_top.JPG" title="Ir" style="width:40px;height:50px;position: fixed; bottom: 2px; right: 1%;">
+<a href="#"><img src="../Menu_Mainframe/img/Arrow_top.JPG" title="Ir" style="width:40px;height:50px;position: fixed; bottom: 2px; right: 1%;">
+	<script src="../js/script.js"></script>
 </body>
 </html>
 <!--../../Menu_Mainframe/img_kenan/Arrow_top.jpg-->

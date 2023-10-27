@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<title>GGTO</title>
+		<link rel="stylesheet" href="../../Menu_Mainframe/css/miestilo.css" type/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../../Menu_Mainframe/img/images.dinosauro.jpg";>
+		<img src="../../Menu_Mainframe\img/images.dinosauro.jpg" alt="../../Menu_Mainframe\img\images.dinosauro.jpg" style="float:right ;width:60px;height:60px;">
+		<h3>Gerencia Sistemas Gestión Empresarial<br>                   
+			Normas y procedimentos para el usuario de Ambiente</h3>
+		<hr/>	
+	</head>
+
+<body>
+	<ul>
+<!--<ul class="navbar">-->
+ 	 	<li><a href="../../Menu_Mainframe\Index_Gcc.html"><b>Ir al Menu&#769 Principal</a></b>
+  		<li><a <li><a href="../../Menu_Mainframe\menu_Main1.html"><b>Ir al menu&#769 Mainframe y Kenan</a></b>
+  	 	</ul>
+<marquee bgcolor="#006699" behavior="scroll" direction="right"><p style="font-size: 5px"; style="text-align:center";><span class='sombra1'><ins>Procesos N2O</ins></span></p></marquee>
+
+<p><b>Se procesa a solicitud del usuario de "Pruebas" o de "Fa&#769brica".</p></b>
+
+<p>Antes de iniciar el procedimiento, por favor verificar que las base de datos esten acticvas:</p>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_24.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+
+
+<p> A continuaci&oacuten se mostraran los eventos seg&uacuten su caso: 
+ingresamos en Control-m/Mainframe,<br> elejimos la opcio&#769n 2 <b>JOB SCHEDULE DEF  CTM Job Scheduling Definition</b><br></p>
+<b><mark>PASO 1</mark></b><br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O1.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+
+<p>Ingresamos en la Libraria <b>SYS3.BMC.CTMO.V6307.PRUE.SCHED.SOPORTE</b>, como se muestra:</p>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2o2.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+
+<b><ins><mark>EVENTOS PARA AMBIENTE CRVL(11)<br></mark>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_10.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+<br>
+<b><ins><mark>DE01PC11</ins></b><br></ins></mark>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_11.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+<p> Cambiar las siguientes variables:<br>
+<ins>%%SECUEN=93</ins><br>
+<ins>%%REQUER=30</ins> (Requerimiento) Debe de ser indicado en el correo del solicitante,
+<br>          si no lo tiene, por favor responder el correo solicitandolo<br>
+<ins>%%TICKET=OSCARMAIN</ins> Debe de ser un numero, si no, el nombre del Coordinador de Pruebas
+<br>Analida Buitriago, Jorge Vega o Maria de los Angeles</p>
+<br>
+<br>
+<b><ins><mark>DE03PC11</ins></b><br></ins></mark>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_12.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+<p>Cambiar las siguientes variables:<br>
+<ins>%%SECUEN=4787</ins><br>
+<ins>%%REQUER=30184</ins> (Requerimiento) Debe de ser indicado en el correo del solicitante, si no lo tiene, por favor responder el correo solicitandolo<br>
+<ins>%%TICKET=jorgevega</ins> Debe de ser un numero, si no, el nombre del Coordinador de Pruebas:
+<br>Analida Buitriago, Jorge Vega o Maria de los Angeles</p>
+<br>
+<br>
+
+<b><ins><mark>EVENTOS PARA AMBIENTE PRUEBAS UNITARIAS(PB20)<br></mark>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_13.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+<br>
+<b><ins><mark>DE01PB20</ins></b><br></ins></mark>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_14.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+Cambiar las siguientes variables:<br>
+%%SECUENCI=871<br>
+%%REQUERIN=30753 (Requerimiento) Debe de ser indicado en el correo del solicitante, si no lo tiene, por favor responder el correo solicitandolo<br>
+%%AUTORIZA=ANGELA o LORENA<br>
+<br>
+<br>
+<b><ins><mark>DE03PB20</ins></b><br></ins></mark>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_15.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+Cambiar las siguientes variables:<br>
+%%SECUENCI=2664<br>
+%%REQUERIN=31313 (Requerimiento) Debe de ser indicado en el correo del solicitante, si no lo tiene, por favor responder el correo solicitandolo<br>
+%%AUTORIZA=ANGELA o LORENA
+<br>
+<br>
+<b><mark>PASO 2</mark></b><br>Una vez llenado las variables, segun el evento solicitado, por favor ejecute el job.<br>
+
+Al finalizar el job DPCN2OB2 (Eventos DE01PC11 y DE03PC11), o,  el job JPUN2OB2 (Eventos DE01PB11 y DE03PB11)<br>
+busca en la salida de reportes con estos comandos<br>
+
+s.st<br>
+pre dpcn* / pre jpun* ,  verifica con control/m el numero del JobId<br>
+ir al paso07<br>
+<br>
+<hr />
+<br>
+
+
+
+<p><b><mark>PASO 3</mark></b><br>
+<b>Buffer Pool</b><br> Pasos a seguir para borrar el buffer pool de los eventos <b>DE01PC11</b> y <b>DE03PC11</p>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_16.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_17.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+<mark>Buscar la libreria SYSBPM</mark><br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O3_01.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O3_02.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O3_03.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+
+<p><b><mark>PASO 4</mark></b><br>
+<b>Buffer Pool</b><br> Pasos a seguir para borrar el buffer pool de los eventos <b>DE01PB20</b> y <b>DE03PB20</p>
+
+<p><b> Por problemas con la version de Natural en este ambiente, debemos catalogar la liberia que se<br> señala en el evento procesado (JPUN2OB2), veamos el siguiente ejemplo donde la libreria a
+catalogar es UATASAP
+<br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_25.jpg" style="width:900px;height:750px;"></img><br clear="both"></br>
+
+<p><b> En el ejemplo anterior, el reporte que arroja el JPUN2OB2, la libreria, para nuestro caso es la <ins>UATASAP</ins>,<br> por favor proceda con los siguientes pasos:
+<br>
+<br clear="both"></br>
+
+<mark><b>PASO 4.1.-</b></mark> Ingrese a la aplicacion N215 (CICSCOMT):
+
+<br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_18.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_19.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+
+<mark><b>PASO 4.2.-</b></mark> Ingrese a la libreria que se indica en la salida de reporte del evento procesado (JPUN2OB2) y proceda<br> a escribir el comando <mark>CATALL</mark>
+<br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_26.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+
+<mark><b>PASO 4.3.-</b></mark> Desmarque las opciones <mark><b>Recatalog only existing modules</b></mark> y <mark<b>Global data areas</mark<b></b> 
+<br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_27.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+
+<mark><b>PASO 4.4.-</b></mark> Marque la opcion <mark><b>Catalog all sources</b></mark> y dar enter 
+<br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_28.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+
+<mark><b>PASO 4.5-</b></mark> Mostrara una pantalla donde se muestra en linea como cataloga cada objeto 
+<br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_29.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+
+<mark><b>PASO 4.6.-</b></mark> Al finalizar mostrara el numero de objetos catalogados, proceda y dar enter para finalizar  
+<br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_30.jpg" style="width:900px;height:300px;"></img><br clear="both"></br>
+
+<mark><b>PASO 4.6.-</b></mark> Siga con el procedimiento de limpiar el <ins>Buffer Pool</ins> 
+<br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_20.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_21.jpg" style="width:900px;height:500px;"></img><br clear="both"></br>
+
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_22.jpg" style="width:900px;height:200px;"></img><br clear="both"></br>
+
+<p><b><mark>PASO 5</mark></b><br>
+Volver a TSOESA2, para buscar el reporte, dar los siguientes comandos:<br>
+s.st<br>
+<br>
+pre dpcn* (CRVL) / pre jpun* (PB20)<br>
+<br>
+NP   JOBNAME  JobID    Owner    Prty Queue      C  Pos  SAff  ASys Status<br>
+?    JPUN2OB2 J0027955 T030047     1 PRINT      8 17350    <br>  
+<br>            
+ir al PASO007 para sacar el reporte y enviarlo al analista solicitante.<br>
+<br>
+
+<img src="../../Menu_Mainframe\img_mainframe\Main_n2O_23.jpg" style="width:800px;height:300px;"></img><br clear="both"></br>
+
+
+<a href="#"><img src="../../Menu_Mainframe/img_kenan/Arrow_top.jpg" title="Ir" style="width:40px;height:50px;position: fixed; bottom: 2px; right: 1%;"/></a>
+</body>
+</html>
