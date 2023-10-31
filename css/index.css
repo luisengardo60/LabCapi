@@ -1,242 +1,69 @@
 /*Nueno inicio*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
 
 body {
-    background: url(../img/newcantv1.jpg) no-repeat center center fixed;
-        background-size: cover;
-    overflow: hidden;
-    height: 10%;
-    width: 1200px;
-    margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
-    color: cyan;
+    background: url(../img/cantvLogo1.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.menu {
-    width: 300px;
-    height: 100px;
-    display: block;
-    position: relative;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.menu-title {
-    display: block;
-    width: 250px;
-    height: 40px;
-    padding: 12px 0 0;
-    background: transparent;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    /*text-transform: uppercase;*/
-    transition: 0.3s transparent;
-}
-
-.menu-title:before {
-    content: "";
-    display: block;
-    text-decoration: none;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 0 solid transparent;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 101;
-    transition:
-        0.2s 0.2s border-top ease-out,
-        0.3s border-top-color;
-}
-
-.menu-title:hover {
-    background: transparent;
-    text-decoration: none;
-}
-
-.menu-title:hover:before {
-    border-top-color: #8db842;
-    text-decoration: none;
-}
-
-.menu:hover>.menu-title:before {
-    border-top-width: 0;
-    transition:
-        0.2s border-top-width ease-in,
-        0.3s border-top-color;
-}
-
-.menu-title:after {
-    content: "";
-    display: block;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 0 solid transparent;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 101;
-    transition: 0.2s border-bottom ease-in;
-}
-
-.menu:hover>.menu-title:after {
-    border-bottom-width: 5px;
-    transition: 0.2s 0.2s border-bottom-width ease-out;
-}
-
-.menu-title_2nd {
-    background: transparent;
-}
-
-.menu-title_2nd:hover {
-    background: transparent;
-}
-
-.menu-title_2nd:before {
-    border-top-color: transparent;
-}
-
-.menu-title_2nd:hover:before {
-    border-top-color: transparent;
-}
-
-.menu-title_3rd {
-    background: transparent;
-}
-
-.menu-title_3rd:hover {
-    background: transparent;
-}
-
-.menu-title_3rd:before {
-    border-top-color: transparent;
-}
-
-.menu-title_3rd:hover:before {
-    border-top-color: transparent;
-}
-
-.menu-title_4th {
-    background: #dbab58;
-}
-
-.menu-title_4th:hover {
-    background: #cb9b48;
-}
-
-.menu-title_4th:before {
-    border-top-color: #dbab58;
-}
-
-.menu-title_4th:hover:before {
-    border-top-color: #cb9b48;
-}
-
-/*Despliegue en cascada*/
-.menu-dropdown {
-    min-width: 90%;
-    padding: 10px 0;
+nav {
+    max-width: 900px;
+    margin: auto;
+    background-color: blue;
     font-size: 20px;
-    position: absolute;
-    background:blue;
-    z-index: 90;
-    transition:
-        1.5s padding,
-        1.5s grey;
+    border-radius: 15px;
+    margin-top: 70px;
 }
 
-.menu-dropdown:after {
-    content: "";
+.menu-horizontal {
+    list-style: none;
+    display:flex;
+    justify-content:space-between;
+}
+
+.menu-horizontal > li > a {
     display: block;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-left: 35px solid transparent;
-    border-right: 10px solid transparent;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 101;
-    transition: 0.5s border-top;
+    padding: 10px 50px;
+    color:white;
+    text-decoration: none;
 }
 
-/*Subrayado de las opciones*/
-.menu:not(:hover)>.menu-dropdown {
-    padding: 1px 0;
-    background: blue;
-    z-index: 99;
+.menu-horizontal > li:hover {
+    background-color: transparent;
 }
 
-.menu:not(:hover)>.menu-dropdown:after {
-    border-top-color: transparent;
+.menu-vertical {
+    position:absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(91, 109, 212, 0.849);
+    border-radius: 2px;
 }
 
-.menu:not(:hover)>.menu-title:after {
-    border-bottom-color: transparent;
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+    border-radius: 10px;
 }
 
-.menu-dropdown>* {
-    overflow: hidden;
-    height: 30px;
-    padding: 5px 10px;
-    background: rgba(0, 0, 0, 0);
-    white-space: nowrap;
-    transition:
-        0.5s 10px cubic-bezier(.73, .32, .34, 1.5),
-        0.5s 28px cubic-bezier(.73, .32, .34, 1.5),
-        0.5s 12px cubic-bezier(.73, .32, .34, 1.5),
-        0.5s 0.2s grey,
-        0.2s grey;
+.menu-vertical li:hover {
+    background-color: blue;
 }
 
-.menu-dropdown>*:hover {
-    background: rgba(0, 0, 0, 0.1);
+.menu-vertical li a {
+    display:contents;
+    color: cyan;
+    padding: 1px 1px 1px 2px;
+    text-decoration: none;
 }
 
-.menu:not(:hover)>.menu-dropdown>* {
-    visibility: hidden;
-    height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0;
-    color: rgba(25, 25, 25, 0);
-    transition:
-        0.5s 0.1s,
-        0.5s 0.1s,
-        0.5s 0.1s,
-        0.3s transparent,
-        0.6s none;
-    z-index: 99;
-}
-
-
-.hList {
-    //overflow: hidden;
-}
-
-.hList>* {
-    float: left;
-}
-
-.hList>*+* {
-    margin-left: 0;
-}
-
-
-/*Fin del nuevo iniicio*/
+/*Fin del nuevo inicio
 
 @import url('../css/googleApis.css');
 
@@ -264,7 +91,7 @@ div.ini3 {
     min-width: 100vmin;
     background: url(../img/venezuela9.jpg) no-repeat center center fixed;
     background-size: cover;
-}*/
+}
 
 button {
     margin: 10px;
@@ -285,9 +112,9 @@ button {
 
 
 .boton:hover {
-    /*text-shadow: 5 2 4px;*/
+    /*text-shadow: 5 2 4px;
     color: transparent;
-   /* padding: 0.5em 0.7em;*/
+   /* padding: 0.5em 0.7em;
     box-sizing: content-box;
     font-size: 14px;
     margin: 1em;
@@ -300,12 +127,12 @@ button {
     transition: 1.7s ease-in-out;
     background: url(../img/venezuela8.jpg) no-repeat center center fixed;
     background-size: cover;
-   /* transform: scaley(1);*/
+   /* transform: scaley(1);
 
  
 }
 
-
+*/
 h1 {
     font-family: 'Unna';
     color: white;

@@ -13,57 +13,49 @@
 </head>
 <!--<body style="background: darkblue;">-->
 <!--<body style="background: url(../img/tierra.jpg) no-repeat center center fixed; background-size:cover;">-->
-    <header>
-        <!--<img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:left;">
+<header>
+    <!--<img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:left;">
         <img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:right;">-->
 
-    </header>
-    
-    <?php include '../titulo/titulo1.html' ?>
-    <br><br>
+</header>
 
-    <ul class="hList">
+<?php include '../titulo/titulo1.html' ?>
+
+<nav>
+    <ul class="menu-horizontal">
+        <li><a href="#">CAPI</a></li>
         <li>
-            <a href="#click" class="menu">
-                <h2 class="menu-title">Admin</h2>         
-                
-                <ul class="menu-dropdown">
-                    <li><a href="indexAdminfact.php">Adminfact
-                    <li><a href="indexAdminfact.php">Adminfact
-                    <li><a href="indexAdminBasis.php">Adminbasis
-                    <li><a href="indexAdminCrm.php">Admincrm
-                    <li><a href="indexAdminEdi.php">Adminedi
-                    </a></a> </a></a></a>
-            </li></li></li></li></li>
+            <a href="#">Admin</a>
+            <ul class="menu-vertical">
+                <li><a href="indexAdminfact.php">Adminfact</a></li>
+                <li><a href="indexAdminfact.php">Adminfact</a></li>
+                <li><a href="indexAdminBasis.php">Adminbasis</a></li>
+                <li><a href="indexAdminCrm.php">Admincrm</a></li>
+                <li><a href="indexAdminEdi.php">Adminedi</a></li>
+            </ul>
+        </li>
 
-
-                </ul>
-           
-          
         <li>
-            <a href="#click" class="menu">
-                <h2 class="menu-title menu-title_2nd">Aplicaciones</h2>
-                <ul class="menu-dropdown">
-                    <li>Proyectos</li>
-                    <li>Facturación</li>
-                    <li>Empresarial</li>
-                    <li>Aprovisionamiento</li>
-                    <li>Tecnología</li>
-                </ul>
-            </a>
+            <a href="#">Aplicaciones</a>
+            <ul class="menu-vertical">
+                <li><a href="indexProyectos.php">Proyectos</a></li>
+                <li><a href="indexRecaudacion.php">Facturación</a></li>
+                <li><a href="indexEmpresarial.php">Empresarial</a></li>
+                <li><a href="indexAprovision.php">Aprovisionamiento</a></li>
+                <li><a href="indexTecnologia.php">Tecnología</a>
+                </li>
+            </ul>
         </li>
         <li>
-            <a href="#click" class="menu">
-                <h2 class="menu-title menu-title_3rd">Salir</h2>
-                <ul class="menu-dropdown">
-                    <li>Salir</li>
-                </ul>
-            </a>
+            <a href="http://www.google.com.ve">Salir</a>
+           <!-- <ul class="menu-vertical">
+                <li><a href="http://www.google.com.ve">Salir</a></li>
+            </ul>-->
         </li>
     </ul>
+</nav><br><br><br><br><br><br><br><br><br><br>
 
-    
-   <!-- <div class="ini">
+    <!-- <div class="ini">
         <a href="indexAdminfact.php"><button class="boton"><b>ADMINFACT</b></button></a>
 
 
@@ -77,7 +69,7 @@
     </div>-->
 
 
-   <!-- <div class="ini2">
+    <!-- <div class="ini2">
         <a href="indexRecaudacion.php"><button class="boton"><b>FACTURACIÓN</b></button></a>
 
         <a href="indexEmpresarial.php"><button class="boton"><b>EMPRESARIAL</b></button></a>
@@ -91,8 +83,8 @@
     </div>-->
 
 
-        <?php include '../reloj/reloj1.html' ?>
+    <?php include '../reloj/reloj1.html' ?>
 
-</body>
+    </body>
 
 </html>
