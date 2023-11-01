@@ -1,10 +1,10 @@
 body { 
-	background-color: black;
+	background-color: blue;
 		font-family: "Sofia", sans-serif;}
 
 .container {/*OK*/
 	margin: auto;
-	background-color: black;
+	background-color: blue;
 	width: 1000px; 
 	height: 700px; 
 	padding: 10px;
@@ -60,7 +60,7 @@ ul.slider li:target {
 .menu li a {
 		color: white;
 			display: inline-block;
-			background-color: black;
+			background-color: blue;
 			box-sizing: content-box;
 			font-size: 12px;
 			margin: 6px;

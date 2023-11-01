@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.A.P.I.</title>
     <!--<link rel="stylesheet" href="../css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/inicio.css">
     <link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">
     <script src="../js/jquery-3.4.1.js"></script>
 </head>
@@ -27,7 +27,6 @@
         <li>
             <a href="#">Admin</a>
             <ul class="menu-vertical">
-                <li><a href="indexAdminfact.php">Adminfact</a></li>
                 <li><a href="indexAdminfact.php">Adminfact</a></li>
                 <li><a href="indexAdminBasis.php">Adminbasis</a></li>
                 <li><a href="indexAdminCrm.php">Admincrm</a></li>
