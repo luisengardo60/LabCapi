@@ -23,7 +23,7 @@
 
 <nav>
     <ul class="menu-horizontal">
-        <li><a href="#">CAPI</a></li>
+        <li><a href="../index.php">CAPI</a></li>
         <li>
             <a href="#">Admin</a>
             <ul class="menu-vertical">
