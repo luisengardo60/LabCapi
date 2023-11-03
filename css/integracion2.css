@@ -7,7 +7,7 @@ body {
 	background-color: blue;
 	width: 1000px; 
 	height: 700px; 
-	padding: 10px;
+	padding: 0px;
 }
 
 ul,li {/*OK*/	
@@ -25,17 +25,17 @@ ul.slider {/*OK*/
 ul.slider li {/*OK*/
 	position: absolute;
 	left: 10;
-	top: 20;
+	top: 10;
 	opacity: 0;
-	width: 900px;
+	width: 1000px;
 	height: initial;
 	background-color: transparent;
 	transition: opacity .5s;
 }
 
 ul.slider li img {
-	width: 880px;
-	height: 650px;
+	width: 1100px;
+	height: 765px;
 	object-fit:cover;
 }
 
@@ -48,8 +48,9 @@ ul.slider li:target {
 }
 
 .menu {
+	padding-top: 100px;
 	text-align: center;
-	margin: 100px;
+	margin: 110px;
 }
 
 .menu li {
@@ -62,7 +63,7 @@ ul.slider li:target {
 			display: inline-block;
 			background-color: blue;
 			box-sizing: content-box;
-			font-size: 12px;
+			font-size: 18px;
 			margin: 6px;
 			border-radius: 8px;
 			border: 8px outset grey;
