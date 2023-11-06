@@ -69,9 +69,7 @@ img {
   left: 10px;
   height: 30px;
   width: 35px;
-  background: black;
   text-align: center;
-  border-radius: 5px;
   cursor: pointer;
   transition: left 0.4s ease;
   
@@ -83,10 +81,18 @@ img {
 
 .btn span{
   color: white;
+  background: blue;
   font-size: 40px;
   line-height: 30px;
 }
 
+.btn span:hover {
+  color: white;
+  background-color:blue;
+  border-radius: 10%;
+  font-size: 40px;
+  line-height: 30px;
+}
 .btn1.click span:before{
 content: '\f00d';
 }

@@ -69,7 +69,6 @@ img {
   left: 10px;
   height: 30px;
   width: 35px;
-  background: black;
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
@@ -83,6 +82,7 @@ img {
 
 .btn span{
   color: white;
+  background: blue;
   font-size: 40px;
   line-height: 30px;
 }
@@ -96,7 +96,6 @@ content: '\f00d';
   width: 250px;
   height: 100%;
   left: -250px;
-  background: #042331;
   transition: left 0.4s ease;
 }
 
