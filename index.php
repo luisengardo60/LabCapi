@@ -38,11 +38,11 @@
             
                 <div class="body__card_back">
                     <!--<h1>Entrar</h1>-->
-                    <p>Bienvenidos</p>
+                    <p style="color:white";>Bienvenidos</p>
                     <a href="php/inicio.php"><button class="boton"><b>Entrar</b></button></a>
                     <!--<input><a href="php/inicio.php"><button class="boton"><b>Entrar</b></button></a> value="Leer Más">-->
                     <br><br>
-                    <h4>C.A.P.I.</h4>
+                    <!--<h4>C.A.P.I.</h4>-->
                 </div>
                
             </div>

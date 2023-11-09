@@ -8,23 +8,25 @@
 }
 
 body{
-        min-width: 100vmin;
+    min-width: 100vmin;
     background: url(../img/venezuela9.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
 .container__card{
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0px;
-    margin-top: 40px;
-    perspective: 1000px;
+    margin-top: 0cqw;
+    padding-left: 30px;
+    perspective: 1100px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .card__father{
-    margin: 20px;
+    margin: 140px;
+    padding-right: 1px;
     perspective: 1000px;
 }
 
@@ -34,8 +36,8 @@ body{
 
 
 .card{
-    width: 230px;
-    height: 300px;
+    width: 245px;
+    height: 390px;
     position:fixed;
     transform-style: preserve-3d;
     transition: all 900ms;
@@ -85,7 +87,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 14px;
     color: #fff;
     transform: translateZ(60px);
     width: 100%;
@@ -98,25 +100,27 @@ body{
 }
 
 .body__card_back{
-    padding: 20px;
+    color: darkblue;
+    margin-top: 0px;
+    padding: 10px;
     text-align: center;
     transform: translateZ(60px);
 }
 
 .body__card_back p{
-    margin-top: 30px;
+    margin-top: 5px;
     font-size: 18px;
+    color:darkblue;
 }
 
 .body__card_back input{
-    padding: 10px 40px;
-    margin-top: 30px;
-    font-size: 16px;
+    padding: 10px 10px;
+    margin-top: 10px;
+    font-size: 14px;
     cursor: pointer;
     border: none;
-    color: white;
     background: #58B0F6;
-    box-shadow: 1px 1px 30px -5px #58B0F6;
+    box-shadow: 1px 1px 40px -10px #58B0F6;
     border-radius: 10px;
     transition: box-shadow 600ms;
 }
@@ -139,4 +143,9 @@ button {
 
 .boton:hover {
   box-shadow: 1px 1px 30px 0px #449de6;
+}
+
+b {
+    color: darkblue;
+    font-size: 16px;
 }
