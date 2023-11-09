@@ -50,7 +50,7 @@
     </div>
 
 </div>
-  </main>
+  </main><br><br><br><br><br><br><br>
 
   <article>
     <?php include 'reloj/reloj.html' ?>
