@@ -18,7 +18,7 @@
 
         <div class="icon__menu">
             <i class="fas fa-bars" id="btn_open"></i>
-            <span>&Congruent;</span>
+            <!--<span>&Congruent;</span>-->
         </div>
     </div>
     
