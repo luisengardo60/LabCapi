@@ -22,6 +22,7 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    cursor: auto;
 }
 
 .card__father{
