@@ -204,13 +204,13 @@
           <thead>
             <tr>
               <!-- <th style="background-color: blue; color:white">Id</th>-->
-              <th style="background-color: blue; color:white">Nombre</th>
-              <th style="background-color: blue; color:white">Apellido</th>
-              <th style="background-color: blue; color:white">Email</th>
-              <th style="background-color: blue; color:white">Teléfono</th>
+              <th style="background-color: blue; color:white; text-align:center">Nombre</th>
+              <th style="background-color: blue; color:white; text-align:center">Apellido</th>
+              <th style="background-color: blue; color:white; text-align:center">Email</th>
+              <th style="background-color: blue; color:white; text-align:center">Teléfono</th>
               <!--<th>Cargo</th>-->
               <!--<th>Gerencia</th>-->
-              <th style="background-color: blue; color:white">Área</th>
+              <th style="background-color: blue; color:white; text-align:center">Área</th>
               <th style="background-color: blue; color:white">Imagen</th>
               <!--<th>Fecha de Creación</th>-->
               <th style="background-color: blue; color:white;">Editar</th>

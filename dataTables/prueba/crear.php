@@ -4,21 +4,14 @@ include("conexion.php");
 include("funciones.php");
 
 if ($_POST["operacion"] == "Crear") {
-  $imagen = '';
-  if ($_FILES["imagen_usuario"]["name"] != ''){
-    $imagen = subir_imagen();
-
-  }
-  $stmt = $conexion->prepare("INSERT INTO usuarios(nombre, apellido, area, imagen, telefono, email)VALUES(:nombre, :apellido, :area, :imagen, :telefono, :email)");
+  
+  $stmt = $conexion->prepare("INSERT INTO prueba(usuario, nombre, unidad)VALUES(:usuario, :nombre, :unidad)");
 
   $resultado = $stmt->execute(
     array(
-      ':nombre'        => $_POST["nombre"],
-      ':apellido'      => $_POST["apellido"],
-      ':email'         => $_POST["email"],
-      ':telefono'      => $_POST["telefono"],
-      ':area'          => $_POST["area"],      
-      ':imagen'        => $imagen
+      ':usuario'        => $_POST["usuario"],
+      ':nombre'         => $_POST["nombre"],
+      ':unidad'         => $_POST["unidad"]
     )
     );
 
@@ -30,25 +23,14 @@ if ($_POST["operacion"] == "Crear") {
 
 
 if ($_POST["operacion"] == "Editar") {
-  $imagen = '';
-  if ($_FILES["imagen_usuario"]["name"] != ''){
-    $imagen = subir_imagen();
-
-  }else{
-    $imagen = $_POST["imagen_usuario_oculta"];
-
-  }
-  $stmt = $conexion->prepare("UPDATE  usuarios SET nombre=:nombre, apellido=:apellido, area=:area, telefono=:telefono, email=:email, imagen=:imagen WHERE id = :id");
+    $stmt = $conexion->prepare("UPDATE prueba SET usuario=:usuario, nombre=:nombre, unidad=:unidad WHERE id = :id");
 
   $resultado = $stmt->execute(
     array(
-      ':nombre'        => $_POST["nombre"],
-      ':apellido'      => $_POST["apellido"],
-      ':email'         => $_POST["email"],
-      ':telefono'      => $_POST["telefono"],
-      ':area'          => $_POST["area"],      
-      ':imagen'        => $imagen,
-      ':id'            => $_POST["id_usuario"]
+      ':usuario'    => $_POST["usuario"],
+      ':nombre'     => $_POST["nombre"],
+      ':unidad'     => $_POST["unidad"],
+      ':id'         => $_POST["id_usuario"]
     )
     );
 

@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="../js/jquery-3.4.1.js"></script>
-    <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">
+    <script src="../../js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <link rel="stylesheet" href="../../css/cdnjscloudflareAjax.css">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -28,7 +28,7 @@
     <div class="menu__side" id="menu_side">
 
         <div class="name__page">
-            <a href="../php/inicio.php" title="Inicio" style="color:transparent;">Inicio<img src="../img/menu_inicio6.jpg" style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
+            <a href="../../php/inicio.php" title="Inicio" style="color:transparent;">Inicio<img src="../../img/menu_inicio6.jpg" style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
         </div>
         <ul>
             <div class="options__menu">
@@ -203,24 +203,16 @@
                 <table id="datos_usuario" class="table table-cebra table-hover">
                     <thead>
                         <tr>
-                            <!-- <th style="background-color: blue; color:white">Id</th>-->
-                            <th style="background-color: blue; color:white">Usuario</th>
-                            <th style="background-color: blue; color:white">Nombre</th>
-                            <th style="background-color: blue; color:white">Unidad</th>
-                            <th style="background-color: blue; color:white;">Editar</th>
-                            <th style="background-color: blue; color:white">Borrar</th>
+                            <!--<th style="background-color: blue; color:white; text-align:center">Id</th>-->
+                            <th style="background-color: blue; color:white; text-align:center">Usuario</th>
+                            <th style="background-color: blue; color:white; text-align:center">Nombre</th>
+                            <th style="background-color: blue; color:white; text-align:center">Unidad</th>
+                            <th style="background-color: blue; color:white; text-align:center">Editar</th>
+                            <th style="background-color: blue; color:white; text-align:center">Borrar</th>
                         </tr>
                     </thead>
                 </table>
             </div><br><br>
-
-            <div class="table-responsive" style="background-color:white">
-
-            </div>
-            <div class="table-responsive">
-                <!-- <b>Menu Adminfact</b><a href="../html/indexAdminfact.php">&#10132;</a>-->
-
-            </div>
 
             <!-- Modal -->
             <div class=" modal fade" id="modalUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -236,13 +228,13 @@
                         <form method="POST" id="formulario" enctype="multipart/form-data">
                             <div class="modal-content">
                                 <div class="modal-body">
-                                    <label for="nombre">Ingrese el usuario</label>
+                                    <label for="usuairo">Ingrese Usuario</label>
                                     <input type="text" name="usuario" id="usuario" class="form-control"><br>
 
-                                    <label for="apellido">Ingrese nombre</label>
+                                    <label for="nombre">Ingrese Nombre</label>
                                     <input type="text" name="nombre" id="nombre" class="form-control"><br>
 
-                                    <label for="telefono">Ingrese unidad</label>
+                                    <label for="unidad">Ingrese Unidad</label>
                                     <input type="text" name="unidad" id="unidad" class="form-control"><br>
 
                                     <!--<label for="cargo">Ingrese el cargo</label>
@@ -252,7 +244,7 @@
                 <input type="text" name="gerencia" id="gerencia" class="form-control"><br>-->
 
 
-                                 <!--   <label for="imagen">Seleccione una imagen</label>
+                                    <!--   <label for="imagen">Seleccione una imagen</label>
                                     <input type="file" name="imagen_usuario" id="imagen_usuario" class="form-control">
                                     <span id="imagen_subida"></span><br>-->
 
@@ -292,7 +284,7 @@
                         $(".modal-title").text("Crear Usuario");
                         $("#action").val("Crear");
                         $("#operacion").val("Crear");
-                       // $("#imagen_subida").html("");
+                        // $("#imagen_subida").html("");
                     });
 
                     var dataTable = $('#datos_usuario').DataTable({
@@ -315,22 +307,11 @@
 
                 $(document).on('submit', '#formulario', function(event) {
                     event.preventDefault();
+                    var usuario = $("#usuario").val();
                     var nombre = $("#nombre").val();
-                    var apellido = $("#apellido").val();
-                    var email = $("#email").val();
-                    var telefono = $("#telefono").val();
-                    var area = $("#area").val();
-                    var extension = $("#imagen_usuario").val().split('.').pop().toLowerCase();
-
-                    if (extension != '') {
-                        if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
-                            alert("Formato de imagen inválido");
-                            ("#imagen_usuario").val('');
-                            return false;
-                        }
-                    }
-
-                    if (nombre != '' && apellido != '' && email != '') {
+                    var unidad = $("#unidad").val();
+                    
+                    if (usuario != '' && nombre != '' && unidad != '') {
                         $.ajax({
                             url: "crear.php",
                             method: "POST",
@@ -362,14 +343,11 @@
                         success: function(data) {
                             //Console.log(data):
                             $('#modalUsuario').modal('show');
+                            $('#usuario').val(data.usuario);
                             $('#nombre').val(data.nombre);
-                            $('#apellido').val(data.apellido);
-                            $('#email').val(data.email);
-                            $('#telefono').val(data.telefono);
-                            $('#area').val(data.area);
+                            $('#unidad').val(data.unidad);
                             $('.modal-title').text("Editar Usuario");
                             $('#id_usuario').val(id_usuario);
-                            $('#imagen_subida').html(data.imagen_usuario);
                             $('#action').val("Editar");
                             $('#operacion').val("Editar");
 
@@ -406,7 +384,7 @@
 
     </main>
 
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>
