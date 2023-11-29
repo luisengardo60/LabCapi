@@ -13,17 +13,12 @@
 </head>
 
 <body>
-  <!--<header>
-    <img src="img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:left;">
-    <img src="img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:right;">
+  <header>
+   <?php include 'titulo/titulo.html' ?>
+</header>
+<main>
 
-  </header>-->
-  
-    <?php include 'titulo/titulo.html' ?>
-
-    <main>
-
-<div class="container__card">
+ <div class="container__card">
 
     <div class="card__father">
         <div class="card">
@@ -50,7 +45,7 @@
     </div>
 
 </div>
-  </main><br><br><br><br><br><br><br>
+  </main>
 
   <article>
     <?php include 'reloj/reloj.html' ?>

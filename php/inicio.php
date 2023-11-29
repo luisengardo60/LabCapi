@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,49 +11,10 @@
     <link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">
     <script src="../js/jquery-3.4.1.js"></script>
 </head>
-<!--<body style="background: darkblue;">-->
-<!--<body style="background: url(../img/tierra.jpg) no-repeat center center fixed; background-size:cover;">-->
-<!--<header>
-    <img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:left;">
-        <img src="../img/cantvLogo.jpg" title="CANTV" style="background:blue;width:120px; height:120px; float:right;">
-
-</header>-->
-
+<header>
 <?php include '../titulo/titulo1.html' ?>
-
-<!--<nav>
-    <ul class="menu-horizontal">
-        <li><a href="../index.php">CAPI</a></li>
-        <li>
-            <a href="#">Admin</a>
-            <ul class="menu-vertical">
-                <li><a href="indexAdminfact.php">Adminfact</a></li>
-                <li><a href="indexAdminBasis.php">Adminbasis</a></li>
-                <li><a href="indexAdminCrm.php">Admincrm</a></li>
-                <li><a href="indexAdminEdi.php">Adminedi</a></li>
-            </ul>
-        </li>
-
-        <li>
-            <a href="#">Aplicaciones</a>
-            <ul class="menu-vertical">
-                <li><a href="indexProyectos.php">Proyectos</a></li>
-                <li><a href="indexRecaudacion.php">Facturación</a></li>
-                <li><a href="indexEmpresarial.php">Empresarial</a></li>
-                <li><a href="indexAprovision.php">Aprovisionamiento</a></li>
-                <li><a href="indexTecnologia.php">Tecnología</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="http://www.google.com.ve">Salir</a>
-                <ul class="menu-vertical">
-                <li><a href="http://www.google.com.ve">Salir</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav><br><br><br><br><br><br><br><br><br><br>-->
-<main>
+</header>
+<body>
     <div class="container__card">
 
         <div class="card__father">
@@ -170,7 +130,7 @@
     </div>
 
 
-</main><br><br><br><br><br><br><br><br><br><br>
+<div class="espacio"></div>
 
 
 <?php include '../reloj/reloj1.html' ?>
