@@ -33,7 +33,7 @@
                     <div class="body__card_back">
                         <!--<h1>Entrar</h1>-->
                         <p style="color:white;">Bienvenidos</p><br><br>
-                        <a href="#"><button class="boton"><b>CAPI</b></button></a>
+                        <a href="../dataTables/prueba/prueba.php"><button class="boton"><b>CAPI</b></button></a>
                         <!--<input><a href="indexAdminfact.php"><button class="boton"><b>Entrar</b></button></a> value="Leer Más">-->
                         <br><br>
                         <!--<h3>C.A.P.I.</h3>-->

@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="../js/jquery-3.4.1.js"></script>
-  <link rel="stylesheet" href="../css/estilos.css">
-  <link rel="stylesheet" href="../css/cdnjscloudflareAjax.css">
+  <script src="../../js/jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="../../css/estilos.css">
+  <link rel="stylesheet" href="../../css/cdnjscloudflareAjax.css">
   <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -28,7 +28,7 @@
   <div class="menu__side" id="menu_side">
 
     <div class="name__page">
-      <a href="../php/inicio.php" title="Inicio" style="color:transparent;">Inicio<img src="../img/menu_inicio6.jpg" style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
+      <a href="../../php/inicio.php" title="Inicio" style="color:transparent;">Inicio<img src="../../img/menu_inicio6.jpg" style="border-radius: 50px; float:right; width: 60px; height: 60px;"></a>
     </div>
     <ul>
       <div class="options__menu">
@@ -40,7 +40,7 @@
           </div></a></li>
           <ul class="feat-show">
 
-            <li><a href="../php/indexAdminfact.php">
+            <li><a href="../../php/indexAdminfact.php">
                 <div class="option">
                   <i title="Menu Adminfact" style="font-size:18px">&#10146;</i>
                   <h6><b>Menu Adminfact</b></h6>
@@ -200,17 +200,17 @@
       <br><br>
 
       <div class="table-responsive" style="background-color:white">
-        <table id="datos_usuario" class="table table-bordered table-striped">
+        <table id="datos_usuario" class="table table-cebra table-hover">
           <thead>
             <tr>
               <!-- <th style="background-color: blue; color:white">Id</th>-->
-              <th style="background-color: blue; color:white">Nombre</th>
-              <th style="background-color: blue; color:white">Apellido</th>
-              <th style="background-color: blue; color:white">Email</th>
-              <th style="background-color: blue; color:white">Teléfono</th>
+              <th style="background-color: blue; color:white; text-align:center">Nombre</th>
+              <th style="background-color: blue; color:white; text-align:center">Apellido</th>
+              <th style="background-color: blue; color:white; text-align:center">Email</th>
+              <th style="background-color: blue; color:white; text-align:center">Teléfono</th>
               <!--<th>Cargo</th>-->
               <!--<th>Gerencia</th>-->
-              <th style="background-color: blue; color:white">Área</th>
+              <th style="background-color: blue; color:white; text-align:center">Área</th>
               <th style="background-color: blue; color:white">Imagen</th>
               <!--<th>Fecha de Creación</th>-->
               <th style="background-color: blue; color:white;">Editar</th>
@@ -221,7 +221,7 @@
       </div><br><br>
 
       <div class="table-responsive" style="background-color:white">
-        <table id="datos_usuario" class="table table-bordered table-striped">
+        <table id="datos_usuario" class="table table-cebra table-hover">
           <thead>
             <tr>
               <th style="background-color: blue; color:white">Área</th>
@@ -443,7 +443,7 @@
 
   </main>
 
-  <script src="../js/script.js"></script>
+  <script src="../../js/script.js"></script>
 </body>
 
 </html>

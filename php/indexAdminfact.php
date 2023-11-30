@@ -28,7 +28,7 @@
                 <li><a href="inicio.php"><img src="../img/menu_inicio6.jpg" title="C.A.P.I" style="padding-left:5x;padding-right:1px;padding-top: 1px; border-radius: 50px; float:center; width: 80px; height: 80px;"></a></li>
                 <li><a href="#" class="feat-btn">Adminfact<br>José Enrique Gonzalez<span class="first">&#x021D3; </span></a>
                     <ul class="feat-show">
-                        <li><a href="../dataTables/organigrama.php"> Organigrama</a></li>
+                        <li><a href="../dataTables/organigrama/organigrama.php"> Organigrama</a></li>
                         <li><a href="../html/adminFactServidores.html"> Servidores VLAN</a></li>
                         <li><a href="../html/adminFactintegKenan.html"> Diapositivas</a></li>
                         <li><a href="../html/adminfactChecklistCAPI.html"> CheckList aplicativos CAPI</a></li>

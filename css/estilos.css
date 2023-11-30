@@ -371,14 +371,13 @@ a.selected{
 }
 
 th {
-border: 2px solid black;
+border: 2px solid blue;
 padding: 8px;
 font-size: 18px;
-text-align: left;
+text-align: center;
 color: whitesmoke;
 padding-top: 12px;
 padding-bottom: 12px;
-text-align: center;
 /*text-decoration: underline;*/
 }
         
