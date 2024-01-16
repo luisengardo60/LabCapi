@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,28 +13,30 @@
     <script src="../js/jquery-3.4.1.js"></script>
 </head>
 <header>
-<?php include '../titulo/titulo1.html' ?>
+    <?php include '../titulo/titulo1.html' ?>
 </header>
+
 <body>
     <div class="container__card">
 
         <div class="card__father">
             <div class="card">
 
-                <div class="card__front" style="background-image: url(../img/castillogenova.jpg);">
+                <div class="card__front" style="background-image: url(../img/cantv_fibraOptica2.jpg);">
                     <div class="bg">
-                        <h2 style="color:darkblue">C.A.P.I.</h2>
+                        <h2>CANTV<BR>PORTALES</h2>
                     </div>
 
                     <div class="body__card_front">
 
                     </div>
                 </div>
-                <div class="card__back" style="background-image: url(../img/bloques.jpg);">
+                <!--   <div class="card__back" style="background: url(../img/venezuela1.jpg) no-repeat center center fixed; background-size: cover;">-->
+                <div class="card__back" style="background-image: url(../img/bloques.jpg)">
                     <div class="body__card_back">
                         <!--<h1>Entrar</h1>-->
                         <p style="color:white;">Bienvenidos</p><br><br>
-                        <a href="../dataTables/prueba/prueba.php"><button class="boton"><b>CAPI</b></button></a>
+                        <a href="../php/indexAdminPortales.php"><button class="boton"><b>PORTALES</b></button></a>
                         <!--<input><a href="indexAdminfact.php"><button class="boton"><b>Entrar</b></button></a> value="Leer Más">-->
                         <br><br>
                         <!--<h3>C.A.P.I.</h3>-->
@@ -45,9 +48,9 @@
 
         <div class="card__father">
             <div class="card">
-                <div class="card__front" style="background-image: url(../img/castillo_sancarlos_borromeo_margarita.jpg);">
+                <div class="card__front" style="background-image: url(../img/newcantv1.jpg);">
                     <div class="bg">
-                        <h2 style="color:darkblue">ADMIN</h2>
+                        <h2>ADMIN</h2>
                     </div>
 
                     <div class="body__card_front">
@@ -74,9 +77,9 @@
 
         <div class="card__father">
             <div class="card">
-                <div class="card__front" style="background-image: url(../img/castillo_laguaira.jpg);">
+                <div class="card__front" style="background-image: url(../img/newcantv1.jpg);">
                     <div class="bg">
-                        <h2 style="color:darkblue">APLICACIONES</h2>
+                        <h2>APLICACIONES</h2>
                     </div>
 
                     <div class="body__card_front">
@@ -104,9 +107,9 @@
 
         <div class="card__father">
             <div class="card">
-                <div class="card__front" style="background-image: url(../img/castillo_narvaez_margarita.jpg);">
+                <div class="card__front" style="background-image: url(../img/newcantv2.jpg);">
                     <div class="bg">
-                        <h2 style="color:darkblue">SALIR</h2>
+                        <h2>SALIR</h2>
                     </div>
 
                     <div class="body__card_front">
@@ -118,7 +121,7 @@
                     <div class="body__card_back">
                         <!--<h1>Entrar</h1>-->
                         <b style="color:white;">Hasta Pronto</b><br>
-                        <a href="php/inicio.php"><button class="boton"><b>Salir</b></button></a>
+                        <a href="https://www.google.com"><button class="boton"><b>Salir</b></button></a>
                         <!--<input><a href="php/inicio.php"><button class="boton"><b>Entrar</b></button></a> value="Leer Más">-->
                         <br><br>
                         <!--<h3>SALIR</h3>-->
@@ -130,10 +133,10 @@
     </div>
 
 
-<div class="espacio"></div>
+    <div class="espacio"></div>
 
 
-<?php include '../reloj/reloj1.html' ?>
+    <?php include '../reloj/reloj1.html' ?>
 
 </body>
 

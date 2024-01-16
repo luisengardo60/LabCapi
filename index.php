@@ -12,39 +12,39 @@
   <script src="js/jquery-3.4.1.js"></script>
 </head>
 
-<body>
+<body style="background-image: url(img/venezuela9.jpg) ;">
   <header>
-   <?php include 'titulo/titulo.html' ?>
-</header>
-<main>
+    <?php include 'titulo/titulo.html' ?>
+  </header>
+  <main>
 
- <div class="container__card">
+    <div class="container__card">
 
-    <div class="card__father">
+      <div class="card__father">
         <div class="card">
-            <div class="card__front" style="background-image: url(img/newcantv.jpg);">
-                <div class="bg"></div>
-                
-                <div class="body__card_front">
-                   <!-- <h1>C.A.P.I</h1>-->
-                </div>
-            </div>
-            <div class="card__back">
-            
-                <div class="body__card_back">
-                    <!--<h1>Entrar</h1>-->
-                    <p style="color:white";>Bienvenidos</p>
-                    <a href="php/inicio.php"><button class="boton"><b>Entrar</b></button></a>
-                    <!--<input><a href="php/inicio.php"><button class="boton"><b>Entrar</b></button></a> value="Leer Más">-->
-                    <br><br>
-                    <!--<h4>C.A.P.I.</h4>-->
-                </div>
-               
-            </div>
-        </div>
-    </div>
+          <div class="card__front" style="background-image: url(img/newcantv.jpg);">
+            <div class="bg"></div>
 
-</div>
+            <div class="body__card_front">
+              <!-- <h1>C.A.P.I</h1>-->
+            </div>
+          </div>
+          <div class="card__back">
+
+            <div class="body__card_back">
+              <!--<h1>Entrar</h1>-->
+              <p style="color:white" ;>Bienvenidos</p>
+              <a href="php/inicio.php"><button class="boton"><b>Entrar</b></button></a>
+              <!--<input><a href="php/inicio.php"><button class="boton"><b>Entrar</b></button></a> value="Leer Más">-->
+              <br><br>
+              <!--<h4>C.A.P.I.</h4>-->
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
   </main>
 
   <article>
