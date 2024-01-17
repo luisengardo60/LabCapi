@@ -180,7 +180,7 @@
     <main>
         <?php include '../titulo/titulo1.html' ?>
 
-        <h1 class="sombra3" style="color:aqua"><b>ADMINFACT</b></h1><br><br><br><br><br><br><br>
+        <h1 class="sombra3" style="color:aqua"><b>ADMINFACT</b></h1>
 
 
         <?php include '../reloj/reloj1.html' ?>

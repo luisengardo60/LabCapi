@@ -53,7 +53,7 @@
     <main>
         <?php include '../titulo/titulo1.html' ?>
 
-        <h1 class="sombra3" style="color:aqua"><b>PORTALES</b></h1><br><br><br><br><br><br><br>
+        <h1 class="sombra3" style="color:cyan"><b>PORTALES</b></h1><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
         <?php include '../reloj/reloj1.html' ?>

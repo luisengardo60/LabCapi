@@ -61,9 +61,9 @@
     </nav>
 
     <?php include '../titulo/titulo1.html' ?>
-    <br><br><br><br>
+    <br>
 
-    <h1 class="sombra3" style="color:aqua"><b>ADMINCRM</b></h1><br><br><br><br><br><br><br><br>
+    <h1 class="sombra3" style="color:aqua"><b>ADMINCRM</b></h1><br><br><br><br><br><br>
 
     <?php include '../reloj/reloj3.html' ?>
 

@@ -11,13 +11,13 @@
 body {
     margin-left: 80px;
     margin-top: 15px;
-    background: url(../img/venezuela7.jpg) no-repeat center center fixed;
+    background: url(../img/cantv_fibraOptica2.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
 
 main {
-    padding: 5px;
+    padding-top: 0px;
 }
 
 .text a {

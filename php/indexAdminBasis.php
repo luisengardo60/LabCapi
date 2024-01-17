@@ -61,7 +61,7 @@
     </nav>
 
 
-    <?php include '../titulo/titulo1.html' ?><br><br><br><br>
+    <?php include '../titulo/titulo1.html' ?><br>
 
     <h1 class="sombra3" style="color:aqua"><b>ADMINBASIS</b></h1><br><br><br><br><br><br><br><br>
 
