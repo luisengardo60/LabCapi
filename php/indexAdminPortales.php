@@ -42,6 +42,8 @@
                     <ul class="serv-show">
                         <li><a href="https://translate.google.com" target="_blank">Traductor Google</a></li>
                         <li><a href="https://sigma.cnti.gob.ve" target="_blank">SIGMA</a></li>
+                        <li><a href="https://www.bancodevenezuela.com" target="_blank">Bco. Venezuela</a></li>
+                        <li><a href="https://www.mercantilbanco.com/mercprod/index.html" target="_blank">Bco. Mercantil</a></li>
 
                     </ul>
                 </li>

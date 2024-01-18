@@ -12,7 +12,7 @@
   <script src="js/jquery-3.4.1.js"></script>
 </head>
 
-<body style="background-image: url(img/venezuela9.jpg) ;">
+<body style="background: url(img/venezuela9.jpg) no-repeat center center fixed; background-size: cover;">
   <header>
     <?php include 'titulo/titulo.html' ?>
   </header>
@@ -22,11 +22,11 @@
 
       <div class="card__father">
         <div class="card">
-          <div class="card__front" style="background-image: url(img/newcantv.jpg);">
+          <div class="card__front" style="background: url(img/newcantv6.jpg);">
             <div class="bg"></div>
 
             <div class="body__card_front">
-              <!-- <h1>C.A.P.I</h1>-->
+              <h1 style="color:white">Entrar</h1>
             </div>
           </div>
           <div class="card__back">

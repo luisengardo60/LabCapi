@@ -24,7 +24,7 @@
 
                 <div class="card__front">
                     <div class="bg">
-                        <h2>CANTV<BR>PORTALES</h2>
+                        <h2>CANTV<BR>Portales</h2>
                     </div>
 
 
@@ -34,8 +34,8 @@
                     <div class="body__card_back">
                         <!--<h1>Entrar</h1>-->
                         <p style="color:white;">Bienvenidos</p><br><br>
-                        <a href="../php/indexAdminPortales.php"><button class="boton"><b>PORTALES</b></button></a>
-                        <!--<input><a href="indexAdminfact.php"><button class="boton"><b>Entrar</b></button></a> value="Leer Más">-->
+                        <a href="../php/indexAdminPortales.php"><button class="boton"><b>Portales</b></button></a>
+                        <!--<a href="tel:+584129885610">Aquí el texto que quieras</a>--> <!--<input><a href="indexAdminfact.php"><button class="boton"><b>Entrar</b></button></a> value="Leer Más">-->
                         <br><br>
                         <!--<h3>C.A.P.I.</h3>-->
                     </div>
@@ -48,7 +48,7 @@
             <div class="card">
                 <div class="card__front">
                     <div class="bg">
-                        <h2>ADMIN</h2>
+                        <h2>Admin</h2>
                     </div>
 
                     <div class="body__card_front">
@@ -76,7 +76,8 @@
             <div class="card">
                 <div class="card__front">
                     <div class="bg">
-                        <h2>APLICACIONES</h2>
+                        <h2>Aplicaciones
+                        </h2>
                     </div>
 
                     <div class="body__card_front">
@@ -106,7 +107,7 @@
             <div class="card">
                 <div class="card__front">
                     <div class="bg">
-                        <h2>SALIR</h2>
+                        <h2>Salir</h2>
                     </div>
 
                     <div class="body__card_front">

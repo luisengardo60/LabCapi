@@ -9,9 +9,9 @@
 
 body{
     min-width: 100vmin;
-    /*background: url(../img/cantv_fibraOptica2.jpg) no-repeat center center fixed;
-    background-size: cover;*/
-    background-color:dodgerblue;
+    background: url(../img/cieloazul.jpg) no-repeat center center fixed;
+    background-size: cover;
+    /*background-color:dodgerblue;*/
 }
 
 .container__card{
@@ -49,7 +49,6 @@ body{
 .card__front{
     cursor: pointer;
     border: none;
-    background-color: blue;
     border-radius: 10px;
 }
 
@@ -84,6 +83,8 @@ body{
 }
 
 .bg{
+    background: url(../img/newcantv6.jpg) no-repeat center center fixed;
+    background-size: cover;
     text-align: center;
     padding-bottom: 100px;
     display: flex;
@@ -159,4 +160,30 @@ button {
 b {
     color: darkblue;
     font-size: 16px;
+}
+
+.sombra1 {
+    color: lightseagreen;
+    text-shadow: -12px -10px 5px #050505;
+    font-size: 25px;
+    font-family: 'Unna', serif;
+    text-align: center;
+}
+
+.sombra2 {
+    color: white;
+    text-shadow: -5px -4px 5px #050505;
+    font-size: 25px;
+    font-family: fantasy;
+    text-align: center;
+
+}
+
+.sombra3 {
+    color: black;
+    text-shadow: -5px -4px 5px #050505;
+    font-size: 30px;
+    font-family: 'serif';
+    text-align: center;
+
 }

@@ -68,7 +68,7 @@
 
 
     <article>
-        <?php include '../reloj/reloj2.html' ?>
+        <?php include '../reloj/reloj1.html' ?>
     </article>
 </body>
 

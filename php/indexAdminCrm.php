@@ -65,7 +65,7 @@
 
     <h1 class="sombra3" style="color:aqua"><b>ADMINCRM</b></h1><br><br><br><br><br><br>
 
-    <?php include '../reloj/reloj3.html' ?>
+    <?php include '../reloj/reloj1.html' ?>
 
 </body>
 

@@ -9,6 +9,8 @@
 body {
   text-align: center;
   background-repeat: no-repeat;
+  text-shadow: -5px -4px 5px #050505;
+  font-size: 1.2em;
   color: cyan;
 }
 
@@ -35,8 +37,9 @@ body {
 .fecha {
   font-family: Oswald, Arial;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: white;
+  text-shadow: -5px -4px 5px #050505;
   /*margin-bottom: 5px;
   background: rgba(0,0,0,.5);*/
   background: transparent;
@@ -71,9 +74,13 @@ body {
 
 .reloj .segundos,
 .reloj .ampm {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   display: block;
-  color: white;/*
+  color: white;
+  text-shadow: -5px -4px 5px #050505;
+  font-family: Oswald, Arial;
+  text-align: center;
+  /*
   background: white;
   border-radius: 2px;*/
 }
