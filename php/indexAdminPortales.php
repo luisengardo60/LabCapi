@@ -31,6 +31,7 @@
                         </span></a>
                     <ul class="feat-show">
                         <li><a href="https://talento.cantv.com.ve/login" target="_blank">Talentos</a></li>
+                        <li><a href="https://saludenlinea.cantv.com.ve/login" target="_blank">Salud En Linea</a></li>
                         <li><a href="https://fichatecnica-ciencia.mincyt.gob.ve/login" target="_blank">Ficha Tècnica</a></li>
                         <li><a href="http://portalmc.cantv.com.ve/Coordenadas.php" target="_blank">Coordenadas</a></li>
                         <li><a href="https://monitoreo.cantv.com.ve/inicio.html" target="_blank">Plataforma Monitoreo</a></li>
