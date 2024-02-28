@@ -14,7 +14,7 @@
 
 <body style="background: url(img/venezuela9.jpg) no-repeat center center fixed; background-size: cover;">
   <header>
-    <?php include 'titulo/titulo.html' ?>
+    <?php include 'titulo/titulo1.html' ?>
   </header>
   <main>
 
@@ -46,10 +46,11 @@
 
     </div>
   </main>
-
-  <article>
+  
+ 
     <?php include 'reloj/reloj.html' ?>
-  </article>
+
+
 </body>
 
 </html>

@@ -37,7 +37,7 @@ body {
 .fecha {
   font-family: Oswald, Arial;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: white;
   text-shadow: -5px -4px 5px #050505;
   /*margin-bottom: 5px;
@@ -51,7 +51,7 @@ body {
   font-family: Oswald, Arial;
   width: 100%;
   padding: 5px;
-  font-size: 2em;
+  font-size: 1.2em;
   text-align: center;
   /*background: rgba(0,0,0,.5);
   background: transparent;*/
@@ -74,7 +74,7 @@ body {
 
 .reloj .segundos,
 .reloj .ampm {
-  font-size: 1.3rem;
+  font-size: .8rem;
   display: block;
   color: white;
   text-shadow: -5px -4px 5px #050505;

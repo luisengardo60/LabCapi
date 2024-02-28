@@ -1,25 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
 
 body{
-    min-width: 100vmin;
+    /*min-width: 100vmin;*/
     background: url(../img/cieloazul.jpg) no-repeat center center fixed;
     background-size: cover;
     /*background-color:dodgerblue;*/
 }
 
 .container__card{
-    max-width: 1280px;
-    margin: 5x;
+    max-width: 1180px;
+    margin: 5px;
     margin-top: 0px;
-    padding-left: 40px;
-    perspective: 1100px;
+    padding-left: 10px;
+    perspective: 0px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -27,8 +21,8 @@ body{
 }
 
 .card__father{
-    margin: 150px;
-    padding-right: 8px;
+    margin: 110px;
+    padding-right: 10px;
     perspective: 1000px;
 
 }
@@ -39,8 +33,8 @@ body{
 
 
 .card{
-    width: 240px;
-    height: 300px;
+    width: 180px;
+    height: 120px;
     position:fixed;
     transform-style: preserve-3d;
     transition: all 1.3s;
@@ -59,10 +53,10 @@ body{
     height: 100%;
     position: absolute;
     top: 0;
-    left: 20px;
+    right: 5px;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    border-radius: 20px;
+    
 }
 
 .card__back{
@@ -71,8 +65,8 @@ body{
 }
 
 .body__card_front{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     text-align: center;
     padding: 0px;
     padding-top: 1px;
@@ -104,29 +98,26 @@ body{
 }
 
 .body__card_back{
-    background-image: url(../img/cantv_fibraOptica.jpg);
+    background: url(../img/cantv_fibraOptica.jpg) no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    color: darkblue;
-    margin-top: 0px;
-    padding: 1px;
-    width: 95%;
-    height: 95%;
+    width: 180px;
+    height: 226px;
+    position: absolute;
     border-radius: 20px;
-    text-align: center;
-    transform: translateZ(60px);
-}
+    
+    
+ }
 
 .body__card_back p{
     margin-top: 5px;
-    font-size: 18px;
+    font-size: 12px;
     color:darkblue;
 }
 
 .body__card_back input{
     padding: 10px 10px;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
     border: none;
     background: #58B0F6;
@@ -140,7 +131,7 @@ body{
 button {
   padding: 10px 20px;
   margin-top: 12px;
-  font-size: 16px;
+  font-size: 12px;
   cursor: pointer;
   border: none;
   color: darkblue;
@@ -154,12 +145,9 @@ button {
   box-shadow: 1px 1px 15px 0px white;
 }
 
-.espacio {
-    padding: 60px;
-}
 b {
     color: darkblue;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .sombra1 {

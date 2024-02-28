@@ -131,10 +131,9 @@
     </div>
 
 
-    <div class="espacio"></div>
+  
 
-
-    <?php include '../reloj/reloj1.html' ?>
+        <?php include '../reloj/reloj1.html' ?>
 
 </body>
 
