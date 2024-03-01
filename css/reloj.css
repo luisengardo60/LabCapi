@@ -73,7 +73,7 @@ body {
 .reloj .segundos,
 .reloj .ampm {
     font-size: .4em;
-    display: block;
+    display:inline-block;
     color: yellowgreen;/*
     background: white;
     border-radius: 2px;*/
