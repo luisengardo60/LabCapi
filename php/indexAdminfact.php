@@ -16,12 +16,12 @@
 
 <body id="body">
 
-        <div class="icon__menu">
-            <i class="fas fa-bars" id="btn_open"></i>
-            <!--<span>&Congruent;</span>-->
-        </div>
+    <div class="icon__menu">
+        <i class="fas fa-bars" id="btn_open"></i>
+        <!--<span>&Congruent;</span>-->
     </div>
-    
+    </div>
+
     <nav class="sidebar">
         <div class="menu__side" id="menu_side">
             <ul>
@@ -30,6 +30,7 @@
                     <ul class="feat-show">
                         <li><a href="../dataTables/organigrama/organigrama.php"> Organigrama</a></li>
                         <li><a href="../html/adminFactServidores.html"> Servidores VLAN</a></li>
+                        <li><a href="../html/adminFactServidoresSGDC.html"> Servidores SGDC</a></li>
                         <li><a href="../html/adminFactintegKenan.html"> Diapositivas</a></li>
                         <li><a href="../html/adminfactChecklistCAPI.html"> CheckList aplicativos CAPI</a></li>
                         <li><a href="../html/adminFactModuloKenan.html"> Módulo Kenan User Security (KUS)</a></li>

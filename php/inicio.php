@@ -24,7 +24,7 @@
 
                 <div class="card__front">
                     <div class="bg">
-                        <h2>CANTV<BR>Portales</h2>
+                        <h3>CANTV<BR>Portales</h3>
                     </div>
 
 
@@ -48,7 +48,7 @@
             <div class="card">
                 <div class="card__front">
                     <div class="bg">
-                        <h2>Admin</h2>
+                        <h3>Admin</h3>
                     </div>
 
                     <div class="body__card_front">
@@ -76,8 +76,8 @@
             <div class="card">
                 <div class="card__front">
                     <div class="bg">
-                        <h2>Aplicaciones
-                        </h2>
+                        <h3>Aplicaciones
+                        </h3>
                     </div>
 
                     <div class="body__card_front">
@@ -107,7 +107,7 @@
             <div class="card">
                 <div class="card__front">
                     <div class="bg">
-                        <h2>Salir</h2>
+                        <h3>Salir</h3>
                     </div>
 
                     <div class="body__card_front">
@@ -128,7 +128,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><br><br><BR><BR></BR></BR><BR><BR></BR></BR>
 
 
   
