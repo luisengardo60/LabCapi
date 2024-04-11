@@ -34,6 +34,7 @@
                         <li><a href="../html/adminFactintegKenan.html"> Diapositivas</a></li>
                         <li><a href="../html/adminfactChecklistCAPI.html"> CheckList aplicativos CAPI</a></li>
                         <li><a href="../html/adminFactModuloKenan.html"> Módulo Kenan User Security (KUS)</a></li>
+                        <li><a href="../html/adminFactInvEquipos.html"> Inventario Usuario</a></li>
                     </ul>
                 </li>
                 <li><a href="#" class="serv-btn">Facturación<span class="second">&#x021D3;</span></a>
