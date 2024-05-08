@@ -65,8 +65,8 @@ body{
 }
 
 .body__card_front{
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 50%;
     text-align: center;
     padding: 0px;
     padding-top: 1px;
@@ -77,7 +77,7 @@ body{
 }
 
 .bg{
-    background: url(../img/newcantv6.jpg) no-repeat center center fixed;
+    background: url(../img/newcantv.jpg) no-repeat center center fixed;
     background-size: cover;
     text-align: center;
     padding-bottom: 100px;

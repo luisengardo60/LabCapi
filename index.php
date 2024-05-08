@@ -19,14 +19,13 @@
   <main>
 
     <div class="container__card">
-
-      <div class="card__father">
-        <div class="card">
-          <div class="card__front" style="background: url(img/newcantv6.jpg);">
+        <div class="card__father">
+            <div class="card">
+              <div class="card__front">
             <div class="bg"></div>
-
+            
             <div class="body__card_front">
-              <h1 style="color:white">Entrar</h1>
+              
             </div>
           </div>
           <div class="card__back">
