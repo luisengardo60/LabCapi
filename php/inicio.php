@@ -18,7 +18,7 @@
 <header class="header">
 		<div class="container">
 			<nav class="menu">
-				<a href="#">Inicio</a>
+				<a href="../php/indexAdminPortales.php">Portales</a>
 				<a href="#">Nosotros</a>
 				<a href="#">Blog</a>
 				<a href="#">Contacto</a>
