@@ -25,7 +25,7 @@
             <div class="bg"></div>
             
             <div class="body__card_front">
-              
+              <h1 style="color:white">Entrar</h1>
             </div>
           </div>
           <div class="card__back">

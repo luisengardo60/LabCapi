@@ -35,6 +35,8 @@
                         <li><a href="https://monitoreo.cantv.com.ve/inicio.html" target="_blank">Plataforma Monitoreo</a></li>
                         <li><a href="https://www.cantv.com.ve" target="_blank">CANTV</a></li>
                         <li><a href="https://averiastelefonicas.cantv.com.ve/views/reporte-telefonica" target="_blank">Reporte Averías</a></li>
+                        <li><a href="http://pca01/principal.asp" target="_blank">GGSI</a></li>
+                        <li><a href="https://correoweb.cantv.com.ve/?client=advanced&loginOp=logout" target="_blank">Zimbra</a></li>
                     </ul>
                 </li>
                 <li><a href="#" class="serv-btn">Portales Otros<span class="second">&#x021D3;</span></a>
