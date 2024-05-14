@@ -24,8 +24,8 @@
     style="padding-left:5x;padding-right:1px;padding-top: 1px; border-radius: 50px; float:center; width: 80px; height: 80px; background-color:green"></a></li>
                 <li><a href="#" class="feat-btn">AdminCrm<span class="first">&#x021D3; </span></a>
                 <ul class="feat-show">
-                    <li><a href="../html/adminCrmServidores.html">Servidores Certus</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
+                    <li><a href="../html/adminCrmServidores.html" target="_blank">Servidores Certus</a></li>
+                    <li><a href="http://vmwecerdb01/ibmcognos/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/logoff.xts&h_CAM_action=logoff"  target="_blank">Cognos</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
