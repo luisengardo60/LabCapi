@@ -26,7 +26,7 @@
                 <ul class="feat-show">
                     <li><a href="../html/adminCrmServidores.html" target="_blank">Servidores Certus</a></li>
                     <li><a href="http://vmwecerdb01/ibmcognos/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/logoff.xts&h_CAM_action=logoff"  target="_blank">Cognos</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
+                    <li><a href="../html/adminCrmReinCognos.html">Re-Iniciar Cognos</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
