@@ -77,10 +77,10 @@ body{
 }
 
 .bg{
-    background: url(../img/cantvLogo.jpg) no-repeat center center fixed;
+    background: url(../img/cantv3.jpg) no-repeat center center fixed;
     background-size: cover;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,22 +88,25 @@ body{
     font-family: Geneva;
     color:white;
     transform: translateZ(60px);
-    width: 180px;
-    height: 160px;
+    width: 210px;
+    height: 210px;
     position: absolute;
     top: 0;
     left: 0;
     /*background: rgba(0,0,0,0.4);*/
-    border-radius: 20px;
+    border-radius: 200px;
+   /* animation: rotar 9s linear infinite;*/
 }
 
 .body__card_back{
-    background: url(../img/cantv_fibraOptica.jpg) no-repeat center center fixed;
+    background: url(../img/cantv_fibraOptica2.jpg) no-repeat center center fixed;
     background-size: cover;
-    width: 170px;
-    height: 253px;
+    width: 210px;
+    height: 210px;
+    right: 5px;
     position: absolute;
-    border-radius: 20px;
+    border-radius: 200px;
+    /*animation: rotar 9s linear infinite;*/
     
     
  }
@@ -126,12 +129,12 @@ body{
 
 .body__card_back input:hover{
     box-shadow: 1px 1px 30px 0px #449de6;
-    transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(360deg);
 }
 button {
-  padding: 5px 15px;
-  margin-top: 12px;
-  font-size: 20px;
+  padding: 5px 12px;
+  margin-top: 10px;
+  font-size: 10px;
   cursor: pointer;
   border: none;
   color: darkblue;
@@ -142,12 +145,21 @@ button {
 }
 
 .boton:hover {
-  box-shadow: 1px 1px 15px 0px white;
+  box-shadow: 1px 1px 10px 0px white;
 }
 
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-360deg);
+    }
+}
 b {
     color: darkblue;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .sombra1 {

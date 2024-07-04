@@ -82,7 +82,7 @@ img {
 
 .btn span{
   color: white;
-  background: blue;
+  background: transparent;
   font-size: 40px;
   line-height: 30px;
 }

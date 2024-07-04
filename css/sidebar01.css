@@ -81,14 +81,14 @@ img {
 
 .btn span{
   color: white;
-  background: blue;
+  background: transparent;
   font-size: 40px;
   line-height: 30px;
 }
 
 .btn span:hover {
   color: white;
-  background-color:blue;
+  background-color:transparent;
   border-radius: 10%;
   font-size: 40px;
   line-height: 30px;
