@@ -49,7 +49,7 @@
                         <li><a href="../html/adminFactReplicaDaP.html">Replicate Tablas</a></li>
                     </ul>
                 </li>
-                <li><a href="../html/Menu_Main1.html">Mainframe</a></li>
+                <li><a href="../Menu_Mainframe/html1/Menu_Main1.html">Mainframe</a></li>
             </ul>
     </nav>
 
