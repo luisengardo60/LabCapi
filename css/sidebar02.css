@@ -116,9 +116,9 @@ content: '\f00d';
 }
 
 .serv-show {
-  padding-left: 2px;
+  padding-left: 0px;
   font-size: 12px;
-}
+} /*Menu lateral izquierdo*/
 nav ul{
   background: #042331;
   height: 100%;
@@ -152,18 +152,18 @@ nav ul li a{ /*Adminfact Plataformas Facturación Mainframe*/
   position: relative;
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 19px;
   padding-left: 4px;
   font-weight: 500;
   display: block;
   width: 100%;
   border-left: 2px solid transparent;
 }
-
+/* AdminCrm y Portales */
 nav ul li.active a{
   color:cyan;
-  background: grey;
-  border-left-color: yellow;
+  background: transparent;
+  border-left-color: cyan;
 }
 
 nav ul ul{
@@ -188,11 +188,11 @@ nav ul ul li{
   line-height: 42px;
   border-bottom: none;
 }
-
+/* Despliegue del Menu AdminCrm y Portales*/
 nav ul ul li a{
-  font-size: 17px;
+  font-size: 18px;
   color: #e6e6e6;
-  padding-left: 80px;
+  padding-left: 70px;
 }
 
 nav ul li.active ul li a{

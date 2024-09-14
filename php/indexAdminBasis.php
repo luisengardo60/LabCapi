@@ -24,37 +24,26 @@
     style="padding-left:5x;padding-right:1px;padding-top: 1px; border-radius: 50px; float:center; width: 80px; height: 80px; background-color:green"></a></li>
             <li><a href="#" class="feat-btn">AdminBasis<span class="first">&#x021D3; </span></a>
                 <ul class="feat-show">
-                    <li><a href="../html/adminBasisInteg.html">Integración Platafpormas Sap</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
+                    <li><a href="../html/AdminBasis1/index.php" target="_blank">Manual Usuario</a></li>
+                    <li><a href="../html/AdminBasis2/index.php" target="_blank">Transacciones</a></li>
+                    <li><a href="../../LabCapi/html/adminFactAreasAtencion.html" target="_blank">Correos Áreas</a></li>                    
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                 </ul>
             </li>
-            <li><a href="#" class="serv-btn">xxxxxxx<span class="second">&#x021D3;</span></a>
+            <li><a href="#" class="serv-btn">Portales<span class="second">&#x021D3;</span></a>
                 <ul class="serv-show">
-                    <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
+                    <li><a href="https://help.sap.com/docs/sap_gui_for_windows?locale=en-US" target="_blank">SAP GUI</a></li>
+                    <li><a href="http://j2eprd.cantv.com.ve:50000/wsnavigator/enterwsdl.html" target="_blank">J2eprd</a></li>
+                    <li><a href="http://srvft11:8002/">La Matriz</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                 </ul>
             </li>
-            <li><a href="#">xxxxxxx</a></li>
-            <li><a href="#">xxxxxxx</a></li>
-            <li><a href="#">xxxxxxx</a></li>
-            <!--<li><a href="https://ss64.com/" target="_blank" class="bg-linux">
-                    <img style="width: 50px; border-radius: 50%;" src="../img/linux.png" alt="Linux" /><span
-                        class="segundo">Manual Online</span></a></li>
-            <li><a href="https://www.bancodevenezuela.com/" target="_blank">
-                    <img class="venezuela" src="../img/bancoVenezuela.png" alt="Bco de Venezuela" /><span
-                        class="segundo">Banco Venezuela</span></a></li>
-            <li><a href="https://www.mercantilbanco.com/" target="_blank">
-                    <img class="mercantil" src="../img/mercantl.jpg" alt="Mercantil Banco" /><span class="segundo">Banco
-                        Mercantil</span></a></li>-->
+  
         </ul>
 
 

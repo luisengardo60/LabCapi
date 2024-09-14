@@ -14,14 +14,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
   <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Organigrama</title>
 
 </head>
 
-<body id="body" style="background:lightskyblue;">
+<body>
+  
 
-  <div class="icon__menu">
-    <i class="fas fa-bars" id="btn_open"></i>
+  <div class="icon__menu">    <i class="fas fa-bars" id="btn_open"></i>
   </div>
 
 
@@ -230,7 +231,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>ADMINFACT</td>
+              <td>ADMINFACT </td>
               <td>KENAN - DOC1 - GENERATE - DATAFLOW - KDM</td>
             </tr>
             <tr>
@@ -239,6 +240,13 @@
             </tr>
             <tr>
               <td>ADMINCRM</td>
+              <td>CRM - CERTUS - DALMA</td>
+            </tr>
+            <tr>
+              <td>ADMINCDI</td>
+              <td>DI CONTROL CANTV</td>
+            </tr>
+            <td>ADMINCRM</td>
               <td>CRM - CERTUS - DALMA</td>
             </tr>
             <tr>

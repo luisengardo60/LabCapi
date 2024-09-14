@@ -27,26 +27,26 @@
                     <li><a href="../html/adminCrmServidores.html" target="_blank">Servidores Certus</a></li>
                     <li><a href="http://vmwecerdb01/ibmcognos/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/logoff.xts&h_CAM_action=logoff"  target="_blank">Cognos</a></li>
                     <li><a href="../html/adminCrmReinCognos.html">Re-Iniciar Cognos</a></li>
+                    <!--<li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
+                    <li><a href="#">xxxxxxx</a></li>-->
                 </ul>
             </li>
-            <li><a href="#" class="serv-btn">xxxxxxx<span class="second">&#x021D3;</span></a>
+            <li><a href="#" class="serv-btn">Portales<span class="second">&#x021D3;</span></a>
                 <ul class="serv-show">
+                    <li><a href="https://www.zimbra.com/" target="_blank">Zimbra</a></li>
+                    <li><a href="https://www.zimbra.com/product/documentation/" target="_blank">Zimbra Manuales</a></li>
+                    <!--<li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
+                    <li><a href="#">xxxxxxx</a></li>-->
                 </ul>
             </li>
+            <!--<li><a href="#">xxxxxxx</a></li>
             <li><a href="#">xxxxxxx</a></li>
             <li><a href="#">xxxxxxx</a></li>
-            <li><a href="#">xxxxxxx</a></li>
-            <!--<li><a href="https://ss64.com/" target="_blank" class="bg-linux">
+            <li><a href="https://ss64.com/" target="_blank" class="bg-linux">
                     <img style="width: 50px; border-radius: 50%;" src="../img/linux.png" alt="Linux" /><span
                         class="segundo">Manual Online</span></a></li>
             <li><a href="https://www.bancodevenezuela.com/" target="_blank">

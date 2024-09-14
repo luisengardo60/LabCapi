@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
-<body id="body" style="background:url('../img/cantv13.webp') no-repeat center center fixed; background-size: cover;">
+<body id="body" style="background:url('../img/cantvLogo.png') no-repeat center center fixed; background-size: cover;">
 
 <header class="header">
 		<div class="container">
