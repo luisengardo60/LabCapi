@@ -36,7 +36,10 @@
                         <li><a href="https://www.cantv.com.ve" target="_blank">CANTV</a></li>
                         <li><a href="https://averiastelefonicas.cantv.com.ve/views/reporte-telefonica" target="_blank">Reporte Averías</a></li>
                         <li><a href="http://pca01/principal.asp" target="_blank">GGSI</a></li>
-                        <li><a href="https://correoweb.cantv.com.ve/?client=advanced&loginOp=logout" target="_blank">Zimbra</a></li>
+                        <li><a href="https://correoweb.cantv.com.ve/?client=advanced&loginOp=logout" target="_blank">Zimbra Mail</a></li>
+                        <li><a href="https://10.2.37.175:7071/zimbraAdmin/" target="_blank">Zimbra Admin</a></li>
+                        <li><a href="https://gestordocumental.cantv.com.ve/share/page/context/shared/sharedfiles#filter=all&page=1" target="_blank">SGDC</a></li>
+                        <li><a href="http://corporativa.cantv.com.ve/" target="_blank">Corporativa CANTV</a></li>
                     </ul>
                 </li>
                 <li><a href="#" class="serv-btn">Portales Otros<span class="second">&#x021D3;</span></a>

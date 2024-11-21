@@ -1,0 +1,830 @@
+
+/*
+* Zimbra Collaboration Suite Web Client
+* Copyright (C) 2004-2017 Synacor, Inc.
+* https://www.zimbra.com/license
+*/
+if(AjxPackage.define("Zimbra")){if(AjxPackage.define("zimbra.csfe.ZmBatchCommand")){ZmBatchCommand=function(a,b,c){this._onError=(a===false)?ZmBatchCommand.STOP:ZmBatchCommand.CONTINUE;
+this._accountName=b;
+this._useJson=c;
+this._requestBody=null;
+this.curId=0;
+this._cmds=[];
+this._requests=[];
+this._respCallbacks=[];
+this._errorCallbacks=[]
+};
+ZmBatchCommand.prototype.toString=function(){return"ZmBatchCommand"
+};
+ZmBatchCommand.prototype._sensitive=false;
+ZmBatchCommand.prototype._noAuthToken=false;
+ZmBatchCommand.STOP="stop";
+ZmBatchCommand.CONTINUE="continue";
+ZmBatchCommand.prototype.setSensitive=function(a){this._sensitive=this._sensitive||a
+};
+ZmBatchCommand.prototype.setNoAuthToken=function(a){this._noAuthToken=a
+};
+ZmBatchCommand.prototype.isSensitive=function(){return this._sensitive
+};
+ZmBatchCommand.prototype.add=function(a){this._cmds.push(a)
+};
+ZmBatchCommand.prototype.size=function(){return this.curId||this._cmds.length
+};
+ZmBatchCommand.prototype.run=function(n,h,a){for(var g=0;
+g<this._cmds.length;
+g++){var d=this._cmds[g];
+d.run(this);
+this.curId++
+}var e={sensitive:this._sensitive,noAuthToken:this._noAuthToken,asyncMode:true,callback:new AjxCallback(this,this._handleResponseRun,[n,h]),errorCallback:h,offlineCallback:a,accountName:this._accountName};
+if(this._useJson){var o={BatchRequest:{_jsns:"urn:zimbra",onerror:this._onError}};
+var b=o.BatchRequest;
+var p=this.size();
+if(p&&this._requests.length){for(var g=0;
+g<p;
+g++){var f=this._requests[g];
+if(f){f.requestId=g;
+var m=ZmCsfeCommand.getMethodName(f);
+if(!b[m]){b[m]=[]
+}f[m].requestId=g;
+b[m].push(f[m])
+}}e.jsonObj=o;
+this._requestBody=o
+}}else{var k=AjxSoapDoc.create("BatchRequest","urn:zimbra");
+k.setMethodAttribute("onerror",this._onError);
+var p=this.size();
+if(p>0){for(var g=0;
+g<p;
+g++){var l=this._requests[g];
+var j=l.getMethod();
+j.setAttribute("requestId",g);
+var c=k.adoptNode(j);
+k.getMethod().appendChild(c)
+}e.soapDoc=k;
+this._requestBody=k
+}}if(e.jsonObj||e.soapDoc){appCtxt.getAppController().sendRequest(e)
+}else{if(n){n.run()
+}}};
+ZmBatchCommand.prototype.getRequestBody=function(){return this._requestBody
+};
+ZmBatchCommand.prototype._handleResponseRun=function(j,e,l){var h=l.getResponse();
+if(!h.BatchResponse){return
+}var f=[];
+for(var a in h.BatchResponse){if(a.match(/^_/)){continue
+}var k=h.BatchResponse[a];
+for(var d=0;
+d<k.length;
+d++){f[k[d].requestId]={method:a,resp:k[d]}
+}}var b=[];
+for(var d=0;
+d<f.length;
+d++){var c=f[d];
+try{this._processResponse(c.method,c.resp)
+}catch(g){b.push(g);
+if(this._onError==ZmBatchCommand.STOP){break
+}}}if(b.length>0&&e){e.run.apply(e,b)
+}else{if(j){j.run(l)
+}}};
+ZmBatchCommand.prototype.addRequestParams=function(b,c,a){this._requests[this.curId]=b;
+this._respCallbacks[this.curId]=c;
+this._errorCallbacks[this.curId]=a
+};
+ZmBatchCommand.prototype.addNewRequestParams=function(b,c,a){this.addRequestParams(b,c,a);
+this.curId++
+};
+ZmBatchCommand.prototype._processResponse=function(g,e){var f=e.requestId;
+if(g=="Fault"){var b=ZmCsfeCommand.faultToEx(e,"ZmBatchCommand.prototype.run");
+if(this._errorCallbacks[f]){var d=this._errorCallbacks[f].run(b);
+if(!d){appCtxt.getAppController()._handleException(b)
+}}throw b
+}if(this._respCallbacks[f]){var c={};
+c[g]=e;
+var a=new ZmCsfeResult(c);
+this._respCallbacks[f].run(a,e)
+}}
+}if(AjxPackage.define("zimbra.csfe.ZmCsfeCommand")){ZmCsfeCommand=function(){};
+ZmCsfeCommand.prototype.isZmCsfeCommand=true;
+ZmCsfeCommand.prototype.toString=function(){return"ZmCsfeCommand"
+};
+ZmCsfeCommand._COOKIE_NAME="ZM_AUTH_TOKEN";
+ZmCsfeCommand.serverUri=null;
+ZmCsfeCommand._sessionId=null;
+ZmCsfeCommand._staleSession={};
+ZmCsfeCommand.REAUTH="reauth";
+ZmCsfeCommand.RETRY="retry";
+ZmCsfeCommand.getAuthToken=function(){return AjxCookie.getCookie(document,ZmCsfeCommand._COOKIE_NAME)
+};
+ZmCsfeCommand.setCookieName=function(a){ZmCsfeCommand._COOKIE_NAME=a
+};
+ZmCsfeCommand.setServerUri=function(a){ZmCsfeCommand.serverUri=a
+};
+ZmCsfeCommand.setAuthToken=function(b,f,e,c){ZmCsfeCommand._curAuthToken=b;
+if(f!=null){var d=null;
+if(f>0){d=new Date();
+var a=parseInt(f);
+d.setTime(d.getTime()+a)
+}AjxCookie.setCookie(document,ZmCsfeCommand._COOKIE_NAME,b,d,"/",null,c)
+}else{AjxCookie.deleteCookie(document,ZmCsfeCommand._COOKIE_NAME,"/")
+}if(e){ZmCsfeCommand.setSessionId(e)
+}};
+ZmCsfeCommand.clearAuthToken=function(){AjxCookie.deleteCookie(document,ZmCsfeCommand._COOKIE_NAME,"/")
+};
+ZmCsfeCommand.getSessionId=function(){return ZmCsfeCommand._sessionId
+};
+ZmCsfeCommand.setSessionId=function(b){var a=ZmCsfeCommand.extractSessionId(b);
+if(a){if(a&&!ZmCsfeCommand._staleSession[a]){if(a!=ZmCsfeCommand._sessionId){if(ZmCsfeCommand._sessionId){ZmCsfeCommand._staleSession[ZmCsfeCommand._sessionId]=true
+}ZmCsfeCommand._sessionId=a
+}}}};
+ZmCsfeCommand.clearSessionId=function(){ZmCsfeCommand._sessionId=null
+};
+ZmCsfeCommand.extractSessionId=function(a){var b;
+if(a instanceof Array){a=a[0].id
+}else{if(a&&a.id){a=a.id
+}}b=parseInt(a,10);
+if(isNaN(b)){b=null
+}return b
+};
+ZmCsfeCommand.faultToEx=function(b,c){var d={msg:AjxStringUtil.getAsString(b.Reason.Text),code:AjxStringUtil.getAsString(b.Detail.Error.Code),method:(c?c.methodNameStr:null),detail:AjxStringUtil.getAsString(b.Code.Value),data:b.Detail.Error.a,trace:(b.Detail.Error.Trace||"")};
+var a;
+if(c){if(c.soapDoc){d.request=c.soapDoc.getXml()
+}else{if(c.jsonRequestObj){if(c.jsonRequestObj&&c.jsonRequestObj.Header&&c.jsonRequestObj.Header.context){c.jsonRequestObj.Header.context.authToken="(removed)"
+}d.request=AjxStringUtil.prettyPrint(c.jsonRequestObj,true)
+}}}return new ZmCsfeException(d)
+};
+ZmCsfeCommand.getMethodName=function(b){var a=(b&&b._methodEl&&b._methodEl.tagName)?b._methodEl.tagName:null;
+if(!a){for(var c in b){if(/Request|Response$/.test(c)){a=c;
+break
+}}}return(a||"[unknown]")
+};
+ZmCsfeCommand.prototype.invoke=function(g){this.cancelled=false;
+if(!(g&&(g.soapDoc||g.jsonObj))){return
+}var a=ZmCsfeCommand.getRequestStr(g);
+var f;
+try{var e=(g.serverUri||ZmCsfeCommand.serverUri)+g.methodNameStr;
+this._st=new Date();
+var d={"Content-Type":"application/soap+xml; charset=utf-8"};
+if(g.asyncMode){f=new AjxCallback(this,this._runCallback,[g]);
+this._rpcId=AjxRpc.invoke(a,e,d,f)
+}else{var b=AjxRpc.invoke(a,e,d);
+return(!g.returnXml)?(this._getResponseData(b,g)):b
+}}catch(c){this._handleException(c,g,f)
+}};
+ZmCsfeCommand.prototype.invokeRest=function(d){if(!(d&&d.restUri)){return
+}var c;
+try{this._st=new Date();
+if(d.asyncMode){c=new AjxCallback(this,this._runCallback,[d]);
+this._rpcId=AjxRpc.invoke(null,d.restUri,null,c,true)
+}else{var a=AjxRpc.invoke(null,d.restUri,null,null,true);
+return a.text
+}}catch(b){this._handleException(b,d,c)
+}};
+ZmCsfeCommand.prototype.cancel=function(){if(!this._rpcId){return
+}this.cancelled=true;
+var a=AjxRpc.getRpcRequestById(this._rpcId);
+if(a){a.cancel();
+if(AjxEnv.isFirefox3_5up){AjxRpc.removeRpcCtxt(a)
+}}};
+ZmCsfeCommand.getRequestStr=function(a){return a.soapDoc?ZmCsfeCommand._getSoapRequestStr(a):ZmCsfeCommand._getJsonRequestStr(a)
+};
+ZmCsfeCommand._getJsonRequestStr=function(g){var e={Header:{},Body:g.jsonObj};
+var c=e.Header.context={_jsns:"urn:zimbra"};
+var d=["ZimbraWebClient - ",AjxEnv.browser," (",AjxEnv.platform,")"].join("");
+c.userAgent={name:d};
+if(ZmCsfeCommand.clientVersion){c.userAgent.version=ZmCsfeCommand.clientVersion
+}if(g.noSession){c.nosession={}
+}else{var f=ZmCsfeCommand.getSessionId();
+if(f){c.session={_content:f,id:f}
+}else{c.session={}
+}}if(g.targetServer){c.targetServer={_content:g.targetServer}
+}if(g.highestNotifySeen){c.notify={seq:g.highestNotifySeen}
+}if(g.changeToken){c.change={token:g.changeToken,type:"new"}
+}if(!g.skipAuthCheck){if(g.accountId){c.account={_content:g.accountId,by:"id"}
+}else{if(g.accountName){c.account={_content:g.accountName,by:"name"}
+}}}if(g.useXml){c.format={type:"xml"}
+}g.methodNameStr=ZmCsfeCommand.getMethodName(g.jsonObj);
+if(!g.noAuthToken){var b=g.authToken||ZmCsfeCommand.getAuthToken();
+if(!b){throw new ZmCsfeException(ZMsg.authTokenRequired,ZmCsfeException.NO_AUTH_TOKEN,g.methodNameStr)
+}if(ZmCsfeCommand._curAuthToken&&!g.skipAuthCheck&&(g.resend!=ZmCsfeCommand.REAUTH)&&(b!=ZmCsfeCommand._curAuthToken)){throw new ZmCsfeException(ZMsg.authTokenChanged,ZmCsfeException.AUTH_TOKEN_CHANGED,g.methodNameStr)
+}c.authToken=ZmCsfeCommand._curAuthToken=b
+}else{if(ZmCsfeCommand.noAuth){throw new ZmCsfeException(ZMsg.authRequired,ZmCsfeException.NO_AUTH_TOKEN,g.methodNameStr)
+}}if(window.csrfToken){c.csrfToken=window.csrfToken
+}AjxDebug.logSoapMessage(g);
+g.jsonRequestObj=e;
+var a=(g.useStringify1?JSON.stringify1(e):JSON.stringify(e));
+return AjxStringUtil.jsEncode(a)
+};
+ZmCsfeCommand._getSoapRequestStr=function(g){var l=g.soapDoc;
+if(!g.resend){var n=l.createHeaderElement();
+var e=l.set("context",null,n,"urn:zimbra");
+var b=l.set("userAgent",null,e);
+var c=["ZimbraWebClient - ",AjxEnv.browser," (",AjxEnv.platform,")"].join("");
+b.setAttribute("name",c);
+if(ZmCsfeCommand.clientVersion){b.setAttribute("version",ZmCsfeCommand.clientVersion)
+}if(g.noSession){l.set("nosession",null,e)
+}else{var h=ZmCsfeCommand.getSessionId();
+var i=l.set("session",null,e);
+if(h){i.setAttribute("id",h)
+}}if(g.targetServer){l.set("targetServer",g.targetServer,e)
+}if(g.highestNotifySeen){var o=l.set("notify",null,e);
+o.setAttribute("seq",g.highestNotifySeen)
+}if(g.changeToken){var k=l.set("change",null,e);
+k.setAttribute("token",g.changeToken);
+k.setAttribute("type","new")
+}if(!g.skipAuthCheck){if(g.accountId){var f=l.set("account",g.accountId,e);
+f.setAttribute("by","id")
+}else{if(g.accountName){var f=l.set("account",g.accountName,e);
+f.setAttribute("by","name")
+}}}if(g.skipExpiredToken){var j=l.set("authTokenControl",null,e);
+j.setAttribute("voidOnExpired","1")
+}if(!g.useXml){var d=l.set("format",null,e);
+d.setAttribute("type","js")
+}}g.methodNameStr=ZmCsfeCommand.getMethodName(l);
+if(!g.noAuthToken){var m=g.authToken||ZmCsfeCommand.getAuthToken();
+if(!m){throw new ZmCsfeException(ZMsg.authTokenRequired,ZmCsfeException.NO_AUTH_TOKEN,g.methodNameStr)
+}if(ZmCsfeCommand._curAuthToken&&!g.skipAuthCheck&&(g.resend!=ZmCsfeCommand.REAUTH)&&(m!=ZmCsfeCommand._curAuthToken)){throw new ZmCsfeException(ZMsg.authTokenChanged,ZmCsfeException.AUTH_TOKEN_CHANGED,g.methodNameStr)
+}ZmCsfeCommand._curAuthToken=m;
+if(g.resend==ZmCsfeCommand.REAUTH){var a=l.getDoc().getElementsByTagName("authToken");
+if(a&&a.length==1){a[0].firstChild.data=m
+}else{a=l.getDoc().getElementsByTagName("context");
+if(a&&a.length==1){l.set("authToken",m,a[0])
+}else{}}}else{if(!g.resend){l.set("authToken",m,e)
+}}}else{if(ZmCsfeCommand.noAuth&&!g.ignoreAuthToken){throw new ZmCsfeException(ZMsg.authRequired,ZmCsfeException.NO_AUTH_TOKEN,g.methodNameStr)
+}}if(window.csrfToken){l.set("csrfToken",window.csrfToken,e)
+}AjxDebug.logSoapMessage(g);
+return l.getXml()
+};
+ZmCsfeCommand.prototype._runCallback=function(c,a){if(!a){return
+}if(this.cancelled&&c.skipCallbackIfCancelled){return
+}var b;
+if(a instanceof ZmCsfeResult){b=a
+}else{b=this._getResponseData(a,c)
+}this._en=new Date();
+if(c.callback&&b){c.callback.run(b)
+}else{if(!c.emptyResponseOkay){}}};
+ZmCsfeCommand.prototype._getResponseData=function(d,c){this._en=new Date();
+var j=new ZmCsfeResult();
+var b=false;
+var a=Boolean(c.restUri);
+var f=null;
+if(!d.success&&!d.xml&&(/<html/i.test(d.text))){var h=new ZmCsfeException(null,ZmCsfeException.CSFE_SVC_ERROR,c.methodNameStr,"HTTP response status "+d.status);
+if(c.asyncMode){j.set(h,true);
+return j
+}else{throw h
+}}if(typeof(d.text)=="string"&&d.text.indexOf("{")==0){f=d.text
+}else{if(!a){try{b=true;
+if(!(d.text||(d.xml&&(typeof d.xml)=="string"))){if(c.emptyResponseOkay){return null
+}else{throw new ZmCsfeException(null,ZmCsfeException.EMPTY_RESPONSE,c.methodNameStr)
+}}f=(AjxEnv.isIE||d.xml==null)?AjxSoapDoc.createFromXml(d.text):AjxSoapDoc.createFromDom(d.xml)
+}catch(h){if(c.asyncMode){j.set(h,true);
+return j
+}else{throw h
+}}if(!f){var h=new ZmCsfeException(null,ZmCsfeException.SOAP_ERROR,c.methodNameStr,"Bad XML response doc");
+if(c.asyncMode){j.set(h,true);
+return j
+}else{throw h
+}}}}var e=a?d.text:{};
+if(b){e=f._xmlDoc.toJSObject(true,false,true)
+}else{if(!a){try{e=JSON.parse(f)
+}catch(h){if(h.name=="SyntaxError"){h=new ZmCsfeException(null,ZmCsfeException.BAD_JSON_RESPONSE,c.methodNameStr,f);
+AjxDebug.println(AjxDebug.BAD_JSON,"bad json. respDoc="+f)
+}if(c.asyncMode){j.set(h,true);
+return j
+}else{throw h
+}}}}c.methodNameStr=ZmCsfeCommand.getMethodName(e.Body);
+AjxDebug.logSoapMessage(c);
+var g=e&&e.Body&&e.Body.Fault;
+if(g){if(AjxUtil.isString(g)&&g.indexOf("<")==0){g=AjxXmlDoc.createFromXml(g).toJSObject(true,false,true)
+}var h=ZmCsfeCommand.faultToEx(g,c);
+if(c.asyncMode){j.set(h,true,e.Header);
+return j
+}else{throw h
+}}else{if(!d.success){var h=new ZmCsfeException(null,ZmCsfeException.CSFE_SVC_ERROR,c.methodNameStr,"HTTP response status "+d.status);
+if(c.asyncMode){j.set(h,true);
+return j
+}else{throw h
+}}else{if(c.asyncMode){j.set(e)
+}}}var i=e.Header&&e.Header.context&&e.Header.context.session;
+ZmCsfeCommand.setSessionId(i);
+return c.asyncMode?j:e
+};
+ZmCsfeCommand.prototype._handleException=function(a,c,d){if(!(a&&(a instanceof ZmCsfeException||a instanceof AjxSoapException||a instanceof AjxException))){var b=new ZmCsfeException();
+b.method=c.methodNameStr||c.restUri;
+b.detail=a?a.toString():"undefined exception";
+b.code=ZmCsfeException.UNKNOWN_ERROR;
+b.msg="Unknown Error";
+a=b
+}if(c.asyncMode){d.run(new ZmCsfeResult(a,true))
+}else{throw a
+}}
+}if(AjxPackage.define("zimbra.csfe.ZmCsfeException")){ZmCsfeException=function(d){d=Dwt.getParams(arguments,ZmCsfeException.PARAMS);
+AjxException.call(this,d.msg,d.code,d.method,d.detail);
+if(d.data){this.data={};
+for(var b=0;
+b<d.data.length;
+b++){var c=d.data[b];
+var a=c.n;
+if(!this.data[a]){this.data[a]=[]
+}this.data[a].push(c._content)
+}}this.trace=d.trace;
+this.request=d.request
+};
+ZmCsfeException.PARAMS=["msg","code","method","detail","data","trace"];
+ZmCsfeException.prototype=new AjxException;
+ZmCsfeException.prototype.constructor=ZmCsfeException;
+ZmCsfeException.prototype.isZmCsfeException=true;
+ZmCsfeException.prototype.toString=function(){return"ZmCsfeException"
+};
+ZmCsfeException.MAIL_SEND_ADDRESS_FAILURE_INVALID="invalid";
+ZmCsfeException.MAIL_SEND_ADDRESS_FAILURE_UNSENT="unsent";
+ZmCsfeException.getErrorMsg=function(b,a){var c=ZMsg[b];
+if(!c){ZmCsfeException._unknownFormat=ZmCsfeException._unknownFormat||new AjxMessageFormat(ZMsg.unknownError);
+return ZmCsfeException._unknownFormat.format(b)
+}this.msg=this.msg||c;
+return a?AjxMessageFormat.format(c,a):c
+};
+ZmCsfeException.prototype.getErrorMsg=function(a){return ZmCsfeException.getErrorMsg(this.code,a)
+};
+ZmCsfeException.prototype.getData=function(a){return this.data&&this.data[a]
+};
+ZmCsfeException.AUTH_TOKEN_CHANGED="AUTH_TOKEN_CHANGED";
+ZmCsfeException.BAD_JSON_RESPONSE="BAD_JSON_RESPONSE";
+ZmCsfeException.CSFE_SVC_ERROR="CSFE_SVC_ERROR";
+ZmCsfeException.EMPTY_RESPONSE="EMPTY_RESPONSE";
+ZmCsfeException.NETWORK_ERROR="NETWORK_ERROR";
+ZmCsfeException.NO_AUTH_TOKEN="NO_AUTH_TOKEN";
+ZmCsfeException.SOAP_ERROR="SOAP_ERROR";
+ZmCsfeException.LICENSE_ERROR="service.LICENSE_ERROR";
+ZmCsfeException.SVC_ALREADY_IN_PROGRESS="service.ALREADY_IN_PROGRESS";
+ZmCsfeException.SVC_AUTH_EXPIRED="service.AUTH_EXPIRED";
+ZmCsfeException.SVC_AUTH_REQUIRED="service.AUTH_REQUIRED";
+ZmCsfeException.SVC_FAILURE="service.FAILURE";
+ZmCsfeException.SVC_INVALID_REQUEST="service.INVALID_REQUEST";
+ZmCsfeException.SVC_PARSE_ERROR="service.PARSE_ERROR";
+ZmCsfeException.SVC_PERM_DENIED="service.PERM_DENIED";
+ZmCsfeException.SVC_RESOURCE_UNREACHABLE="service.RESOURCE_UNREACHABLE";
+ZmCsfeException.SVC_UNKNOWN_DOCUMENT="service.UNKNOWN_DOCUMENT";
+ZmCsfeException.SVC_TEMPORARILY_UNAVAILABLE="service.TEMPORARILY_UNAVAILABLE";
+ZmCsfeException.SVC_WRONG_HOST="service.WRONG_HOST";
+ZmCsfeException.ACCT_AUTH_FAILED="account.AUTH_FAILED";
+ZmCsfeException.ACCT_CHANGE_PASSWORD="account.CHANGE_PASSWORD";
+ZmCsfeException.ACCT_EXISTS="account.ACCOUNT_EXISTS";
+ZmCsfeException.ACCT_TOO_MANY_ACCOUNTS="account.TOO_MANY_ACCOUNTS";
+ZmCsfeException.ACCT_INVALID_ATTR_VALUE="account.INVALID_ATTR_VALUE";
+ZmCsfeException.ACCT_INVALID_PASSWORD="account.INVALID_PASSWORD";
+ZmCsfeException.ACCT_INVALID_PREF_NAME="account.INVALID_PREF_NAME";
+ZmCsfeException.ACCT_INVALID_PREF_VALUE="account.INVALID_PREF_VALUE";
+ZmCsfeException.ACCT_MAINTENANCE_MODE="account.MAINTENANCE_MODE";
+ZmCsfeException.ACCT_NO_SUCH_ACCOUNT="account.NO_SUCH_ACCOUNT";
+ZmCsfeException.ACCT_NO_SUCH_SAVED_SEARCH="account.NO_SUCH_SAVED_SEARCH";
+ZmCsfeException.ACCT_NO_SUCH_TAG="account.ACCT_NO_SUCH_TAG";
+ZmCsfeException.ACCT_PASS_CHANGE_TOO_SOON="account.PASSWORD_CHANGE_TOO_SOON";
+ZmCsfeException.ACCT_PASS_LOCKED="account.PASSWORD_LOCKED";
+ZmCsfeException.ACCT_PASS_RECENTLY_USED="account.PASSWORD_RECENTLY_USED";
+ZmCsfeException.COS_EXISTS="account.COS_EXISTS";
+ZmCsfeException.DISTRIBUTION_LIST_EXISTS="account.DISTRIBUTION_LIST_EXISTS";
+ZmCsfeException.DOMAIN_EXISTS="account.DOMAIN_EXISTS";
+ZmCsfeException.DOMAIN_NOT_EMPTY="account.DOMAIN_NOT_EMPTY";
+ZmCsfeException.IDENTITY_EXISTS="account.IDENTITY_EXISTS";
+ZmCsfeException.NO_SUCH_DISTRIBUTION_LIST="account.NO_SUCH_DISTRIBUTION_LIST";
+ZmCsfeException.NO_SUCH_DOMAIN="account.NO_SUCH_DOMAIN";
+ZmCsfeException.MAINTENANCE_MODE="account.MAINTENANCE_MODE";
+ZmCsfeException.TOO_MANY_IDENTITIES="account.TOO_MANY_IDENTITIES";
+ZmCsfeException.TOO_MANY_SEARCH_RESULTS="account.TOO_MANY_SEARCH_RESULTS";
+ZmCsfeException.NO_SUCH_COS="account.NO_SUCH_COS";
+ZmCsfeException.SIGNATURE_EXISTS="account.SIGNATURE_EXISTS";
+ZmCsfeException.CANNOT_CHANGE_VOLUME="volume.CANNOT_CHANGE_TYPE_OF_CURRVOL";
+ZmCsfeException.CANNOT_DELETE_VOLUME_IN_USE="volume.CANNOT_DELETE_VOLUME_IN_USE";
+ZmCsfeException.NO_SUCH_VOLUME="volume.NO_SUCH_VOLUME";
+ZmCsfeException.ALREADY_EXISTS="volume.ALREADY_EXISTS";
+ZmCsfeException.VOLUME_NO_SUCH_PATH="volume.NO_SUCH_PATH";
+ZmCsfeException.MAIL_ALREADY_EXISTS="mail.ALREADY_EXISTS";
+ZmCsfeException.MAIL_IMMUTABLE="mail.IMMUTABLE_OBJECT";
+ZmCsfeException.MAIL_INVALID_NAME="mail.INVALID_NAME";
+ZmCsfeException.MAIL_INVITE_OUT_OF_DATE="mail.INVITE_OUT_OF_DATE";
+ZmCsfeException.MAIL_MAINTENANCE_MODE="mail.MAINTENANCE";
+ZmCsfeException.MAIL_MESSAGE_TOO_BIG="mail.MESSAGE_TOO_BIG";
+ZmCsfeException.MAIL_MUST_RESYNC="mail.MUST_RESYNC";
+ZmCsfeException.MAIL_NO_SUCH_CALITEM="mail.NO_SUCH_CALITEM";
+ZmCsfeException.MAIL_NO_SUCH_CONV="mail.NO_SUCH_CONV";
+ZmCsfeException.MAIL_NO_SUCH_CONTACT="mail.NO_SUCH_CONTACT";
+ZmCsfeException.MAIL_NO_SUCH_FOLDER="mail.NO_SUCH_FOLDER";
+ZmCsfeException.MAIL_NO_SUCH_ITEM="mail.NO_SUCH_ITEM";
+ZmCsfeException.MAIL_NO_SUCH_MOUNTPOINT="mail.NO_SUCH_MOUNTPOINT";
+ZmCsfeException.MAIL_NO_SUCH_MSG="mail.NO_SUCH_MSG";
+ZmCsfeException.MAIL_NO_SUCH_PART="mail.NO_SUCH_PART";
+ZmCsfeException.MAIL_NO_SUCH_TAG="mail.NO_SUCH_TAG";
+ZmCsfeException.MAIL_QUERY_PARSE_ERROR="mail.QUERY_PARSE_ERROR";
+ZmCsfeException.MAIL_QUOTA_EXCEEDED="mail.QUOTA_EXCEEDED";
+ZmCsfeException.MAIL_SEND_ABORTED_ADDRESS_FAILURE="mail.SEND_ABORTED_ADDRESS_FAILURE";
+ZmCsfeException.MAIL_SEND_FAILURE="mail.SEND_FAILURE";
+ZmCsfeException.MAIL_TOO_MANY_CONTACTS="mail.TOO_MANY_CONTACTS";
+ZmCsfeException.MAIL_TOO_MANY_TERMS="mail.TOO_MANY_QUERY_TERMS_EXPANDED";
+ZmCsfeException.MAIL_UNABLE_TO_IMPORT_APPOINTMENTS="mail.MAIL_UNABLE_TO_IMPORT_APPOINTMENTS";
+ZmCsfeException.MAIL_UNABLE_TO_IMPORT_CONTACTS="mail.UNABLE_TO_IMPORT_CONTACTS";
+ZmCsfeException.MODIFY_CONFLICT="mail.MODIFY_CONFLICT";
+ZmCsfeException.TOO_MANY_TAGS="mail.TOO_MANY_TAGS";
+ZmCsfeException.CANNOT_RENAME="mail.CANNOT_RENAME";
+ZmCsfeException.CANNOT_UNLOCK="mail.CANNOT_UNLOCK";
+ZmCsfeException.CANNOT_LOCK="mail.CANNOT_LOCK";
+ZmCsfeException.LOCKED="mail.LOCKED";
+ZmCsfeException.UPLOAD_REJECTED="mail.UPLOAD_REJECTED";
+ZmCsfeException.MUST_BE_ORGANIZER="mail.MUST_BE_ORGANIZER";
+ZmCsfeException.OFFLINE_ONLINE_ONLY_OP="offline.ONLINE_ONLY_OP"
+}if(AjxPackage.define("zimbra.csfe.ZmCsfeResult")){ZmCsfeResult=function(a,b,c){this.set(a,b,c)
+};
+ZmCsfeResult.prototype.isZmCsfeResult=true;
+ZmCsfeResult.prototype.toString=function(){return"ZmCsfeResult"
+};
+ZmCsfeResult.prototype.set=function(a,b,c){this._data=a;
+this._isException=(b===true);
+this._header=c
+};
+ZmCsfeResult.prototype.getResponse=function(){if(this._isException){throw this._data
+}else{return this._data
+}};
+ZmCsfeResult.prototype.getException=function(){return this._isException?this._data:null
+};
+ZmCsfeResult.prototype.isException=function(){return this._isException
+};
+ZmCsfeResult.prototype.getHeader=function(){return this._header
+}
+}if(AjxPackage.define("zimbra.common.ZmBaseSplashScreen")){ZmBaseSplashScreen=function(b,a,c){if(arguments.length==0){return
+}if(!(b instanceof DwtShell)){throw new AjxException("Parent must be a DwtShell",AjxException.INVALIDPARENT,"ZSplashScreen")
+}c=c||"ZSplashScreen";
+DwtControl.call(this,{parent:b,className:c,posStyle:Dwt.ABSOLUTE_STYLE});
+this.__createContents()
+};
+ZmBaseSplashScreen.prototype=new DwtControl;
+ZmBaseSplashScreen.prototype.constructor=ZmBaseSplashScreen;
+ZmBaseSplashScreen.prototype.getHtml=function(){};
+ZmBaseSplashScreen.prototype.setVisible=function(a){if(a==this.getVisible()){return
+}if(a){this.__createContents()
+}DwtControl.prototype.setVisible.call(this,a);
+if(!a){this.getHtmlElement().innerHTML=""
+}};
+ZmBaseSplashScreen.prototype.__createContents=function(){var c=this.getHtmlElement();
+c.style.zIndex=Dwt.Z_SPLASH;
+var b=document.createElement("table");
+b.border=b.cellSpacing=b.cellPadding=0;
+Dwt.setSize(b,"100%","100%");
+var d=b.insertRow(0);
+var a=d.insertCell(0);
+a.vAlign="middle";
+a.align="center";
+a.innerHTML=this.getHtml();
+c.appendChild(b);
+c.style.cursor="wait"
+}
+}if(AjxPackage.define("zimbra.common.ZmErrorDialog")){ZmErrorDialog=function(b,c){this._strNav=this._getNavigatorInfo();
+this._subjPfx=this._getSubjectPrefix();
+var d=new DwtDialog_ButtonDescriptor(ZmErrorDialog.REPORT_BUTTON,c.report,DwtDialog.ALIGN_LEFT);
+var a=new DwtDialog_ButtonDescriptor(ZmErrorDialog.DETAIL_BUTTON,c.showDetails,DwtDialog.ALIGN_LEFT);
+DwtMessageDialog.call(this,{parent:b,extraButtons:[d,a],id:"ErrorDialog"});
+this.registerCallback(ZmErrorDialog.REPORT_BUTTON,this._reportCallback,this);
+this.registerCallback(ZmErrorDialog.DETAIL_BUTTON,this.showDetail,this);
+this._showDetailsMsg=c.showDetails;
+this._hideDetailsMsg=c.hideDetails;
+this._setAllowSelection()
+};
+ZmErrorDialog.prototype=new DwtMessageDialog;
+ZmErrorDialog.prototype.constructor=ZmErrorDialog;
+ZmErrorDialog.prototype.toString=function(){return"ZmErrorDialog"
+};
+ZmErrorDialog.REPORT_BUTTON="Report";
+ZmErrorDialog.DETAIL_BUTTON="Detail";
+ZmErrorDialog.DEFAULT_REPORT_URL="//www.zimbra.com/e/";
+ZmErrorDialog.prototype._detailsVisible=false;
+ZmErrorDialog.prototype.CONTROLS_TEMPLATE="zimbra.Widgets#ZmErrorDialogControls";
+ZmErrorDialog.prototype.reset=function(){this.setDetailString();
+DwtMessageDialog.prototype.reset.call(this)
+};
+ZmErrorDialog.prototype.setDetailString=function(a){if(!(this._button[ZmErrorDialog.DETAIL_BUTTON])){return
+}this._button[ZmErrorDialog.DETAIL_BUTTON].setVisible(a!=null);
+this._detailStr=a
+};
+ZmErrorDialog.prototype.setMessage=function(a,d,b,c){this._msgStr=a;
+this.setDetailString(d);
+this._msgStyle=b;
+this._msgTitle=c;
+this._detailsVisible=false;
+this._button[ZmErrorDialog.DETAIL_BUTTON].setText(this._showDetailsMsg);
+this._updateContent()
+};
+ZmErrorDialog.prototype._updateContent=function(){var b={message:this._msgStr,detail:this._detailStr,showDetails:this._detailsVisible};
+var a=AjxTemplate.expand("zimbra.Widgets#ZmErrorDialogContent",b);
+this.setSize(Dwt.CLEAR,this._detailsVisible?"300":Dwt.CLEAR);
+DwtMessageDialog.prototype.setMessage.call(this,a,this._msgStyle,this._msgTitle)
+};
+ZmErrorDialog.prototype.popup=function(a,b){if(b){this.setButtonVisible(ZmErrorDialog.REPORT_BUTTON,false)
+}DwtMessageDialog.prototype.popup.call(this,a)
+};
+ZmErrorDialog.prototype.popdown=function(){DwtMessageDialog.prototype.popdown.call(this);
+this.setSize(Dwt.CLEAR,Dwt.CLEAR);
+this.setButtonVisible(ZmErrorDialog.REPORT_BUTTON,true)
+};
+ZmErrorDialog.prototype._getNavigatorInfo=function(){var c=[];
+var a=0;
+c[a++]="\n\n";
+c[a++]="href: ";
+c[a++]=location.href;
+c[a++]="\n";
+for(var b in navigator){if(typeof navigator[b]=="function"){continue
+}if(typeof navigator[b]=="unknown"){continue
+}if(AjxEnv.isIE&&b==="mimeTypes"){continue
+}c[a++]=b+": "+navigator[b]+"\n"
+}return c.join("")
+};
+ZmErrorDialog.prototype._getSubjectPrefix=function(){var b=[];
+var a=0;
+b[a++]="ER: ";
+if(AjxEnv.isIE){b[a++]="IE "
+}else{if(AjxEnv.isFirefox){b[a++]="FF "
+}else{if(AjxEnv.isMozilla){b[a++]="MOZ "
+}else{if(AjxEnv.isSafari){b[a++]="SAF "
+}else{if(AjxEnv.isOpera){b[a++]="OPE "
+}else{b[a++]="UKN "
+}}}}}if(AjxEnv.isWindows){b[a++]="WIN "
+}else{if(AjxEnv.isLinux){b[a++]="LNX "
+}else{if(AjxEnv.isMac){b[a++]="MAC "
+}else{b[a++]="UNK "
+}}}b[a++]=appCtxt.get(ZmSetting.CLIENT_VERSION)+" ";
+return b.join("")
+};
+ZmErrorDialog.prototype._getUserPrefs=function(){var d=appCtxt.getCurrentSearch();
+var c=[];
+var a=0;
+c[a++]="\n\n";
+c[a++]="username: ";
+c[a++]=appCtxt.get(ZmSetting.USERNAME);
+c[a++]="\n";
+if(d){c[a++]="currentSearch: ";
+c[a++]=d.query;
+c[a++]="\n"
+}for(var b in ZmSetting.INIT){if(ZmSetting.INIT[b][0]){c[a++]=ZmSetting.INIT[b][0];
+c[a++]=": ";
+c[a++]=(""+ZmSetting.INIT[b][3]);
+c[a++]="\n"
+}}return c.join("")
+};
+ZmErrorDialog.prototype._reportCallback=function(){this._iframe=document.createElement("iframe");
+this._iframe.style.width=this._iframe.style.height=0;
+this._iframe.style.visibility="hidden";
+var c=this._getContentDiv();
+c.appendChild(this._iframe);
+var i=this._getUserPrefs();
+var h=Dwt.getNextId();
+var e=[];
+var g=0;
+var f=this._subjPfx+this._detailStr.substring(0,40);
+var b=(location.protocol=="https:")?"https:":"http:";
+e[g++]="<html><head></head><body><form id='";
+e[g++]=h;
+e[g++]="' method='POST' action='";
+e[g++]=b;
+e[g++]=appCtxt.get(ZmSetting.ERROR_REPORT_URL)||ZmErrorDialog.DEFAULT_REPORT_URL;
+e[g++]="'>";
+e[g++]="<textarea name='details'>";
+e[g++]=this._detailStr;
+e[g++]="version - ";
+e[g++]=appCtxt.get(ZmSetting.CLIENT_VERSION);
+e[g++]="\n";
+e[g++]="release - ";
+e[g++]=appCtxt.get(ZmSetting.CLIENT_RELEASE);
+e[g++]="\n";
+e[g++]="date - ";
+e[g++]=appCtxt.get(ZmSetting.CLIENT_DATETIME);
+e[g++]="</textarea><textarea name='navigator'>";
+e[g++]=this._strNav;
+e[g++]="</textarea><textarea name='prefs'>";
+e[g++]=i;
+e[g++]="</textarea><textarea name='subject'>";
+e[g++]=f;
+e[g++]="</textarea></form></body></html>";
+var d=Dwt.getIframeDoc(this._iframe);
+d.open();
+d.write(e.join(""));
+d.close();
+var a=d.getElementById(h);
+if(a){a.submit();
+appCtxt.setStatusMsg(ZmMsg.errorReportSent)
+}this.popdown()
+};
+ZmErrorDialog.prototype.showDetail=function(){this._detailsVisible=!this._detailsVisible;
+this._updateContent();
+this._button[ZmErrorDialog.DETAIL_BUTTON].setText(this._detailsVisible?this._hideDetailsMsg:this._showDetailsMsg)
+}
+}if(AjxPackage.define("zimbra.common.ZLoginFactory")){ZLoginFactory=function(){};
+ZLoginFactory.USER_ID="ZLoginUserName";
+ZLoginFactory.PASSWORD_ID="ZLoginPassword";
+ZLoginFactory.REMEMBER_ME_ID="rememberMe";
+ZLoginFactory.REMEMBER_ME_CONTAINER_ID="ZLoginRememberMeContainer";
+ZLoginFactory.NEW_PASSWORD_ID="newpass1";
+ZLoginFactory.NEW_PASSWORD_TR_ID="ZLoginNewPassword1Tr";
+ZLoginFactory.PASSWORD_CONFIRM_TR_ID="ZLoginNewPassword2Tr";
+ZLoginFactory.PASSWORD_CONFIRM_ID="newpass2";
+ZLoginFactory.LOGIN_BUTTON_ID="ZLoginButton";
+ZLoginFactory.MORE_ID="ZLoginMore";
+ZLoginFactory.TWO_FACTOR_CODE="ZTwoFactorCode";
+ZLoginFactory.TWO_FACTOR_CODE_FORM="ZTwoFactorCodeForm";
+ZLoginFactory.VERIFY_BUTTON_ID="ZTwoFactorVerifyButton";
+ZLoginFactory.TEXT_TYPE=0;
+ZLoginFactory.CHECKBOX_TYPE=1;
+ZLoginFactory.BUTTON_TYPE=2;
+ZLoginFactory.TAB_ORDER=[ZLoginFactory.USER_ID,ZLoginFactory.PASSWORD_ID,ZLoginFactory.NEW_PASSWORD_ID,ZLoginFactory.PASSWORD_CONFIRM_ID,ZLoginFactory.REMEMBER_ME_ID,ZLoginFactory.LOGIN_BUTTON_ID,ZLoginFactory.VERIFY_BUTTON_ID];
+ZLoginFactory.VISIBILITY=[ZLoginFactory.USER_ID,ZLoginFactory.PASSWORD_ID,ZLoginFactory.NEW_PASSWORD_TR_ID,ZLoginFactory.PASSWORD_CONFIRM_TR_ID,ZLoginFactory.REMEMBER_ME_CONTAINER_ID,ZLoginFactory.LOGIN_BUTTON_ID,ZLoginFactory.VERIFY_BUTTON_ID];
+ZLoginFactory.TAB_TYPE=[ZLoginFactory.TEXT_TYPE,ZLoginFactory.TEXT_TYPE,ZLoginFactory.TEXT_TYPE,ZLoginFactory.TEXT_TYPE,ZLoginFactory.CHECKBOX_TYPE,ZLoginFactory.BUTTON_TYPE];
+ZLoginFactory.copyDefaultParams=function(a){return{showPanelBorder:true,companyURL:a.splashScreenCompanyURL||"",shortVersion:"",longVersion:"",appName:a.splashScreenAppName||"",productName:"",showError:false,errorMsg:"",showLongVersion:false,showAbout:false,aboutMsg:"",showLoading:false,loadingMsg:a.splashScreenLoading||"",showForm:false,showUserField:false,userNameMsg:a.username?a.username+":":"",showMoreField:false,moreMsg:a.more||"",showPasswordField:false,passwordMsg:a.password?a.password+":":"",showNewPasswordFields:false,newPassword1Msg:a.newPassword+":"||"",newPassword2Msg:a.confirm+":"||"",showLicenseMsg:false,licenseMsg:"",showRememberMeCheckbox:false,rememberMeMsg:a.rememberMe||"",showLogOff:false,logOffMsg:a.loginAsDiff||"",logOffAction:"",showButton:true,buttonName:a.login||"",copyrightText:a.splashScreenCopyright||"",twoFactorCodeTitle:a.twoFactorCodeTitle||"",twoFactorCodeLabel:a.twoFactorCodeLabel+":"||"",twoFactorCodeButton:a.twoFactorCodeButton||""}
+};
+ZLoginFactory.getLoginPanel=function(){var a=document.getElementsByName("loginForm");
+return a
+};
+ZLoginFactory.showErrorMsg=function(a){this.setHTML("ZLoginErrorMsg",a);
+this.show("ZLoginErrorPanel");
+this._flickerErrorMessagePanel()
+};
+ZLoginFactory.hideErrorMsg=function(){this.hide("ZLoginErrorPanel")
+};
+ZLoginFactory.getErrorMsgPanel=function(){return this.get("ZLoginErrorPanel")
+};
+ZLoginFactory.showAboutMsg=function(a){this.setHTML("ZLoginAboutPanel",a);
+this.show("ZLoginAboutPanel")
+};
+ZLoginFactory.hideAboutMsg=function(){this.hide("ZLoginAboutPanel")
+};
+ZLoginFactory.getAboutMsg=function(){return this.get("ZLoginAboutPanel")
+};
+ZLoginFactory.showLoadingMsg=function(a){this.setHTML("ZLoginLoadingMsg",a);
+this.show("ZLoginAboutPanel")
+};
+ZLoginFactory.hideLoadingMsg=function(){this.hide("ZLoginAboutPanel")
+};
+ZLoginFactory.getLoadingMsg=function(){return this.get("ZLoginAboutPanel")
+};
+ZLoginFactory.showForm=function(){this.show("ZLoginFormPanel")
+};
+ZLoginFactory.hideForm=function(){this.hide("ZLoginFormPanel")
+};
+ZLoginFactory.getForm=function(){return this.get("ZLoginFormPanel")
+};
+ZLoginFactory.showMoreField=function(a){this.setValue(ZLoginFactory.MORE_ID,a);
+this.show(ZLoginFactory.MORE_ID)
+};
+ZLoginFactory.hideMoreField=function(){this.hide(ZLoginFactory.MORE_ID)
+};
+ZLoginFactory.getMoreField=function(){return this.get(ZLoginFactory.MORE_ID)
+};
+ZLoginFactory.showUserField=function(a){this.setValue(ZLoginFactory.USER_ID,a);
+this.show(ZLoginFactory.USER_ID)
+};
+ZLoginFactory.hideUserField=function(){this.hide(ZLoginFactory.USER_ID)
+};
+ZLoginFactory.getUserField=function(){return this.get(ZLoginFactory.USER_ID)
+};
+ZLoginFactory.showPasswordField=function(a){this.show(ZLoginFactory.PASSWORD_ID)
+};
+ZLoginFactory.hidePasswordField=function(){this.hide(ZLoginFactory.PASSWORD_ID)
+};
+ZLoginFactory.getPasswordField=function(){return this.get(ZLoginFactory.PASSWORD_ID)
+};
+ZLoginFactory.showNewPasswordFields=function(){this.show(ZLoginFactory.NEW_PASSWORD_TR_ID);
+this.show(ZLoginFactory.PASSWORD_CONFIRM_TR_ID)
+};
+ZLoginFactory.hideNewPasswordFields=function(){this.hide(ZLoginFactory.NEW_PASSWORD_TR_ID);
+this.hide(ZLoginFactory.PASSWORD_CONFIRM_TR_ID)
+};
+ZLoginFactory.areNewPasswordFieldsShown=function(){return this.isShown(ZLoginFactory.NEW_PASSWORD_TR_ID)
+};
+ZLoginFactory.getNewPasswordField=function(){return this.get(ZLoginFactory.NEW_PASSWORD_ID)
+};
+ZLoginFactory.getPasswordConfirmField=function(){return this.get(ZLoginFactory.PASSWORD_CONFIRM_ID)
+};
+ZLoginFactory.showRememberMeCheckbox=function(){this.show(ZLoginFactory.REMEMBER_ME_CONTAINER_ID)
+};
+ZLoginFactory.hideRememberMeCheckbox=function(){this.hide(ZLoginFactory.REMEMBER_ME_CONTAINER_ID)
+};
+ZLoginFactory.showLogOff=function(){this.show("ZLoginLogOffContainer")
+};
+ZLoginFactory.hideLogOff=function(){this.hide("ZLoginLogOffContainer")
+};
+ZLoginFactory.setLoginButtonName=function(a){this.setHTML("ZLoginButtonText",a)
+};
+ZLoginFactory.setLoginButtonAction=function(b){var a=document.getElementById(ZLoginFactory.LOGIN_BUTTON_ID);
+if(a){a.onclick=b
+}};
+ZLoginFactory.getLoginButton=function(){return this.get(ZLoginFactory.LOGIN_BUTTON_ID)
+};
+ZLoginFactory.showTwoFactorCode=function(){this.hideForm();
+this.show(ZLoginFactory.TWO_FACTOR_CODE_FORM)
+};
+ZLoginFactory.getLoginDialogHTML=function(b){var a=["<div ",(b.showAbout?" ":"class='center'"),">","<div class='contentBox'>","<h1><a href='"+b.companyURL+"' id='bannerLink' target='_new'>","<span class='ImgLoginBanner'></span>","</a></h1>","<div id='ZLoginErrorPanel' ",(b.showError?" ":"style='display:none'"),">","<table><tr><td width='40'><div class='ImgCritical_32'></div></td><td width='*'><span class='errorText' id='ZLoginErrorMsg'></span></td></tr></table>","</div>","<form name='loginForm' method='POST'>","<table class='form' id='ZLoginFormPanel'",(b.showForm?" ":"style='display:none'"),">","<tr ",(b.showMoreField?" ":"style='display:none'"),">","<td></td>","<td><span class='Img ImgInformation_xtra_small'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><label for='",ZLoginFactory.MORE_ID,"'>",b.moreMsg,"</label></td>","</tr>","<tr ",(b.showLoading?" ":"style='display:none'"),">","<td colspan=2 class='ZLoadingMessage'>",b.loadingMsg,"</td>","</tr>","<tr id='ZLoginLicenseMsgContainer' ",(b.showLicenseMsg?" ":"style='display:none'"),">","<td colspan=3 id='ZLoginLicenseMsg'>",b.licenseMsg,"</td>","</tr>","<tr ",(b.showUserField?" ":"style='display:none'"),">","<td><label for='",ZLoginFactory.USER_ID,"'>",b.userNameMsg,"</label></td>","<td><input id='",ZLoginFactory.USER_ID,"' name='",ZLoginFactory.USER_ID,"' class='zLoginField' type='text' size='40' autocomplete=OFF/></td>","</tr>","<tr ",(b.showPasswordField?" ":"style='display:none'"),">","<td><label for=",ZLoginFactory.PASSWORD_ID,">",b.passwordMsg,"</label></td>","<td><input id=",ZLoginFactory.PASSWORD_ID," class='zLoginField' name=",ZLoginFactory.PASSWORD_ID," type='password' autocomplete=OFF size='40'/></td>","</tr>","<tr id=",ZLoginFactory.NEW_PASSWORD_TR_ID,(b.showNewPasswordFields?" ":" style='display:none'"),">","<td><label for='",ZLoginFactory.NEW_PASSWORD_ID,"'>",b.newPassword1Msg,"</label></td>","<td><input id='",ZLoginFactory.NEW_PASSWORD_ID,"' class='zLoginField' name='",ZLoginFactory.NEW_PASSWORD_ID,"' type='password' autocomplete=OFF size='40'/></td>","</tr>","<tr id=",ZLoginFactory.PASSWORD_CONFIRM_TR_ID,(b.showNewPasswordFields?" ":" style='display:none'"),">","<td><label for='",ZLoginFactory.PASSWORD_CONFIRM_ID,"'>",b.newPassword2Msg,"</label></td>","<td><input id='",ZLoginFactory.PASSWORD_CONFIRM_ID,"' class='zLoginField' name='",ZLoginFactory.PASSWORD_CONFIRM_ID,"' type='password' autocomplete=OFF size='40'/></td>","</tr>","<tr>","<td>&nbsp;</td>","<td class='submitTD'>","<input id='",ZLoginFactory.LOGIN_BUTTON_ID,"' class='ZLoginButton DwtButton' type='button' onclick='",b.loginAction,";return false' value='",b.buttonName,(b.showButton?"'/>":"' style='display:none'/>"),"<input id='",ZLoginFactory.REMEMBER_ME_ID,"' value='1' type='checkbox' name='",ZLoginFactory.REMEMBER_ME_ID,"'  ",(b.showRememberMeCheckbox?"":"style='display:none'"),"/>","<label ",(b.showRememberMeCheckbox?"":"style='display:none'")," for='",ZLoginFactory.REMEMBER_ME_ID,"'>",b.rememberMeMsg,"</label>","</td>","</tr>","</table>","<table class='form' id='",ZLoginFactory.TWO_FACTOR_CODE_FORM,"'",(b.showTwoFactorForm?" ":"style='display:none'")," >","<tr>","<td colspan=2 class='ZTwoFactorMessage'>",b.twoFactorCodeTitle,"</td>","</tr>","<tr>","<td><label for='",ZLoginFactory.TWO_FACTOR_CODE,"'>",b.twoFactorCodeLabel,"</label></td>","<td><input id='",ZLoginFactory.TWO_FACTOR_CODE,"' name='",ZLoginFactory.TWO_FACTOR_CODE,"' class='zLoginField' type='text' autocomplete='off' size='40' ></td>","</tr>","<tr>","<td>&nbsp;</td>","<td class='submitTD'>","<input id='",ZLoginFactory.VERIFY_BUTTON_ID,"' class='ZLoginButton DwtButton' type='button' onclick='",b.loginAction,";return false' value='",b.twoFactorCodeButton,"' />","</td>","</tr>","</table>","</form>","<div id='ZLoginAboutPanel' ",(b.showAbout?"":"style='display:none'"),">",b.aboutMsg,"</div>","<div id='ZLoginLongVersion' class='version' ",(b.showLongVersion?"":"style='display:none'"),">",b.longVersion,"</div>","</div>","<div class='decor1'></div>","</div>","<div class='Footer'>","<div id='ZLoginNotice'>",b.clientLevelNotice,"</div>","<div class='copyright'>",b.copyrightText,"</div>","</div>","<div class='decor2'></div>"].join("");
+return a
+};
+ZLoginFactory.setHTML=function(c,a){var b=document.getElementById(c);
+if(b&&a!=null){b.innerHTML=a
+}};
+ZLoginFactory.setValue=function(c,a){var b=document.getElementById(c);
+if(b&&a!=null){b.value=a
+}};
+ZLoginFactory.show=function(c,a){var b=document.getElementById(c);
+if(b){b.style.display=""
+}};
+ZLoginFactory.isShown=function(b){var a=document.getElementById(b);
+return a?(a.style.display!="none"):false
+};
+ZLoginFactory.hide=function(b){var a=document.getElementById(b);
+if(a){a.style.display="none"
+}};
+ZLoginFactory.get=function(a){return document.getElementById(a)
+};
+ZLoginFactory.handleKeyPress=function(g){g=g||window.event;
+if(g==null){return true
+}var e=g.target?g.target:g.srcElement;
+if(!e){return true
+}var j=g.keyCode;
+var a=false;
+if(j==13){if(e.id==ZLoginFactory.USER_ID||e.id==ZLoginFactory.NEW_PASSWORD_ID){a=true
+}else{var b=ZLoginFactory.get(ZLoginFactory.LOGIN_BUTTON_ID).onclick;
+if(b){b.call(e)
+}ZLoginFactory._cancelEvent(g);
+return false
+}}if(a||(j==9)){var h=ZLoginFactory.TAB_ORDER.length-1;
+for(var c=0;
+c<ZLoginFactory.TAB_ORDER.length;
+c++){if(ZLoginFactory.TAB_ORDER[c]==e.id){h=c;
+break
+}}var d=!g.shiftKey;
+var l=ZLoginFactory._getTabToIndex(h,d);
+var f=ZLoginFactory.TAB_ORDER[l];
+var k=ZLoginFactory.TAB_TYPE[l];
+ZLoginFactory._onFocusChange(k,f,e);
+ZLoginFactory._cancelEvent(g)
+}};
+ZLoginFactory._cancelEvent=function(a){if(a.stopPropagation){a.stopPropagation()
+}if(a.preventDefault){a.preventDefault()
+}a.cancelBubble=true;
+a.returnValue=false
+};
+ZLoginFactory._onFocusChange=function(b,f,e){if(b==ZLoginFactory.TEXT_TYPE){var c=ZLoginFactory.get(f);
+c.focus();
+c.select()
+}else{if(b==ZLoginFactory.CHECKBOX_TYPE){var d=ZLoginFactory.get(f);
+d.focus()
+}else{var a=ZLoginFactory.get(f);
+a.focus()
+}}};
+ZLoginFactory._getTabToIndex=function(f,a){var b=f;
+do{var e;
+if(a){b=(b==(ZLoginFactory.TAB_ORDER.length-1))?0:b+1
+}else{b=(b==0)?(ZLoginFactory.TAB_ORDER.length-1):b-1
+}var g=ZLoginFactory.TAB_ORDER[b];
+var c=ZLoginFactory.VISIBILITY[b];
+var d=ZLoginFactory.get(g);
+if(ZLoginFactory.isShown(c)&&!ZLoginFactory.get(g).disabled){return b
+}}while(b!=f);
+return 0
+};
+ZLoginFactory._loginButtonFocus=function(a){a.className="DwtButton-focused"
+};
+ZLoginFactory._flickerErrorMessagePanel=function(){ZLoginFactory.getErrorMsgPanel().style.visibility="hidden";
+window.setTimeout(ZLoginFactory._showErrorMessagePanel,8)
+};
+ZLoginFactory._showErrorMessagePanel=function(){ZLoginFactory.getErrorMsgPanel().style.visibility="visible"
+}
+}}if(AjxPackage.define("zimbra.Widgets")){AjxTemplate.register("zimbra.Widgets#ZmErrorDialogControls",function(b,f,e,a){var d=Boolean(a);
+e=(typeof e=="string"?{id:e}:e)||{};
+a=a||[];
+var c=a.length;
+a[c++]="<div id='";
+a[c++]=e.id;
+a[c++]="_buttons' class='DwtDialogButtonBar'>";
+if(AjxEnv.isNav){a[c++]="<input type='button' id='";
+a[c++]=e.id;
+a[c++]="_focus' style='height:0px;width:0px;display:none;'>"
+}a[c++]="</div>";
+return d?a.length:a.join("")
+},{width:"20",id:"zimbra.Widgets#ZmErrorDialogControls",height:"32"},false);
+AjxTemplate.register("zimbra.Widgets",AjxTemplate.getTemplate("zimbra.Widgets#ZmErrorDialogControls"),AjxTemplate.getParams("zimbra.Widgets#ZmErrorDialogControls"));
+AjxTemplate.register("zimbra.Widgets#ZmErrorDialogContent",function(b,f,e,a){var d=Boolean(a);
+e=(typeof e=="string"?{id:e}:e)||{};
+a=a||[];
+var c=a.length;
+a[c++]="<table role=\"presentation\" width='100%' height='100%'><tr><td>";
+a[c++]=e.message;
+a[c++]="</td></tr>";
+if(e.showDetails){a[c++]="<tr><td><hr/></td></tr><tr><td style='height:100%;vertical-align:top;'>\n";
+a[c++]="\t\t\t\t";
+a[c++]=e.detail;
+a[c++]="\n";
+a[c++]="\t\t\t</td></tr>"
+}a[c++]="</table>";
+return d?a.length:a.join("")
+},{id:"zimbra.Widgets#ZmErrorDialogContent"},false);
+AjxTemplate.register("zimbra.Widgets#ZmColorMenuItem",function(b,f,e,a){var d=Boolean(a);
+e=(typeof e=="string"?{id:e}:e)||{};
+a=a||[];
+var c=a.length;
+a[c++]="<table role=\"presentation\" class='ZWidgetTable ZMenuItemTable ZMenuItemBorder'><tr><td id='";
+a[c++]=e.id;
+a[c++]="_title' class='ZWidgetTitle'></td></tr></table>";
+return d?a.length:a.join("")
+},{id:"zimbra.Widgets#ZmColorMenuItem","class":"ZWidget"},false)
+};

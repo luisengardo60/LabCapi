@@ -16,6 +16,7 @@
 
     <div class="btn">
         <span>&Congruent;</span>
+        <!--Prueba-->
     </div>
     <nav class="sidebar">
         <!--<div class="text"><a href="../html/index.html">C.A.P.I.</a></div>-->
@@ -27,20 +28,20 @@
                     <li><a href="../html/AdminBasis1/index.php" target="_blank">Manual Usuario</a></li>
                     <li><a href="../html/AdminBasis2/index.php" target="_blank">Transacciones</a></li>
                     <li><a href="../../LabCapi/html/adminFactAreasAtencion.html" target="_blank">Correos Áreas</a></li>                    
+                    <!--<li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
+                    <li><a href="#">xxxxxxx</a></li>-->
                 </ul>
             </li>
             <li><a href="#" class="serv-btn">Portales<span class="second">&#x021D3;</span></a>
                 <ul class="serv-show">
-                    <li><a href="https://help.sap.com/docs/sap_gui_for_windows?locale=en-US" target="_blank">SAP GUI</a></li>
+                    <li><a href="https://help.sap.com/docs/sap_gui_for_windows?locale=en-US" target="_blank">Ayuda en linea SAP</a></li>
                     <li><a href="http://j2eprd.cantv.com.ve:50000/wsnavigator/enterwsdl.html" target="_blank">J2eprd</a></li>
                     <li><a href="http://srvft11:8002/">La Matriz</a></li>
+                    <!--<li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
-                    <li><a href="#">xxxxxxx</a></li>
+                    <li><a href="#">xxxxxxx</a></li>-->
                 </ul>
             </li>
   

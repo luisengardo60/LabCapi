@@ -22,21 +22,31 @@
         <ul>
         <li><a href="inicio.php"><img src="../img/menu_inicio6.jpg" title="C.A.P.I"
     style="padding-left:5x;padding-right:1px;padding-top: 1px; border-radius: 50px; float:center; width: 80px; height: 80px; background-color:green"></a></li>
-                <li><a href="#" class="feat-btn">AdminCrm<span class="first">&#x021D3; </span></a>
+                <li><a href="#" class="feat-btn">AdminCrm<br>Jorge Gonzalez<span class="first">&#x021D3; </span></a>
                 <ul class="feat-show">
                     <li><a href="../html/adminCrmServidores.html" target="_blank">Servidores Certus</a></li>
-                    <li><a href="http://vmwecerdb01/ibmcognos/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/logoff.xts&h_CAM_action=logoff"  target="_blank">Cognos</a></li>
                     <li><a href="../html/adminCrmReinCognos.html">Re-Iniciar Cognos</a></li>
+                    <li><a href="http://vmwecerdb01/ibmcognos/cgi-bin/cognos.cgi?b_action=xts.run&m=portal/logoff.xts&h_CAM_action=logoff"  target="_blank">IBM Cognos Connection CERTUS</a></li>
+
                     <!--<li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>-->
                 </ul>
             </li>
-            <li><a href="#" class="serv-btn">Portales<span class="second">&#x021D3;</span></a>
+            <li><a href="#" class="serv-btn">Zimbra<span class="second">&#x021D3;</span></a>
                 <ul class="serv-show">
-                    <li><a href="https://www.zimbra.com/" target="_blank">Zimbra</a></li>
-                    <li><a href="https://www.zimbra.com/product/documentation/" target="_blank">Zimbra Manuales</a></li>
+                    <li><a href="../html/imgZimbra/zimbraVersion.png" target="_blank">Versión</a></li>
+                    <li><a href="../html/Guía del administrador de colaboración de Zimbra.pdf" target="_blank">Licencia y Arquitectura</a></li>
+                    <li><a href="../html/Troubleshooting.pdf" target="_blank">Soluciones</a></li>
+                    <li><a href="../html/ScriptsSolución.pdf" target="_blank">Scripts</a></li>
+                    <li><a href="../html/adminZimbra.pdf" target="_blank">Admin Guia</a></li>
+                    <li><a href="https://www.zimbra.com/product/documentation/" target="_blank">Manuales Online</a></li>
+                    <li><a href="../html/Diagrama Sustitución del correo corporativo.pdf" target="_blank">Buzones</a></li>
+                    <li><a href="../html/ZimbraShell.pdf" target="_blank">Planificación Diaria</a></li>
+                    <li><a href="https://10.2.37.175:7071/zimbraAdmin/" target="_blank">Consola Admin</a></li>
+                    <li><a href="https://correoweb.cantv.com.ve/?client=advanced&loginOp=logout" target="_blank">Mail inicio</a></li>
+                    
                     <!--<li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
                     <li><a href="#">xxxxxxx</a></li>
